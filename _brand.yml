@@ -1,0 +1,8 @@
+typography:
+  fonts:
+    - family: Poppins
+      source: google
+    - family: Arimo
+      source: google
+  base: Arimo
+  headings: Poppins

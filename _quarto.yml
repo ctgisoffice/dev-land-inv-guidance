@@ -1,17 +1,21 @@
 project:
   type: book
 
+number-depth: 2
+
+title-block-banner: '#C6D4FB'
+title-block-banner-color: '#333333'
+
 book:
-  title: "dev-land-inv-guidance"
-  author: "Norah Jones"
-  date: "6/11/2026"
+  title: "Developable Land Inventory"
+  subtitle: "Technical Guidance"
   chapters:
     - index.qmd
-    - intro.qmd
-    - summary.qmd
-    - references.qmd
+    - outputs.qmd
+    - definitions.qmd
+  page-footer: "CT GIS Office, July 2026 V1.0"
 
-bibliography: references.bib
+#bibliography: references.bib
 
 format:
   html:

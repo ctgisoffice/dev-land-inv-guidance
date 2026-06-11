@@ -1,0 +1,82 @@
+[
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "1  Introduction",
+    "section": "",
+    "text": "This is a book created from markdown and executable code.\nSee @knuth84 for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "2  Summary",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever.\n\n1 + 1\n\n[1] 2",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Summary</span>"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Developable Land Inventory",
+    "section": "",
+    "text": "Introduction",
+    "crumbs": [
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "index.html#purpose",
+    "href": "index.html#purpose",
+    "title": "Developable Land Inventory",
+    "section": "Purpose",
+    "text": "Purpose\nThis documentation provides technical guidance for preparing the municipal developable land inventory required for inclusion in Housing Growth Plans under Connecticut Public Act No. 25-1 of the November 2025 Special Session (PA 25-1). The inventory identifies developable land within a municipality for purposes of the Housing Growth Plan process, consistent with the definitions in Section 4(5) of PA 25-1. This guidance is intended as an analytical tool to support this exercise.\nIdentifying land as developable does not obligate anyone to pursue development on that land, nor does identifying land as nondevelopable limit future development opportunities outside the context of the Housing Growth Plan process. The developable land inventory is not a permanent designation of a property’s development potential. Rather, it is a necessary step in preparing a Housing Growth Plan under PA 25-1.",
+    "crumbs": [
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "index.html#audience",
+    "href": "index.html#audience",
+    "title": "Developable Land Inventory",
+    "section": "Audience",
+    "text": "Audience\nThis document is intended for municipal staff, councils of government or regional planning agencies, and consultants responsible for compiling, reviewing, or applying data for developable land inventories as part of the Housing Growth Plan process.",
+    "crumbs": [
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "index.html#overview",
+    "href": "index.html#overview",
+    "title": "Developable Land Inventory",
+    "section": "Overview",
+    "text": "Overview\nThis document explains the expected inputs and required outputs of the developable land inventory and provides technical guidance on recommended data resources and methodologies. It is designed to support a consistent, transparent, and replicable approach across municipalities. For additional context on the broader Housing Growth Plan framework and how the developable land inventory fits within that process, municipalities should refer to the Housing Growth Plan Guidance[link].\nThe sections that follow describe each statutory exclusion from developable land and the associated recommended datasets and methodologies, outline analysis methods for identifying vacant and potentially redevelopable land, and provide mapping guidance for assembling the final developable land inventory.",
+    "crumbs": [
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "definitions.html",
+    "href": "definitions.html",
+    "title": "2  Statutory Definitions",
+    "section": "",
+    "text": "Section 4(5) of PA 25-1 defines what developable land is and is not in the context of this planning process:\n\n(5) “Developable land” means land, including any land owned by the state or a political subdivision of the state, including a municipality, that, as of January 1, 2026, can be feasibly developed or redeveloped into a residential development or a mixed-use development, as defined in section 8-13m of the general statutes, provided the feasibility of such development or redevelopment is based on commercially reasonable assumptions. “Developable land” does not include: (A) Land already committed to a public use or purpose, whether publicly or privately owned; (B) open space, parks and recreation areas that are dedicated to the public or subject to a recorded conservation easement; (C) land that is subject to an enforceable restriction on or prohibition of development, provided any such restriction or prohibition is not imposed by any zoning regulations or ordinance adopted by a municipality; (D) wetlands or watercourses, as defined in chapter 440 of the general statutes; and (E) areas of one-half or more acres of contiguous land that are unsuitable for development due to topographic features, such as steep slopes;\n\nThis developable land inventory is a high-level description of land with a municipality that has opportunity for development or redevelopment of residential or mixed-use development.\nUnder the statute, several types of land are defined as areas that should not be included in the developable land inventory for the purposes of Housing Growth Plans. The statutory constraints identified in Section 4(5) of PA 25-1 are:\n\nLand already committed to public use or purpose (public or private)\nOpen space, parks, and recreation areas dedicated to the public or protected by a conservation easement\nLand subject to enforceable restrictions or prohibitions on development\nWetlands or watercourses, as defined in the Wetlands and Watercourses Act (CGS Chapter 440)\nContiguous land areas of 0.5 acres or more that are unsuitable for development due to steep slopes or other topographic conditions\n\nIn addition to incorporating these statutory constraints, the final inventory may also document vacant land and land with potential for redevelopment. These areas provide important context for analyses done in the later phases of the development of the Housing Growth Plans, which will assess capacity for future housing growth (see [link] for more information). Guidance for identifying and analyzing vacant and potentially redevelopable land is provided in Section X.\nThis section outlines each statutory constraint category, identifies recommended datasets for analysis, and provides technical guidance for preparing those datasets for inclusion in the final developable land inventory. The intent is to support consistent data preparation across municipalities and ensure that the resulting outputs meet the standards described in Section X[mapping standards section].",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Statutory Definitions</span>"
+    ]
+  },
+  {
+    "objectID": "outputs.html",
+    "href": "outputs.html",
+    "title": "1  Required Outputs",
+    "section": "",
+    "text": "Regarding the inventory of developable lands, the following outputs of this process are required as part of the Housing Growth Plan report:\n\nA town-wide map showing the statutory constraints, vacant parcels, and parcels for potential redevelopment",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Required Outputs</span>"
+    ]
+  }
+]

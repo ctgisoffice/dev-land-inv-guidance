@@ -3,8 +3,8 @@ project:
 
 number-depth: 2
 
-title-block-banner: '#C6D4FB'
-title-block-banner-color: '#333333'
+#title-block-banner: '#C6D4FB'
+#title-block-banner-color: '#333333'
 
 book:
   title: "Developable Land Inventory"
@@ -12,7 +12,7 @@ book:
   chapters:
     - index.qmd
     - outputs.qmd
-    - definitions.qmd
+    - stat_def.qmd
   page-footer: "CT GIS Office, July 2026 V1.0"
 
 #bibliography: references.bib

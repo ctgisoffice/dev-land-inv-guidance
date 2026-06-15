@@ -3,6 +3,9 @@ project:
 
 number-depth: 2
 
+toc: true
+toc-depth: 5
+
 #title-block-banner: '#C6D4FB'
 #title-block-banner-color: '#333333'
 

@@ -2,9 +2,13 @@
 
 ## Purpose
 
-This documentation provides technical guidance for preparing the municipal developable land inventory required for inclusion in Housing Growth Plans under Connecticut Public Act No. 25-1 of the November 2025 Special Session (PA 25-1). The inventory identifies developable land within a municipality for purposes of the Housing Growth Plan process, consistent with the definitions in Section 4(5) of PA 25-1. This guidance is intended as an analytical tool to support this exercise.
+This documentation provides technical guidance for preparing the municipal developable land inventory required for inclusion in Housing Growth Plans under [Connecticut Public Act No. 25-1 of the November 2025 Special Session](https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&which_year=2025&bill_num=8002) (PA 25-1). The inventory identifies developable land within a municipality for purposes of the Housing Growth Plan process, consistent with the definitions in Section 4(5) of PA 25-1. This guidance is intended as an analytical tool to support this exercise.
+
+::: callout-note
+## A note about developable land
 
 Identifying land as developable does not obligate anyone to pursue development on that land, nor does identifying land as nondevelopable limit future development opportunities outside the context of the Housing Growth Plan process. The developable land inventory is not a permanent designation of a property's development potential. Rather, it is a necessary step in preparing a Housing Growth Plan under PA 25-1.
+:::
 
 <br/>
 

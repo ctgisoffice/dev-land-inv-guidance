@@ -1,0 +1,27 @@
+# Creating the Map
+
+The Developable Land Inventory should be presented as a single municipality-wide map. The map should clearly distinguish between different land categories using simple, accessible symbology.
+
+## Map Layers and Symbology
+
+The final map should include the following layers.
+
+| Layer | Description | Recommended Symbology |
+|:------------------|---------------------------|---------------------------|
+| **Statutory Exclusions** | Areas not considered developable under Section 4(5) of PA 25-1. All statutory exclusion datasets should be merged into a single layer. | Gray (`[hex code]`) |
+| **Vacant Areas** | Areas identified as vacant in Section X. | `[hex code]` |
+| **Potentially Developable Land** | Areas identified as potentially developable in Section X. | `[hex code]` |
+| **Basemap** | A simple reference basemap used to provide geographic context, should not compete visually with the inventory layers. | Light, muted colors; avoid high-contrast imagery or dark backgrounds. |
+
+The colors selected for vacant and potentially developable land should provide sufficient visual contrast and remain distinguishable for users with color vision deficiencies. This is a recommended cartographic best practice that improves map readability and accessibility.
+
+## Required Map Elements
+
+All Developable Land Inventory maps should include:
+
+- Municipality-wide extent
+- Clear map title
+- Scale bar or representative fraction
+- North arrow
+- Legend identifying all mapped categories
+- Data sources and preparation date (recommended)

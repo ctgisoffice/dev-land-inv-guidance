@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Developable Land Inventory</title>
+<title>3&nbsp; Identifying Vacant and Potential Land for Redevelopment – Developable Land Inventory</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -23,6 +23,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -33,7 +68,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./outputs.html" rel="next">
+<link href="./map.html" rel="next">
+<link href="./stat_def.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -88,7 +124,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Introduction</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./vac_redev.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Identifying Vacant and Potential Land for Redevelopment</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -115,7 +151,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction</span></a>
   </div>
 </li>
@@ -133,7 +169,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./vac_redev.html" class="sidebar-item-text sidebar-link">
+  <a href="./vac_redev.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Identifying Vacant and Potential Land for Redevelopment</span></span></a>
   </div>
 </li>
@@ -159,12 +195,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a>
-  <ul>
-  <li><a href="#purpose" id="toc-purpose" class="nav-link" data-scroll-target="#purpose">Purpose</a></li>
-  <li><a href="#audience" id="toc-audience" class="nav-link" data-scroll-target="#audience">Audience</a></li>
-  <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview">Overview</a></li>
-  </ul></li>
+  <li><a href="#vacant-parcels" id="toc-vacant-parcels" class="nav-link active" data-scroll-target="#vacant-parcels"><span class="header-section-number">3.1</span> Vacant Parcels</a></li>
+  <li><a href="#potentially-redevelopable-land" id="toc-potentially-redevelopable-land" class="nav-link" data-scroll-target="#potentially-redevelopable-land"><span class="header-section-number">3.2</span> Potentially Redevelopable Land</a></li>
   </ul>
 </nav>
     </div>
@@ -173,8 +205,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Developable Land Inventory</h1>
-<p class="subtitle lead">Technical Guidance</p>
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Identifying Vacant and Potential Land for Redevelopment</span></h1>
 </div>
 
 
@@ -191,38 +222,61 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="introduction" class="level1 unnumbered">
-<h1 class="unnumbered">Introduction</h1>
-<section id="purpose" class="level2">
-<h2 class="anchored" data-anchor-id="purpose">Purpose</h2>
-<p>This documentation provides technical guidance for preparing the municipal developable land inventory required for inclusion in Housing Growth Plans under <a href="https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&amp;which_year=2025&amp;bill_num=8002">Connecticut Public Act No.&nbsp;25-1 of the November 2025 Special Session</a> (PA 25-1). The inventory identifies developable land within a municipality for purposes of the Housing Growth Plan process, consistent with the definitions in Section 4(5) of PA 25-1. This guidance is intended as an analytical tool to support this exercise.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
+<p>Beyond the statutory requirements, identifying vacant and potentially redevelopable parcels provides important context for the Housing Growth Plan and supports suitability analysis and further analyses in subsequent phases.</p>
+<section id="vacant-parcels" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="vacant-parcels"><span class="header-section-number">3.1</span> Vacant Parcels</h2>
+<p>Vacant parcels represent land that is either currently undeveloped or previously developed but now considered vacant and may present direct development opportunities. While no statewide dataset of vacant parcels exists, the statewide CAMA and parcel dataset can be queried to identify parcels labeled as vacant.</p>
+<p>We have completed a statewide queried feature layer as a hosted feature layer view on ArcGIS Online. This can be used as a starting point for local analysis, or a new query analysis can be started on a full CAMA and parcel dataset.</p>
+<p><strong>Dataset:</strong> <a href="https://ctmaps.maps.arcgis.com/home/item.html?id=1e733783ba524d26b540961257bb0bcb#overview">Connecticut Vacant Parcels (**CT Geodata Portal)</a></p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>A note about developable land
+<div class="callout-body-container">
+<p>Please note that terminology is not standardized across municipalities statewide; however, many jurisdictions use similar naming conventions and descriptions that can provide useful indicators for identifying parcels that may fit within a given category.</p>
 </div>
 </div>
-<div class="callout-body-container callout-body">
-<p>Identifying land as developable does not obligate anyone to pursue development on that land, nor does identifying land as nondevelopable limit future development opportunities outside the context of the Housing Growth Plan process. The developable land inventory is not a permanent designation of a property’s development potential. Rather, it is a necessary step in preparing a Housing Growth Plan under PA 25-1.</p>
 </div>
-</div>
+<p>The following text-based queries were developed for the statewide parcel dataset to identify parcels that are likely vacant based on the state use code and state use description fields.</p>
+<ul>
+<li>State Use (is): “500”</li>
+<li>State Use Description (contains): “vac”</li>
+</ul>
+<p><br></p>
+<p><strong>Example query logic:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>STATE_USE <span class="kw">IS</span> <span class="st">'%500%'</span>  </span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">OR</span> STATE_USE_DESCRIPTION <span class="kw">CONTAINS</span> <span class="st">'%VAC%'</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><br></p>
 </section>
-<section id="audience" class="level2">
-<h2 class="anchored" data-anchor-id="audience">Audience</h2>
-<p>This document is intended for municipal staff, councils of government or regional planning agencies, and consultants responsible for compiling, reviewing, or applying data for developable land inventories as part of the Housing Growth Plan process.</p>
-<p><br></p>
-</section>
-<section id="overview" class="level2">
-<h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>This document explains the expected inputs and required outputs of the developable land inventory and provides technical guidance on recommended data resources and methodologies. It is designed to support a consistent, transparent, and replicable approach across municipalities. For additional context on the broader Housing Growth Plan framework and how the developable land inventory fits within that process, municipalities should refer to the Housing Growth Plan Guidance[link].</p>
-<p>The sections that follow describe each statutory exclusion from developable land and the associated recommended datasets and methodologies, outline analysis methods for identifying vacant and potentially redevelopable land, and provide mapping guidance for assembling the final developable land inventory.</p>
+<section id="potentially-redevelopable-land" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="potentially-redevelopable-land"><span class="header-section-number">3.2</span> Potentially Redevelopable Land</h2>
+<p>Potentially redevelopable land consists of previously developed parcels with characteristics suggesting they may be underutilized or suitable for redevelopment.</p>
+<p>Consider the following approaches:</p>
+<ul>
+<li><strong>Brownfields</strong>: Previously contaminated or industrial sites undergoing or eligible for cleanup.
+<ul>
+<li><em>[Analysis methodology to be provided]</em></li>
+</ul></li>
+<li><strong>Land-to-improvement value ratio</strong>: Analyze assessed land value to assessed improvements value in certain areas or districts to identify properties that may be underperforming (significantly higher than average land-to-improvements values)
+<ul>
+<li><em>[Analysis methodology to be provided]</em></li>
+</ul></li>
+<li><strong>Parcel size relative to district average:</strong> Analyze parcel size by neighborhood or regulatory district to identify parcels that may be underutilized (significantly larger than the average) which may indicate an opportunity for infill development
+<ul>
+<li><em>[Analysis methodology to be provided]</em></li>
+</ul></li>
+<li><strong>Floor Area Ratio (FAR) analysis:</strong> Analyze Floor Area Ratios by neighborhood or district to identify parcels that have significantly lower than average ratios which may indicate infill or redevelopment opportunities
+<ul>
+<li><em>[Analysis methodology to be provided]</em></li>
+</ul></li>
+<li><strong>Construction and renovation year clustering</strong>: Analyze construction and renovation years to identify clusters of existing units in need of rehabilitation.
+<ul>
+<li><em>[Analysis methodology to be provided]</em></li>
+</ul></li>
+</ul>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -628,10 +682,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./stat_def.html" class="pagination-link" aria-label="Statutory Exclusions">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Statutory Exclusions</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./outputs.html" class="pagination-link" aria-label="Required Outputs">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Required Outputs</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./map.html" class="pagination-link" aria-label="Creating the Map">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Creating the Map</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

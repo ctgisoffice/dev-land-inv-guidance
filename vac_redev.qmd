@@ -1,0 +1,48 @@
+# Identifying Vacant and Potential Land for Redevelopment
+
+Beyond the statutory requirements, identifying vacant and potentially redevelopable parcels provides important context for the Housing Growth Plan and supports suitability analysis and further analyses in subsequent phases.
+
+## Vacant Parcels
+
+Vacant parcels represent land that is either currently undeveloped or previously developed but now considered vacant and may present direct development opportunities. While no statewide dataset of vacant parcels exists, the statewide CAMA and parcel dataset can be queried to identify parcels labeled as vacant.
+
+We have completed a statewide queried feature layer as a hosted feature layer view on ArcGIS Online. This can be used as a starting point for local analysis, or a new query analysis can be started on a full CAMA and parcel dataset.
+
+**Dataset:** [Connecticut Vacant Parcels (\*\*CT Geodata Portal)](https://ctmaps.maps.arcgis.com/home/item.html?id=1e733783ba524d26b540961257bb0bcb#overview)
+
+::: {.callout-note appearance="simple"}
+Please note that terminology is not standardized across municipalities statewide; however, many jurisdictions use similar naming conventions and descriptions that can provide useful indicators for identifying parcels that may fit within a given category.
+:::
+
+The following text-based queries were developed for the statewide parcel dataset to identify parcels that are likely vacant based on the state use code and state use description fields.
+
+- State Use (is): "500"
+- State Use Description (contains): "vac"
+
+<br/>
+
+**Example query logic:**
+
+``` sql
+STATE_USE IS '%500%'  
+OR STATE_USE_DESCRIPTION CONTAINS '%VAC%'
+```
+
+<br/>
+
+## Potentially Redevelopable Land
+
+Potentially redevelopable land consists of previously developed parcels with characteristics suggesting they may be underutilized or suitable for redevelopment.
+
+Consider the following approaches:
+
+- **Brownfields**: Previously contaminated or industrial sites undergoing or eligible for cleanup.
+  - *\[Analysis methodology to be provided\]*
+- **Land-to-improvement value ratio**: Analyze assessed land value to assessed improvements value in certain areas or districts to identify properties that may be underperforming (significantly higher than average land-to-improvements values)
+  - *\[Analysis methodology to be provided\]*
+- **Parcel size relative to district average:** Analyze parcel size by neighborhood or regulatory district to identify parcels that may be underutilized (significantly larger than the average) which may indicate an opportunity for infill development
+  - *\[Analysis methodology to be provided\]*
+- **Floor Area Ratio (FAR) analysis:** Analyze Floor Area Ratios by neighborhood or district to identify parcels that have significantly lower than average ratios which may indicate infill or redevelopment opportunities
+  - *\[Analysis methodology to be provided\]*
+- **Construction and renovation year clustering**: Analyze construction and renovation years to identify clusters of existing units in need of rehabilitation.
+  - *\[Analysis methodology to be provided\]*

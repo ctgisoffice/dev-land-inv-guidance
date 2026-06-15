@@ -9,13 +9,9 @@ This developable land inventory is a high-level description of land with a munic
 Under the statute, several types of land are defined as areas that should be excluded from the developable land inventory for the purposes of Housing Growth Plans. The statutory exclusions identified in Section 4(5) of PA 25-1 are:
 
 A.  Land already committed to public use or purpose (public or private)
-
 B.  Open space, parks, and recreation areas dedicated to the public or protected by a conservation easement
-
 C.  Land subject to enforceable restrictions or prohibitions on development
-
 D.  Wetlands or watercourses, as defined in the Wetlands and Watercourses Act (CGS Chapter 440)
-
 E.  Contiguous land areas of 0.5 acres or more that are unsuitable for development due to steep slopes or other topographic conditions
 
 In addition to incorporating these statutory constraints, the final inventory may also document vacant land and land with potential for redevelopment. These areas provide important context for analyses done in the later phases of the development of the Housing Growth Plans, which will assess capacity for future housing growth (see \[link\] for more information). Guidance for identifying and analyzing vacant and potentially redevelopable land is provided in Section X.
@@ -29,9 +25,7 @@ This section outlines each statutory constraint category, identifies recommended
 For each statutory constraint category, the workflow will generally proceed as follows:
 
 1.  Identify datasets that capture relevant land, parcel, or resource information associated with each category.
-
 2.  Filter datasets to the regional study area (i.e. municipality or planning region) and, where necessary, apply attribute queries or other selection criteria to isolate relevant features.
-
 3.  Review and verify selected areas for accuracy using available reference materials, including aerial imagery, local knowledge, municipal mapping resources, and other supporting datasets.
 
 Finally, the land areas for each category will be compiled and symbolized in accordance with the mapping standards described in section X\[mapping standards section\]. The final map layouts will include the land area identified in this section. Inventories are recommended to include vacant land from section X and land for potential redevelopment from section X, since these components will be used in subsequent phases of the Housing Growth Plan analyses.
@@ -45,21 +39,13 @@ This category includes publicly or privately owned land dedicated to governmenta
 Examples of land committed to public use or purpose include:
 
 - Public schools and school campuses
-
 - Municipal buildings and facilities (police, fire, emergency services, libraries, community centers, public works, transfer stations)
-
 - Utility infrastructure and utility-owned land (water treatment plants, reservoirs, etc.)
-
 - Transportation infrastructure (highways, airports, park-and-ride facilities)
-
 - Cemeteries
-
 - Active public parks and recreation complexes
-
 - Institutional campuses serving a public purpose (hospitals, universities)
-
 - Military or state-owned facilities
-
 - Privately owned land permanently dedicated to a public function through easement, agreement, or operational use (e.g., a privately owned water supply reservoir subject to a public easement)
 
 <br/>
@@ -68,40 +54,37 @@ Examples of land committed to public use or purpose include:
 
 There is no single comprehensive dataset of publicly committed land in Connecticut. The following sources, used in combination, should capture most qualifying parcels and land area. Some overlap across sources is expected, but each may also identify areas the others miss. See the “Technical Guidance” section below for more details about using, filtering, spatializing, and querying these datasets.
 
-1.  Local data
-
-2.  Parcel and CAMA Data
-
-3.  CT Education Directory
-
-4.  OpenStreetMap (OSM)
+1.  [Local data](#sec-local-data)
+2.  [Parcel and CAMA Data](#sec-parcel-and-cama-data)
+3.  [CT Education Directory](#sec-ct-education-directory)
+4.  [OpenStreetMap (OSM)](#sec-openstreetmap)
 
 <br/>
 
 ### Technical Guidance
 
-#### Local data
+#### Local data {#sec-local-data}
 
 Utility parcel data, local zoning or public facilities layers, and local institutional datasets may be available from your municipality or utility providers.
 
 <br/>
 
-#### Parcel and CAMA Data
+#### Parcel and CAMA Data {#sec-parcel-and-cama-data}
 
 We recommend starting with the parcel dataset. The CT GIS Office aggregates municipal parcel data annually. While locally published datasets may also be available, the statewide aggregation is publicly accessible through the CT Geodata Portal. This data is not edited or transformed by the CT GIS Office; questions about data quality or completeness should be directed to the local town assessor. For more information on CT parcel data aggregation, see [the CT Geodata Portal page on parcels](https://geodata.ct.gov/pages/parcels).
 
-| Dataset | Portal | Link to data |
-|------------------|-----------------------|-------------------------------|
-| Connecticut CAMA and Parcel Layer | CT Geodata Portal (geodata.ct.gov) | <https://geodata.ct.gov/datasets/ctmaps::connecticut-cama-and-parcel-layer/about> |
-| 2025 Connecticut Parcel and CAMA Data | CT Open Data Portal (data.ct.gov) | <https://data.ct.gov/Local-Government/2025-Connecticut-Parcel-and-CAMA-Data/rny9-6ak2/about_data> |
+<br/>
+
+**Links to datasets:**
+
+- [Connecticut CAMA and Parcel Layer (CT Geodata Portal)](https://geodata.ct.gov/datasets/ctmaps::connecticut-cama-and-parcel-layer/about)
+- [2025 Connecticut Parcel and CAMA Data (CT Open Data Portal)](https://data.ct.gov/Local-Government/2025-Connecticut-Parcel-and-CAMA-Data/rny9-6ak2/about_data)
 
 <br/>
 
-We have completed a statewide queried feature layer as a hosted feature layer view on ArcGIS Online using the keywords above. This can be used as a starting point for local analysis, or a new query analysis can be started on a full CAMA and parcel dataset.
+We have completed a statewide queried feature layer as a hosted feature layer view on ArcGIS Online using the owner name and state use queries below. This can be used as a starting point for local analysis, or a new query analysis can be started on a full CAMA and parcel dataset.
 
-| Dataset | Link |
-|--------------------------|----------------------------------------------|
-| Connecticut Public Use Parcels | <https://ctmaps.maps.arcgis.com/home/item.html?id=ee917ce4b44d488cbba7df730b8583dc> |
+**Dataset:** [Connecticut Public Use Parcels (\*\*CT Geodata Portal)](https://ctmaps.maps.arcgis.com/home/item.html?id=ee917ce4b44d488cbba7df730b8583dc)
 
 The following screening queries were developed for the statewide parcel dataset to identify parcels that are likely publicly committed based on owner name and land use description fields.
 
@@ -116,23 +99,14 @@ Please note that terminology is not standardized across municipalities statewide
 Search the owner’s name field (“Owner_Name”) for terms including:
 
 - “City of”
-
 - “Town of”
-
 - “State of Connecticut” or “State of”
-
 - “U.S. Dept”
-
 - “U.S. Dept” or “US Dept”, “U S Government”, “US Government”, “U.S. Government”
-
 - “Board of Ed”
-
 - “Housing Authority” or “Housing Auth”
-
 - “School District” or “School Dist”
-
 - “Public Works”
-
 - “Water Auth”, “Sewer Auth”, “Power Co”, “National Rail”, “Passenger Co”
 
 <br/>
@@ -156,29 +130,17 @@ OR OWNER_NAME LIKE '%U.S. DEPT%'
 Search use ("Use") or use description ("Use_Desc") fields for publicly oriented institutional and civic uses, including:
 
 - “Post” for Postal Service (no false positives)
-
 - “State” for state lands (no false positives)
-
 - “Fed” for federal lands (1 false positive)
-
 - “Education” or “Educ”
-
 - “Library” or “Libr”
-
 - Museum
-
 - “Cemetery” or “Cemet”
-
 - “Fire station” or “Fire”
-
 - “Police” or “Pol”
-
 - “Recreation”
-
 - “Municipal” or “Munic”
-
 - Government
-
 - Public facility
 
 <br/>
@@ -210,7 +172,6 @@ No comprehensive statewide GIS dataset currently exists publicly that consistent
 Rights-of-way may be identified using keyword searches within the \[FIELD NAME\] field of the parcel dataset. Common keywords may include:
 
 - "ROW"
-
 - "Right of Way"
 
 <br/>
@@ -230,24 +191,19 @@ Because parcel data are compiled from municipal assessor records, terminology an
 Where ROW polygons are present but not clearly identified through attribute queries, additional review methods may be necessary, including:
 
 - Visual inspection of parcel geometry and spatial patterns
-
 - Comparison with roadway centerline or transportation datasets
-
 - Review of aerial imagery or basemap data
-
 - Identification of narrow linear parcels associated with transportation or utility corridors
 
 In municipalities where dedicated ROW polygons are not included in the parcel dataset, approximate rights-of-way areas may be derived by comparing the municipal boundary polygon to the aggregate parcel coverage. In these cases, the unassigned or residual land area between mapped parcel polygons and the municipal boundary may represent public rights-of-way or other unmapped areas.
 
 <br/>
 
-#### CT Education Directory
+#### CT Education Directory {#sec-ct-education-directory}
 
 There is no publicly available statewide GIS dataset representing public school locations in Connecticut. However, the Connecticut State Department of Education (CSDE) maintains a tabular dataset containing the official listing of public educational organizations, including district name, school name, street address, municipality, and ZIP code information.
 
-| Dataset | Link |
-|--------------------------|----------------------------------------------|
-| Education Directory | <https://data.ct.gov/Education/Education-Directory/9k2y-kqxn/about_data> |
+**Dataset:** [Education Directory (CT Open Data Portal)](https://data.ct.gov/Education/Education-Directory/9k2y-kqxn/about_data)
 
 Because the dataset is provided in address form and does not contain spatial geometry, the records must first be spatialized through a geocoding process to generate point features representing individual school locations. Once geocoded, the resulting point dataset can be used to identify associated parcel polygons through a spatial selection or spatial join operation, whereby parcels containing or intersecting school point locations are selected.
 
@@ -263,7 +219,7 @@ Parcel Selection from Points Reference:
 
 <br/>
 
-#### OpenStreetMap
+#### OpenStreetMap {#sec-openstreetmap}
 
 OpenStreetMap (OSM) data may be used to identify features and land uses such as cemeteries, schools, libraries, parks, and other civic, recreational, or institutional facilities. OSM is a crowd-sourced geographic database maintained by volunteer contributors, and data completeness, positional accuracy, and attribute consistency can vary across locations. As a result, OSM should be used as a supplemental reference source to assist in feature identification and screening rather than as a primary authoritative dataset. Features identified through OSM should be reviewed and verified using authoritative GIS data, parcel information, aerial imagery, or other reliable sources where available.
 
@@ -276,17 +232,11 @@ This category includes lands preserved for conservation, passive or active recre
 Examples include:
 
 - Conservation areas and land trust properties
-
 - Municipal, state, or federal parks
-
 - Greenways and recreational trails
-
 - Wildlife management areas
-
 - Land subject to conservation easements
-
 - Public beaches, boat launches, or recreational waterfront areas
-
 - Agricultural preservation land protected through conservation programs
 
 <br/>
@@ -295,60 +245,48 @@ Examples include:
 
 There is no single comprehensive dataset of open space, parks, and recreation areas in Connecticut. The following sources, used in combination, should capture most qualifying parcels and land area. Some overlap across sources is expected, but each may also identify areas the others miss. See the “Technical Guidance” section below for more details about using, filtering, spatializing, and querying these datasets.
 
-1.  Local data
-
-2.  Land trust inventories
-
-3.  Parcel and CAMA data
-
-4.  CT DEEP Property
-
-5.  CT DEEP Protected Open Space (2011)
-
-6.  CT DEEP Federal Open Space
-
-7.  CT DEEP 1997 Municipal and Private Open Space Property
-
-8.  CT Department of Agriculture Conservation Easements
-
-9.  USGS PAS-US
+1.  [Local data](#sec-local-data2)
+2.  [Land trust inventories](#sec-land-trust-inventories)
+3.  [Parcel and CAMA data](#sec-parcel-and-cama-data2)
+4.  [CT DEEP Property](#sec-ct-deep-property)
+5.  \[CT DEEP Protected Open Space (2011)\](#sec-ct-deep-protected-open-space-(2011)
+6.  [CT DEEP Federal Open Space](#sec-ct-deep-federal-open-space)
+7.  [CT DEEP 1997 Municipal and Private Open Space Property](#sec-ct-deep-1997-municipal-and-private-open-space-property)
+8.  [CT Department of Agriculture Conservation Easements](#sec-ct-department-of-agriculture-conservation-easements)
+9.  [USGS PAD-US](#sec-usgs-protected-areas-database-of-the-united-states)
 
 <br/>
 
 ### Technical Guidance
 
-#### Land trust inventories
+#### Local data {#sec-local-data2}
 
-Land owned or permanently protected by land trusts should generally be considered protected open space and excluded from developable land inventories.
+Utility parcel data, local zoning or public facilities layers, and local institutional datasets may be available from your municipality or utility providers.
 
-No comprehensive statewide GIS dataset exists for land trust holdings in Connecticut.
+<br/>
 
-The Connecticut Land Conservation Council (CLCC) maintains a statewide directory of Connecticut land trusts that can be used to identify organizations operating within a municipality or region.
+#### Land trust inventories {#sec-land-trust-inventories}
 
-| Title | Link |
-|--------------------------|----------------------------------------------|
-| CLCC Land Trust Inventory | <https://ctconservation.org/what-is-a-land-trust/#maps> |
+Land owned or permanently protected by land trusts should generally be considered protected open space and excluded from developable land inventories.No comprehensive statewide GIS dataset exists for land trust holdings in Connecticut.The Connecticut Land Conservation Council (CLCC) maintains a statewide directory of Connecticut land trusts that can be used to identify organizations operating within a municipality or region.
+
+**Source:** [CLCC Land Trust Inventory (CLCC)](https://ctconservation.org/what-is-a-land-trust/#maps)
 
 The GIS Office Open Space Parcels layer \[link\] includes land trusts as identified through ownership from the parcel and CAMA dataset. See the Open Space Parcel and CAMA data section for more details.
 
 <br/>
 
-#### Parcel and CAMA Data
+#### Parcel and CAMA Data {#sec-parcel-and-cama-data2}
 
 We recommend starting with the parcel dataset. The CT GIS Office aggregates municipal parcel data annually. While locally published datasets may also be available, the statewide aggregation is publicly accessible through the CT Geodata Portal. This data is not edited or transformed by the CT GIS Office; questions about data quality or completeness should be directed to the local town assessor. For more information on CT parcel data aggregation, see [the CT Geodata Portal page on parcels](https://geodata.ct.gov/pages/parcels).
 
-| Dataset | Portal | Link to data |
-|------------------|------------------------|------------------------------|
-| Connecticut CAMA and Parcel Layer | CT Geodata Portal (geodata.ct.gov) | <https://geodata.ct.gov/datasets/ctmaps::connecticut-cama-and-parcel-layer/about> |
-| 2025 Connecticut Parcel and CAMA Data | CT Open Data Portal (data.ct.gov) | <https://data.ct.gov/Local-Government/2025-Connecticut-Parcel-and-CAMA-Data/rny9-6ak2/about_data> |
+**Links to datasets:**
 
-<br/>
+- [Connecticut CAMA and Parcel Layer (CT Geodata Portal)](https://geodata.ct.gov/datasets/ctmaps::connecticut-cama-and-parcel-layer/about)
+- [2025 Connecticut Parcel and CAMA Data (CT Open Data Portal)](https://data.ct.gov/Local-Government/2025-Connecticut-Parcel-and-CAMA-Data/rny9-6ak2/about_data)
 
 We have completed a statewide queried filtered feature layer as a hosted feature layer view on AGOL using the queries above. This can be used as a starting point for local analysis, or a new query analysis can be started on a full CAMA and parcel.
 
-| Dataset | Link |
-|--------------------------|----------------------------------------------|
-| Connecticut Open Space Parcels | <https://ctmaps.maps.arcgis.com/home/item.html?id=8264f13efc0241798d6d1c821bffc2aa> |
+**Dataset:** [Connecticut Open Space Parcels (\*\*CT Geodata Portal)](https://ctmaps.maps.arcgis.com/home/item.html?id=8264f13efc0241798d6d1c821bffc2aa)
 
 The following screening queries were developed for the statewide parcel dataset to identify parcels that are likely publicly committed based on owner name and land use description fields.
 
@@ -363,9 +301,7 @@ Please note that terminology is not standardized across municipalities statewide
 Search the owner (“Owner”) and co-owner ("Co_Owner") fields for terms that contain conservation related ownerships, including:
 
 - “Land trust”
-
 - “Conservation" or "conservancy”
-
 - “Land alliance”
 
 <br/>
@@ -387,7 +323,6 @@ OR OWNER_NAME LIKE '%Land alliance%'
 Search the owner (“Owner”) and co-owner ("Co_Owner") fields for terms that contain conservation related ownerships, including: Search state use description field ("State_Use_Description") for open space and recreation codes, including:
 
 - “490” (from [PA 490](https://portal.ct.gov/doag/commissioner/commissioner/public-act-490---the-basics?language=en_US))
-
 - “Open” (for Open Space)
 
 <br/>
@@ -404,13 +339,11 @@ OR OWNER_NAME LIKE '%Land alliance%'
 
 <br/>
 
-#### CT DEEP Property
+#### CT DEEP Property {#sec-ct-deep-property}
 
 CT DEEP publishes a polygon feature layer representing property that compromises DEEP facilities such as state forests, parks, and wildlife management areas.
 
-| Dataset | Link |
-|--------------------------|----------------------------------------------|
-| DEEP Property | <https://ct-deep-gis-open-data-website-ctdeep.hub.arcgis.com/datasets/CTDEEP::deep-property-3/about> |
+**Dataset:** [DEEP Property (CT Geodata Portal)](https://geodata.ct.gov/datasets/CTDEEP::deep-property-3/about)
 
 > *DEEP Property is a polygon feature-based layer that includes all land owned in fee simple interest by the State of Connecticut Department of Energy and Environmental Protection. This layer is based on information that was collected and mapped at various scales and at different levels of accuracy. Generally, partial interests such as easements or development rights are not included in this layer. The exception is flood control areas, which may include permanent easements. Types of property in this layer include parks, forests, wildlife areas, flood control areas, scenic preserves, natural areas, historic reserves, DEEP owned waterbodies, water access sites and other miscellaneous properties. This layer is current and is updated as parcels are acquired by DEEP.*
 
@@ -418,37 +351,31 @@ This dataset is regularly maintained by CT DEEP and should be used to ensure tha
 
 <br/>
 
-#### CT DEEP Protected Open Space (2011)
+#### CT DEEP Protected Open Space (2011) {#sec-ct-deep-protected-open-space-(2011}
 
 This was created as part of the CT DEEP Protected Open Space Mapping (POSM) Project in 2011. Not all CT towns are included in this inventory. See more detailed information about the contents of the dataset in the data description on the portal page.
 
-| Dataset | Link |
-|--------------------------|----------------------------------------------|
-| 2011 Protected Open Space Mapping Set | <https://deepmaps.ct.gov/maps/80c5e61b6e86423d9089350785e709a3/about> |
+**Dataset:** [2011 Protected Open Space Mapping Set (CT Geodata Portal)](https://geodata.ct.gov/maps/80c5e61b6e86423d9089350785e709a3/about)
 
 This dataset has not been updated since 2011, so it should be used as reference only.
 
 <br/>
 
-#### CT DEEP Federal Open Space
+#### CT DEEP Federal Open Space {#sec-ct-deep-federal-open-space}
 
 This dataset of Federal Open Space, published by CT DEEP, contains parcels of open space land owned by various agencies of the Federal government. It includes parcels owned in fee simple interest and partial interest, such as easements. Types of Federal open space include recreation areas created by the U. S. Army Corps of Engineers in the construction of flood control dams, such as Mansfield Hollow, Thomaston Dam, Colebrook River Lake and Hop Brook Lake; portions of the Appalachian Trail in northwest Connecticut owned by the National Park Service; and scenic and preservation easements, such as the scenic easements located along the Housatonic River in Kent, Cornwall and Canaan, and along the Connecticut River.
 
-| Dataset | Link |
-|--------------------------|----------------------------------------------|
-| Federal Open Space | <https://deepmaps.ct.gov/datasets/CTDEEP::federal-open-space/about> |
+**Dataset:** [Federal Open Space (CT Geodata Portal)](https://geodata.ct.gov/datasets/CTDEEP::federal-open-space/about)
 
 This layer has not been updated since 2004 and may not be accurate, so it should be used as reference only. For more information on this dataset, see the CT Eco Federal Open Space guide here: https://cteco.uconn.edu/guides/Federal_Open_Space.htm
 
 <br/>
 
-#### CT DEEP 1997 Municipal and Private Open Space Property
+#### CT DEEP 1997 Municipal and Private Open Space Property {#sec-ct-deep-1997-municipal-and-private-open-space-property}
 
 1997 Municipal and Private Open Space Property, published by CT DEEP, is polygon feature-based data that includes land owned in fee simple interest by the municipalities, land trusts, and other private entities within the State of Connecticut.
 
-| Dataset | Link |
-|--------------------------|----------------------------------------------|
-| 1997 Municipal and Private Open Space | <https://deepmaps.ct.gov/datasets/CTDEEP::1997-municipal-and-private-open-space/about> |
+**Dataset:** [1997 Municipal and Private Open Space (CT Geodata Portal)](https://geodata.ct.gov/datasets/CTDEEP::1997-municipal-and-private-open-space/about)
 
 Municipal and Private Open Space Property contains parcels owned by municipalities, land trusts and other private entities throughout the state. Generally, these parcels are open space and include schools, cemeteries, recreation, conservation and preservation land. This layer can be used with the Federal Property and DEP Property layers for a more comprehensive understanding of open space and recreation land throughout the State of Connecticut.
 
@@ -456,19 +383,19 @@ This layer has not been updated since 1997 and may not be accurate. For more acc
 
 <br/>
 
-#### CT Department of Agriculture Conservation Easements
+#### CT Department of Agriculture Conservation Easements {#sec-ct-department-of-agriculture-conservation-easements}
 
 Link to be added once published
 
+**Dataset:**
+
 <br/>
 
-#### USGS Protected Areas Database of the United States
+#### USGS Protected Areas Database of the United States {#sec-usgs-protected-areas-database-of-the-united-states}
 
-The USGS Protected Areas Database of the United States (PAD-US) is a national geospatial dataset that inventories protected public lands and conservation areas across the United States. The dataset includes federal, state, local, and nonprofit conservation lands, as well as lands managed for recreation, natural resource protection, open space, and other protected uses.
+The [USGS Protected Areas Database of the United States (PAD-US)](https://www.usgs.gov/programs/gap-analysis-project/science/pad-us-data-overview) is a national geospatial dataset that inventories protected public lands and conservation areas across the United States. The dataset includes federal, state, local, and nonprofit conservation lands, as well as lands managed for recreation, natural resource protection, open space, and other protected uses.
 
-| Dataset | Link |
-|--------------------------|----------------------------------------------|
-| USGS PAD-US | <https://usgs.maps.arcgis.com/home/item.html?id=80c7a138989c4cf8937c4502371d6e99> |
+**Dataset:** [PAD-US Protection Mechanism Category (ArcGIS Online)](https://usgs.maps.arcgis.com/home/item.html?id=80c7a138989c4cf8937c4502371d6e99)
 
 PAD-US can serve as an important reference dataset for identifying existing protected and open space lands that may qualify as constrained under this methodology. Because the dataset compiles information from many agencies and organizations, it should be used in conjunction with parcel data, local open space inventories, and other authoritative state or municipal sources.
 
@@ -483,7 +410,6 @@ This category includes land where development is legally restricted by deed, agr
 Examples include:
 
 - Deed-restricted properties
-
 - \[other?\]
 
 <br/>
@@ -512,22 +438,20 @@ Connecticut wetlands and watercourses are defined as follows:
 
 ### Recommended Datasets
 
-1.  Soils Inland Wetland
-2.  High Resolution Tidal Marsh Datasets
-3.  Connecticut Hydrography Set
-4.  Local data
+1.  [Soils Inland Wetland](#sec-soils-inland-wetland)
+2.  [High Resolution Tidal Marsh Datasets](#sec-high-resolution-tidal-marsh-datasets)
+3.  [Connecticut Hydrography Set](#sec-connecticut-hydrography-set)
+4.  [Local data](#sec-local-data3)
 
 <br/>
 
 ### Technical Guidance
 
-#### Soils Inland Wetland
+#### Soils Inland Wetland {#sec-soils-inland-wetland}
 
 This dataset from CT DEEP is derived from Connecticut SSURGO data and identifies wetland and non‑wetland soils as defined by the Connecticut Inland Wetlands and Watercourses Act ([C.G.S. Chapter 440](https://www.cga.ct.gov/2019/pub/chap_440.htm)).
 
-| Dataset | Link |
-|--------------------------|----------------------------------------------|
-| Soils Inland Wetland | <https://geodata.ct.gov/datasets/CTDEEP::soils-inland-wetland/about> |
+**Dataset:** [Soils Inland Wetland (CT Geodata Portal)](https://geodata.ct.gov/datasets/CTDEEP::soils-inland-wetland/about)
 
 The Soil Survey Geographic Database (SSURGO) contains soil information compiled by the National Cooperative Soil Survey over the course of nearly a century, and the State of Connecticut defines inland wetlands based on soil characteristics. Under the Connecticut Inland Wetlands and Watercourses Act, wetland soils include any soil types designated as poorly drained, very poorly drained, alluvial, or floodplain by the National Cooperative Soil Survey, as periodically amended by the Natural Resources Conservation Service of the U.S. Department of Agriculture.
 
@@ -535,27 +459,23 @@ To delineate soil-defined inland wetlands, the CT DEEP Inland Wetland Soils feat
 
 <br/>
 
-#### High Resolution Tidal Marsh Datasets
+#### High Resolution Tidal Marsh Datasets {#sec-high-resolution-tidal-marsh-datasets}
 
 Detailed tidal wetland mapping is available through CT DEEP and was developed using high-resolution lidar and aerial imagery survey of all the protected coastal marshland across the state of Connecticut. The data are available through the CT ECO geoSAP viewer and may be downloaded for GIS analysis.
 
-| Dataset | Link |
-|--------------------------|----------------------------------------------|
-| High Resolution Marsh Mapping | <https://maps.cteco.uconn.edu/projects/highres_marsh/> |
+**Dataset:** [High Resolution Marsh Mapping (CT ECO)](https://maps.cteco.uconn.edu/projects/highres_marsh/)
 
 ::: {.callout-note appearance="simple"}
-Municipalities located within Connecticut's coastal area should incorporate tidal wetland data into their developable land inventory to account for these regulated environmental resources.
+Municipalities located within Connecticut's coastal areas should incorporate tidal wetland data into their developable land inventory to account for these regulated environmental resources.
 :::
 
 <br/>
 
-#### Connecticut Hydrography Set
+#### Connecticut Hydrography Set {#sec-connecticut-hydrography-set}
 
 The CT National Hydrography Dataset (NHD) is published by CT DEEP as the Connecticut Hydrography Set, including both polygon and line features.
 
-| Dataset | Link |
-|--------------------------|----------------------------------------------|
-| High Resolution Marsh Mapping | <https://maps.cteco.uconn.edu/projects/highres_marsh/> |
+**Dataset:** [Connecticut Hydrography Set (CT Geodata Portal)](https://geodata.ct.gov/maps/ef85cf0c55394065a8a74ea97fbd7ede/about)
 
 At this time, the NHD remains the best available statewide geospatial dataset for identifying surface water features across Connecticut. As of October 1, 2023, the NHD was retired. NHD data will continue to be available but no longer maintained or updated. The most current hydrography data for Connecticut will eventually be provided through the USGS 3D Hydrography Program (3DHP), which is currently in development and will offer a higher‑resolution surface water dataset. Once the 3DHP for Connecticut is completed and released, it will replace the NHD as the recommended dataset in this guidance.
 
@@ -567,7 +487,7 @@ Although the NHD provides information locations of marshes, Connecticut inland w
 
 <br/>
 
-#### Local data
+#### Local data {#sec-local-data3}
 
 Datasets may be available from your municipality’s inland wetlands agency. If available, local mapping can provide greater detail and more current information than statewide datasets.
 
@@ -579,21 +499,19 @@ Areas with unsuitable topography may not be reasonably available for development
 
 ### Recommended Datasets
 
-- Connecticut Steep Slope Areas
-- All Soils Dataset
-- Bedrock Geology Set
+- [Connecticut Steep Slope Areas](#sec-connecticut-steep-slope-areas)
+- [All Soils Dataset](#sec-all-soils)
+- [Bedrock Geology Set](#sec-bedrock-geology-set)
 
 <br/>
 
 ### Technical Guidance
 
-#### Connecticut Steep Slope Areas
+#### Connecticut Steep Slope Areas {#sec-connecticut-steep-slope-areas}
 
 This dataset was derived from the 2023 Digital Elevation Model (DEM) generated from the 2023 spring imagery and lidar capture. The steep slopes layer was developed from 10-foot and 2-foot per pixel DEM data and identifies areas classified as Moderate (10%–15%), Steep (15%–20%), and Very Steep (20%+) slopes. The feature layer is provided as polygons and includes fields identifying the municipality and COG. Detailed methodology for the development of this dataset is available on the CT Geodata Portal data page.
 
-| Dataset | Link |
-|--------------------------|----------------------------------------------|
-| Connecticut Steep Slope Areas | <https://geodata.ct.gov/maps/64e698b122464435a56172f576f3d2a6/about> |
+**Dataset:** [Connecticut Steep Slope Areas (CT Geodata Portal)](https://geodata.ct.gov/maps/64e698b122464435a56172f576f3d2a6/about)
 
 We recommend using the 2-foot contour layer, as it provides the highest level of detail available. To use this layer, query the dataset for the area of interest (municipality or COG) and select the slope category or categories appropriate for the analysis. If alternative slope thresholds are desired, the DEM data and published methodology may be used to develop additional slope classifications.
 
@@ -601,25 +519,21 @@ The statute specifies "areas of 0.5 acres or more of contiguous land." Because c
 
 <br/>
 
-#### All Soils dataset
+#### All Soils Dataset {#sec-all-soils}
 
 This dataset is a SSURGO-based soil dataset published by CT DEEP for Connecticut. It represents a digital soil survey and provides detailed soil geographic information developed through the National Cooperative Soil Survey program. It is generally the most detailed level of soil data available for statewide analysis. Additional information and metadata are available on the CT Geodata Portal data page.
 
-| Dataset | Link |
-|--------------------------|----------------------------------------------|
-| Soils All Soils | <https://geodata.ct.gov/datasets/CTDEEP::soils-all-soils/about> |
+**Dataset:** [Soils All Soils (CT Geodata Portal)](https://geodata.ct.gov/datasets/CTDEEP::soils-all-soils/about)
 
 To use this layer, refer to the soil attributes relevant to erosion hazard or related soil characteristics and query the dataset for the area of interest.
 
 <br/>
 
-#### Bedrock Geology Set
+#### Bedrock Geology Set {#sec-bedrock-geology-set}
 
 This dataset is a polygon and line feature-based layer describing the solid material that underlies soil or other unconsolidated material across Connecticut. It represents mapped bedrock geology and is intended for use in understanding underlying geologic conditions at a statewide scale. Additional information is available on the CT Geodata Portal data page.
 
-| Dataset | Link |
-|--------------------------|----------------------------------------------|
-| Bedrock Geology Set | <https://geodata.ct.gov/maps/a765e96b0c05413da1dcbea0ae86707d/about> |
+**Dataset:** [Bedrock Geology Set (CT Geodata Portal)](https://geodata.ct.gov/maps/a765e96b0c05413da1dcbea0ae86707d/about)
 
 To use this layer, query the dataset for the area of interest and review the mapped bedrock units in relation to shallow bedrock or other considerations.
 

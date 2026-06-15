@@ -16,6 +16,9 @@ book:
     - index.qmd
     - outputs.qmd
     - stat_def.qmd
+    - vac_redev.qmd
+    - map.qmd
+    - end.qmd
   page-footer: "CT GIS Office, July 2026 V1.0"
 
 #bibliography: references.bib
@@ -23,8 +26,9 @@ book:
 format:
   html:
     theme:
-      - cosmo
       - brand
+      - simplex
+    linkcolor: "#1F64E5"
   pdf:
     documentclass: scrreprt
 

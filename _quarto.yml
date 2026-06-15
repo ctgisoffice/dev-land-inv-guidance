@@ -20,6 +20,8 @@ book:
     - map.qmd
     - end.qmd
   page-footer: "CT GIS Office, July 2026 V1.0"
+  favicon: CT-GIS-Office-favicon.png
+  downloads: [pdf]
 
 #bibliography: references.bib
 
@@ -27,10 +29,12 @@ format:
   html:
     theme:
       - brand
-      - simplex
+      - cosmo
     linkcolor: "#1F64E5"
   pdf:
     documentclass: scrreprt
+    mainfont: Arimo
+    sansfont: Poppins
 
 editor: visual
 

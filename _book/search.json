@@ -70,36 +70,6 @@
     ]
   },
   {
-    "objectID": "map.html",
-    "href": "map.html",
-    "title": "4  Creating the Map",
-    "section": "",
-    "text": "4.1 Map Layers and Symbology\nThe Developable Land Inventory should be presented as a single municipality-wide map. The map should clearly distinguish between different land categories using simple, accessible symbology.\nThe final map should include the following layers.\nThe colors selected for vacant and potentially developable land should provide sufficient visual contrast and remain distinguishable for users with color vision deficiencies. This is a recommended cartographic best practice that improves map readability and accessibility.",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Creating the Map</span>"
-    ]
-  },
-  {
-    "objectID": "map.html#map-layers-and-symbology",
-    "href": "map.html#map-layers-and-symbology",
-    "title": "4  Creating the Map",
-    "section": "",
-    "text": "Layer\nDescription\nRecommended Symbology\n\n\n\n\nStatutory Exclusions\nAreas not considered developable under Section 4(5) of PA 25-1. All statutory exclusion datasets should be merged into a single layer.\nGray ([hex code])\n\n\nVacant Areas\nAreas identified as vacant in Section X.\n[hex code]\n\n\nPotentially Developable Land\nAreas identified as potentially developable in Section X.\n[hex code]\n\n\nBasemap\nA simple reference basemap used to provide geographic context, should not compete visually with the inventory layers.\nLight, muted colors; avoid high-contrast imagery or dark backgrounds.",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Creating the Map</span>"
-    ]
-  },
-  {
-    "objectID": "map.html#required-map-elements",
-    "href": "map.html#required-map-elements",
-    "title": "4  Creating the Map",
-    "section": "4.2 Required Map Elements",
-    "text": "4.2 Required Map Elements\nAll Developable Land Inventory maps should include:\n\nMunicipality-wide extent\nClear map title\nScale bar or representative fraction\nNorth arrow\nLegend identifying all mapped categories\nData sources and preparation date (recommended)",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Creating the Map</span>"
-    ]
-  },
-  {
     "objectID": "vac_redev.html",
     "href": "vac_redev.html",
     "title": "3  Identifying Vacant and Potential Land for Redevelopment",
@@ -130,6 +100,36 @@
     ]
   },
   {
+    "objectID": "map.html",
+    "href": "map.html",
+    "title": "4  Creating the Map",
+    "section": "",
+    "text": "4.1 Map Layers and Symbology\nThe Developable Land Inventory should be presented as a single municipality-wide map. The map should clearly distinguish between different land categories using simple, accessible symbology.\nThe final map should include the following layers.\nThe colors selected for vacant and potentially developable land should provide sufficient visual contrast and remain distinguishable for users with color vision deficiencies. This is a recommended cartographic best practice that improves map readability and accessibility.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Creating the Map</span>"
+    ]
+  },
+  {
+    "objectID": "map.html#map-layers-and-symbology",
+    "href": "map.html#map-layers-and-symbology",
+    "title": "4  Creating the Map",
+    "section": "",
+    "text": "Layer\nDescription\nRecommended Symbology\n\n\n\n\nStatutory Exclusions\nAreas not considered developable under Section 4(5) of PA 25-1. All statutory exclusion datasets should be merged into a single layer.\nGray ([hex code])\n\n\nVacant Areas\nAreas identified as vacant in Section X.\n[hex code]\n\n\nPotentially Developable Land\nAreas identified as potentially developable in Section X.\n[hex code]\n\n\nBasemap\nA simple reference basemap used to provide geographic context, should not compete visually with the inventory layers.\nLight, muted colors; avoid high-contrast imagery or dark backgrounds.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Creating the Map</span>"
+    ]
+  },
+  {
+    "objectID": "map.html#required-map-elements",
+    "href": "map.html#required-map-elements",
+    "title": "4  Creating the Map",
+    "section": "4.2 Required Map Elements",
+    "text": "4.2 Required Map Elements\nAll Developable Land Inventory maps should include:\n\nMunicipality-wide extent\nClear map title\nScale bar or representative fraction\nNorth arrow\nLegend identifying all mapped categories\nData sources and preparation date (recommended)",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Creating the Map</span>"
+    ]
+  },
+  {
     "objectID": "end.html",
     "href": "end.html",
     "title": "5  Next Steps",
@@ -137,46 +137,6 @@
     "text": "The Developable Land Inventory feeds into subsequent phases of the Housing Growth Plan, including a suitability analysis, parcel and zoning district identification, and opportunities assessment for new development. Parcel-level detail, including deed restriction research and site-specific constraint verification, is addressed in those later phases.",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Next Steps</span>"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Developable Land Inventory",
-    "section": "",
-    "text": "Introduction",
-    "crumbs": [
-      "Introduction"
-    ]
-  },
-  {
-    "objectID": "index.html#purpose",
-    "href": "index.html#purpose",
-    "title": "Developable Land Inventory",
-    "section": "Purpose",
-    "text": "Purpose\nThis documentation provides technical guidance for preparing the municipal developable land inventory required for inclusion in Housing Growth Plans under Connecticut Public Act No. 25-1 of the November 2025 Special Session (PA 25-1). The inventory identifies developable land within a municipality for purposes of the Housing Growth Plan process, consistent with the definitions in Section 4(5) of PA 25-1. This guidance is intended as an analytical tool to support this exercise.\n\n\n\n\n\n\nNoteA note about developable land\n\n\n\nIdentifying land as developable does not obligate anyone to pursue development on that land, nor does identifying land as nondevelopable limit future development opportunities outside the context of the Housing Growth Plan process. The developable land inventory is not a permanent designation of a property’s development potential. Rather, it is a necessary step in preparing a Housing Growth Plan under PA 25-1.",
-    "crumbs": [
-      "Introduction"
-    ]
-  },
-  {
-    "objectID": "index.html#audience",
-    "href": "index.html#audience",
-    "title": "Developable Land Inventory",
-    "section": "Audience",
-    "text": "Audience\nThis document is intended for municipal staff, councils of government or regional planning agencies, and consultants responsible for compiling, reviewing, or applying data for developable land inventories as part of the Housing Growth Plan process.",
-    "crumbs": [
-      "Introduction"
-    ]
-  },
-  {
-    "objectID": "index.html#overview",
-    "href": "index.html#overview",
-    "title": "Developable Land Inventory",
-    "section": "Overview",
-    "text": "Overview\nThis document explains the expected inputs and required outputs of the developable land inventory and provides technical guidance on recommended data resources and methodologies. It is designed to support a consistent, transparent, and replicable approach across municipalities. For additional context on the broader Housing Growth Plan framework and how the developable land inventory fits within that process, municipalities should refer to the Housing Growth Plan Guidance[link].\nThe sections that follow describe each statutory exclusion from developable land and the associated recommended datasets and methodologies, outline analysis methods for identifying vacant and potentially redevelopable land, and provide mapping guidance for assembling the final developable land inventory.",
-    "crumbs": [
-      "Introduction"
     ]
   }
 ]

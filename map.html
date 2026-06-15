@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Developable Land Inventory</title>
+<title>4&nbsp; Creating the Map – Developable Land Inventory</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -33,7 +33,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./outputs.html" rel="next">
+<link href="./end.html" rel="next">
+<link href="./vac_redev.html" rel="prev">
 <link href="./CT-GIS-Office-favicon.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -89,7 +90,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Introduction</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./map.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Creating the Map</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -119,7 +120,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction</span></a>
   </div>
 </li>
@@ -143,7 +144,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./map.html" class="sidebar-item-text sidebar-link">
+  <a href="./map.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Creating the Map</span></span></a>
   </div>
 </li>
@@ -163,12 +164,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a>
-  <ul>
-  <li><a href="#purpose" id="toc-purpose" class="nav-link" data-scroll-target="#purpose">Purpose</a></li>
-  <li><a href="#audience" id="toc-audience" class="nav-link" data-scroll-target="#audience">Audience</a></li>
-  <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview">Overview</a></li>
-  </ul></li>
+  <li><a href="#map-layers-and-symbology" id="toc-map-layers-and-symbology" class="nav-link active" data-scroll-target="#map-layers-and-symbology"><span class="header-section-number">4.1</span> Map Layers and Symbology</a></li>
+  <li><a href="#required-map-elements" id="toc-required-map-elements" class="nav-link" data-scroll-target="#required-map-elements"><span class="header-section-number">4.2</span> Required Map Elements</a></li>
   </ul>
 </nav>
     </div>
@@ -177,8 +174,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Developable Land Inventory</h1>
-<p class="subtitle lead">Technical Guidance</p>
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Creating the Map</span></h1>
 </div>
 
 
@@ -195,38 +191,61 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="introduction" class="level1 unnumbered">
-<h1 class="unnumbered">Introduction</h1>
-<section id="purpose" class="level2">
-<h2 class="anchored" data-anchor-id="purpose">Purpose</h2>
-<p>This documentation provides technical guidance for preparing the municipal developable land inventory required for inclusion in Housing Growth Plans under <a href="https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&amp;which_year=2025&amp;bill_num=8002">Connecticut Public Act No.&nbsp;25-1 of the November 2025 Special Session</a> (PA 25-1). The inventory identifies developable land within a municipality for purposes of the Housing Growth Plan process, consistent with the definitions in Section 4(5) of PA 25-1. This guidance is intended as an analytical tool to support this exercise.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>A note about developable land
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Identifying land as developable does not obligate anyone to pursue development on that land, nor does identifying land as nondevelopable limit future development opportunities outside the context of the Housing Growth Plan process. The developable land inventory is not a permanent designation of a property’s development potential. Rather, it is a necessary step in preparing a Housing Growth Plan under PA 25-1.</p>
-</div>
-</div>
-<p><br></p>
+<p>The Developable Land Inventory should be presented as a single municipality-wide map. The map should clearly distinguish between different land categories using simple, accessible symbology.</p>
+<section id="map-layers-and-symbology" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="map-layers-and-symbology"><span class="header-section-number">4.1</span> Map Layers and Symbology</h2>
+<p>The final map should include the following layers.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 26%">
+<col style="width: 36%">
+<col style="width: 36%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Layer</th>
+<th>Description</th>
+<th>Recommended Symbology</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Statutory Exclusions</strong></td>
+<td>Areas not considered developable under Section 4(5) of PA 25-1. All statutory exclusion datasets should be merged into a single layer.</td>
+<td>Gray (<code>[hex code]</code>)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Vacant Areas</strong></td>
+<td>Areas identified as vacant in Section X.</td>
+<td><code>[hex code]</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Potentially Developable Land</strong></td>
+<td>Areas identified as potentially developable in Section X.</td>
+<td><code>[hex code]</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Basemap</strong></td>
+<td>A simple reference basemap used to provide geographic context, should not compete visually with the inventory layers.</td>
+<td>Light, muted colors; avoid high-contrast imagery or dark backgrounds.</td>
+</tr>
+</tbody>
+</table>
+<p>The colors selected for vacant and potentially developable land should provide sufficient visual contrast and remain distinguishable for users with color vision deficiencies. This is a recommended cartographic best practice that improves map readability and accessibility.</p>
 </section>
-<section id="audience" class="level2">
-<h2 class="anchored" data-anchor-id="audience">Audience</h2>
-<p>This document is intended for municipal staff, councils of government or regional planning agencies, and consultants responsible for compiling, reviewing, or applying data for developable land inventories as part of the Housing Growth Plan process.</p>
-<p><br></p>
-</section>
-<section id="overview" class="level2">
-<h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>This document explains the expected inputs and required outputs of the developable land inventory and provides technical guidance on recommended data resources and methodologies. It is designed to support a consistent, transparent, and replicable approach across municipalities. For additional context on the broader Housing Growth Plan framework and how the developable land inventory fits within that process, municipalities should refer to the Housing Growth Plan Guidance[link].</p>
-<p>The sections that follow describe each statutory exclusion from developable land and the associated recommended datasets and methodologies, outline analysis methods for identifying vacant and potentially redevelopable land, and provide mapping guidance for assembling the final developable land inventory.</p>
+<section id="required-map-elements" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="required-map-elements"><span class="header-section-number">4.2</span> Required Map Elements</h2>
+<p>All Developable Land Inventory maps should include:</p>
+<ul>
+<li>Municipality-wide extent</li>
+<li>Clear map title</li>
+<li>Scale bar or representative fraction</li>
+<li>North arrow</li>
+<li>Legend identifying all mapped categories</li>
+<li>Data sources and preparation date (recommended)</li>
+</ul>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -632,10 +651,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./vac_redev.html" class="pagination-link" aria-label="Identifying Vacant and Potential Land for Redevelopment">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Identifying Vacant and Potential Land for Redevelopment</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./outputs.html" class="pagination-link" aria-label="Required Outputs">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Required Outputs</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./end.html" class="pagination-link" aria-label="Next Steps">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Next Steps</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

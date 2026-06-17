@@ -1,25 +1,3 @@
-# Introduction {.unnumbered}
+# Preface {.unnumbered}
 
-## Purpose
-
-This documentation provides technical guidance for preparing the municipal developable land inventory required for inclusion in Housing Growth Plans under [Connecticut Public Act No. 25-1 of the November 2025 Special Session](https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&which_year=2025&bill_num=8002) (PA 25-1). The inventory identifies developable land within a municipality for purposes of the Housing Growth Plan process, consistent with the definitions in Section 4(5) of PA 25-1. This guidance is intended as an analytical tool to support this exercise.
-
-::: callout-note
-## A note about developable land
-
-Identifying land as developable does not obligate anyone to pursue development on that land, nor does identifying land as nondevelopable limit future development opportunities outside the context of the Housing Growth Plan process. The developable land inventory is not a permanent designation of a property's development potential. Rather, it is a necessary step in preparing a Housing Growth Plan under PA 25-1.
-:::
-
-<br/>
-
-## Audience
-
-This document is intended for municipal staff, councils of government or regional planning agencies, and consultants responsible for compiling, reviewing, or applying data for developable land inventories as part of the Housing Growth Plan process.
-
-<br/>
-
-## Overview
-
-This document explains the expected inputs and required outputs of the developable land inventory and provides technical guidance on recommended data resources and methodologies. It is designed to support a consistent, transparent, and replicable approach across municipalities. For additional context on the broader Housing Growth Plan framework and how the developable land inventory fits within that process, municipalities should refer to the Housing Growth Plan Guidance\[link\].
-
-The sections that follow describe each statutory exclusion from developable land and the associated recommended datasets and methodologies, outline analysis methods for identifying vacant and potentially redevelopable land, and provide mapping guidance for assembling the final developable land inventory.
+\[Executive summary\]

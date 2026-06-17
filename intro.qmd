@@ -1,9 +1,32 @@
 # Introduction
 
-This is a book created from markdown and executable code.
+## Purpose
 
-See @knuth84 for additional discussion of literate programming.
+This documentation provides technical guidance for preparing the municipal developable land inventory required for inclusion in the Housing Growth Plans under [Connecticut Public Act No. 25-1 of the November 2025 Special Session](https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&which_year=2025&bill_num=8002) (PA 25-1). The inventory identifies land that meets the statutory definition of developable land in Section 4(5) of PA 25-1 and serves as a foundational input to the Housing Growth Plan process. This guidance is intended to support a consistent and transparent analytical approach across municipalities.
 
-```{r}
-1 + 1
-```
+::: {.callout-note appearance="simple"}
+## A note about developable land
+
+Identifying land as developable does not obligate anyone to pursue development on that land, nor does exclusion from the inventory limit future development opportunities outside the context of the Housing Growth Plan process. The developable land inventory is not a permanent designation of a property's development potential. Rather, it is a necessary step in preparing a Housing Growth Plan under
+:::
+
+<br/>
+
+## Audience
+
+This document is intended for municipal staff, councils of government or regional planning agencies, and consultants responsible for compiling, reviewing, or applying data for developable land inventories as part of the Housing Growth Plan process.
+
+<br/>
+
+## Overview
+
+This document describes the required outputs of the developable land inventory and provides technical guidance on recommended data sources, analytical methods, and mapping procedures. The guidance is designed to support a consistent, transparent, and repeatable approach across municipalities while allowing for the use of local data and professional judgment where appropriate.
+
+For additional information on Housing Growth Plans and the role of the developable land inventory within that framework, municipalities should refer to the Housing Growth Plan Guidance \[link\].
+
+The sections that follow describe each statutory exclusion from developable land and the recommended methods for identifying and documenting those exclusions. The document also outlines approaches for identifying vacant and potentially redevelopable land and provides guidance for assembling the final inventory and associated mapping products.\
+<br/>
+
+## Use of this Guidance
+
+This document provides recommended methodologies for preparing a developable land inventory under PA 25-1. Municipalities may use alternative data sources or analytical approaches where appropriate, provided that the resulting inventory is consistent with the requirements of PA 25-1 and is adequately documented.

@@ -16,7 +16,7 @@ E.  Contiguous land areas of 0.5 acres or more that are unsuitable for developme
 
 In addition to incorporating these statutory constraints, the final inventory may also document vacant land and land with potential for redevelopment. These areas provide important context for analyses done in the later phases of the development of the Housing Growth Plans, which will assess capacity for future housing growth (see \[link\] for more information). Guidance for identifying and analyzing vacant and potentially redevelopable land is provided in Section X.
 
-This section outlines each statutory constraint category, identifies recommended datasets for analysis, and provides technical guidance for preparing those datasets for inclusion in the final developable land inventory. The intent is to support consistent data preparation across municipalities and ensure that the resulting outputs meet the standards described in Section X\[mapping standards section\].
+This section outlines each statutory constraint category, identifies recommended datasets for analysis, and provides technical guidance for preparing those datasets for inclusion in the final developable land inventory. The intent is to support consistent data preparation across municipalities and ensure that the resulting outputs meet the standards described in Section 5 \[link\].
 
 <br/>
 
@@ -28,7 +28,7 @@ For each statutory constraint category, the workflow will generally proceed as f
 2.  Filter datasets to the regional study area (i.e. municipality or planning region) and, where necessary, apply attribute queries or other selection criteria to isolate relevant features.
 3.  Review and verify selected areas for accuracy using available reference materials, including aerial imagery, local knowledge, municipal mapping resources, and other supporting datasets.
 
-Finally, the land areas for each category will be compiled and symbolized in accordance with the mapping standards described in section X\[mapping standards section\]. The final map layouts will include the land area identified in this section. Inventories are recommended to include vacant land from section X and land for potential redevelopment from section X, since these components will be used in subsequent phases of the Housing Growth Plan analyses.
+Finally, the land areas for each category will be compiled and symbolized in accordance with the mapping standards described in Section 5 \[link\]. The final maps layouts will include the land area identified in this section. Inventories are recommended to include vacant land from Section 4.1 \[link\] and land for potential redevelopment from Section 4.2 \[link\], since these components will be used in subsequent phases of the Housing Growth Plan analyses.
 
 <br/>
 
@@ -73,14 +73,10 @@ Utility parcel data, local zoning or public facilities layers, and local institu
 
 We recommend starting with the parcel dataset. The CT GIS Office aggregates municipal parcel data annually. While locally published datasets may also be available, the statewide aggregation is publicly accessible through the CT Geodata Portal. This data is not edited or transformed by the CT GIS Office; questions about data quality or completeness should be directed to the local town assessor. For more information on CT parcel data aggregation, see [the CT Geodata Portal page on parcels](https://geodata.ct.gov/pages/parcels).
 
-<br/>
-
 **Links to datasets:**
 
 - [Connecticut CAMA and Parcel Layer (CT Geodata Portal)](https://geodata.ct.gov/datasets/ctmaps::connecticut-cama-and-parcel-layer/about)
 - [2025 Connecticut Parcel and CAMA Data (CT Open Data Portal)](https://data.ct.gov/Local-Government/2025-Connecticut-Parcel-and-CAMA-Data/rny9-6ak2/about_data)
-
-<br/>
 
 We have completed a statewide queried feature layer as a hosted feature layer view on ArcGIS Online using the owner name and state use queries below. This can be used as a starting point for local analysis, or a new query analysis can be started on a full CAMA and parcel dataset.
 
@@ -103,6 +99,7 @@ Search the owner’s name field (“Owner_Name”) for terms including:
 - “State of Connecticut” or “State of”
 - “U.S. Dept”
 - “U.S. Dept” or “US Dept”, “U S Government”, “US Government”, “U.S. Government”
+- "United States of America"
 - “Board of Ed”
 - “Housing Authority” or “Housing Auth”
 - “School District” or “School Dist”
@@ -134,7 +131,7 @@ Search use ("Use") or use description ("Use_Desc") fields for publicly oriented 
 - “Fed” for federal lands (1 false positive)
 - “Education” or “Educ”
 - “Library” or “Libr”
-- Museum
+- "Museum"
 - “Cemetery” or “Cemet”
 - “Fire station” or “Fire”
 - “Police” or “Pol”
@@ -249,7 +246,7 @@ There is no single comprehensive dataset of open space, parks, and recreation ar
 2.  [Land trust inventories](#sec-land-trust-inventories)
 3.  [Parcel and CAMA data](#sec-parcel-and-cama-data2)
 4.  [CT DEEP Property](#sec-ct-deep-property)
-5.  \[CT DEEP Protected Open Space (2011)\](#sec-ct-deep-protected-open-space-(2011)
+5.  [CT DEEP Protected Open Space (2011)](#sec-ct-deep-protected-open-space-2011)
 6.  [CT DEEP Federal Open Space](#sec-ct-deep-federal-open-space)
 7.  [CT DEEP 1997 Municipal and Private Open Space Property](#sec-ct-deep-1997-municipal-and-private-open-space-property)
 8.  [CT Department of Agriculture Conservation Easements](#sec-ct-department-of-agriculture-conservation-easements)
@@ -351,7 +348,7 @@ This dataset is regularly maintained by CT DEEP and should be used to ensure tha
 
 <br/>
 
-#### CT DEEP Protected Open Space (2011) {#sec-ct-deep-protected-open-space-(2011}
+#### CT DEEP Protected Open Space (2011) {#sec-ct-deep-protected-open-space-2011}
 
 This was created as part of the CT DEEP Protected Open Space Mapping (POSM) Project in 2011. Not all CT towns are included in this inventory. See more detailed information about the contents of the dataset in the data description on the portal page.
 

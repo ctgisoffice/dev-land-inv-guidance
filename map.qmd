@@ -1,23 +1,79 @@
-# Creating the Map
+# Creating the Maps
 
-The Developable Land Inventory should be presented as a single municipality-wide map. The map should clearly distinguish between different land categories using simple, accessible symbology.
+The developable land inventory identifies land that meets the statutory definition of developable land under PA 25-1. This inventory serves as a foundational input to subsequent phases of the Housing Growth Plan process, including the suitability analysis \[link\] and the parcel and zone identification. These later steps incorporate additional planning considerations, local context, and policy objectives to evaluate where housing growth and affordable housing opportunities may be most appropriate.
+
+To support Housing Growth Plan reporting and review, the developable land inventory should be presented in the report as municipality-wide maps. The maps should clearly display the location and distribution of developable land using clear, accessible, and consistent symbology.
+
+The maps should incorporate the following data:
+
+- Land identified as excluded from developable land (Section 3 \[link\])
+- Identified vacant parcels (Section 4.1 \[link\])
+- Identified parcels with redevelopment potential (Section 4.2 \[link\])
+
+The final maps included in the Housing Growth Plan will be:
+
+1.  **Statutory Exclusions Map**: A municipality-wide map displaying each statutory exclusion category as a separate layer and symbolized distinctly to illustrate the distribution of land excluded from the developable land inventory.
+2.  **Developable vs. Non-Developable Land Map**: A municipality-wide map depicting all statutory exclusion categories combined into a single consolidated layer symbolized as non-developable land. All remaining land not subject to statutory exclusions is displayed as developable land, providing a simplified binary representation of land suitability across the municipality.
+3.  **Developable Land Summary Map**: A municipality-wide map displaying all statutory exclusion categories combined into a single exclusion layer, alongside a developable land layer representing all land remaining after the exclusion analysis. Identified vacant parcels and parcels with redevelopment potential should be displayed as separate overlays.
 
 ## Map Layers and Symbology
 
-The final map should include the following layers.
+All maps include the municipal boundary layer to delineate the geographic extent of the study area.
 
-| Layer | Description | Recommended Symbology |
-|:------------------|---------------------------|---------------------------|
-| **Statutory Exclusions** | Areas not considered developable under Section 4(5) of PA 25-1. All statutory exclusion datasets should be merged into a single layer. | Gray (`[hex code]`) |
-| **Vacant Areas** | Areas identified as vacant in Section X. | `[hex code]` |
-| **Potentially Developable Land** | Areas identified as potentially developable in Section X. | `[hex code]` |
-| **Basemap** | A simple reference basemap used to provide geographic context, should not compete visually with the inventory layers. | Light, muted colors; avoid high-contrast imagery or dark backgrounds. |
+**Dataset**: [CT Municipalities (CT Geodata Portal)](https://geodata.ct.gov/datasets/ctmaps::ct-municipalities-with-fips/about)
 
-The colors selected for vacant and potentially developable land should provide sufficient visual contrast and remain distinguishable for users with color vision deficiencies. This is a recommended cartographic best practice that improves map readability and accessibility.
+<br/>
+
+Municipal parcel boundaries are included where appropriate to provide spatial context for interpretation of mapped datasets.
+
+**Dataset**: [Connecticut CAMA and Parcel Layer (CT Geodata Portal)](https://geodata.ct.gov/datasets/ctmaps::connecticut-cama-and-parcel-layer/about)
+
+<br/>
+
+1.  **Statutory Exclusions Map**
+
+| Map Layer (top to bottom) | Description | Recommended Symbology |
+|:-----------------------|------------------------|------------------------|
+| Municipality boundary | Municipal boundary delineating the extent of the study area. |  |
+| Parcels | Municipal parcel boundaries. | No fill; thin light-gray outlines. |
+| Land already committed to public use or purpose | Exclusion category described in Section 3.1. |  |
+| Open space, parks, and recreation areas dedicated to the public or protected by a conservation easement | Exclusion category described in Section 3.2. |  |
+| Land subject to enforceable restrictions or prohibitions on development | Exclusion category described in Section 3.3. |  |
+| Wetlands or watercourses, as defined in the Wetlands and Watercourses Act (CGS Chapter 440) | Exclusion category described in Section 3.4. |  |
+| Areas of 0.5 acres or more of contiguous land that are unsuitable for development due to topography (such as steep slopes) | Exclusion category described in Section 3.5. |  |
+
+<br/>
+
+2.  **Developable vs. Non-Developable Land Map**
+
+| Map Layer (top to bottom) | Description | Recommended Symbology |
+|:-----------------------|------------------------|------------------------|
+| Municipality boundary | Municipal boundary delineating the extent of the study area. |  |
+| Statutory Exclusions | Areas excluded from the developable land inventory in Section 2. All statutory exclusion categories should be combined into a single layer. | Dark gray (`[hex code]`) |
+| Developable Land | Land not identified as excluded under the statutory criteria. This layer represents all land remaining after the exclusion analysis. | Light gray |
+
+Map symbology should use colors and patterns that improve overall readability, provide clear visual distinction between categories, and remain accessible to users with color vision deficiencies.
+
+<br/>
+
+3.  **Developable Land Summary Map**
+
+| Map Layer (top to bottom) | Description | Recommended Symbology |
+|:-----------------------|------------------------|------------------------|
+| Municipality boundary | Municipal boundary delineating the extent of the study area. |  |
+| ?Parcels | Municipal parcel boundaries. | No fill; thin light-gray outlines. |
+| Vacant Areas | Areas identified as vacant in Section 4.1. |  |
+| Areas with Redevelopment Potential | Areas identified as having redevelopment potential in Section 4.2. |  |
+| Statutory Exclusions | Areas excluded from the developable land inventory in Section 2. All statutory exclusion categories should be combined into a single layer. | Gray (`[hex code]`) |
+| Developable Land | Land not identified as excluded under the statutory criteria. This layer represents all land remaining after the exclusion analysis. |  |
+
+Map symbology should use colors and patterns that improve overall readability, provide clear visual distinction between categories, and remain accessible to users with color vision deficiencies.
+
+<br/>
 
 ## Required Map Elements
 
-All Developable Land Inventory maps should include:
+All maps should include:
 
 - Municipality-wide extent
 - Clear map title

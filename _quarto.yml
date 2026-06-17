@@ -11,9 +11,11 @@ toc-depth: 5
 
 book:
   title: "Developable Land Inventory"
+  author: "CT Office of Policy and Management, GIS Office"
   subtitle: "Technical Guidance"
   chapters:
     - index.qmd
+    - intro.qmd
     - outputs.qmd
     - stat_def.qmd
     - vac_redev.qmd
@@ -22,6 +24,8 @@ book:
   page-footer: "CT GIS Office, July 2026 V1.0"
   favicon: CT-GIS-Office-favicon.png
   downloads: [pdf]
+  sidebar:
+    logo: 'OPM_Horizontal_RGB.png'
 
 #bibliography: references.bib
 
@@ -31,10 +35,22 @@ format:
       - brand
       - cosmo
     linkcolor: "#1F64E5"
+    include-in-header:
+      text: |
+        <script>
+          document.addEventListener("DOMContentLoaded", function() {
+            var sidebar = document.getElementById('quarto-sidebar');
+            var logo = sidebar.getElementsByTagName('img')[0];
+            
+            sidebar.appendChild(logo);
+          });
+        </script>
   pdf:
     documentclass: scrreprt
     mainfont: Arimo
     sansfont: Poppins
+    pdf-standard: ua-2
 
+    
 editor: visual
 

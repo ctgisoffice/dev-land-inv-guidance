@@ -6,9 +6,9 @@ To support Housing Growth Plan reporting and review, the developable land invent
 
 The maps should incorporate the following data:
 
-- Land identified as excluded from developable land (Section 3 \[link\])
-- Identified vacant parcels (Section 4.1 \[link\])
-- Identified parcels with redevelopment potential (Section 4.2 \[link\])
+- Land identified as excluded from developable land ([Section 3](stat_def.qmd))
+- Identified vacant parcels ([Section 4](vac_redev.qmd))
+- Identified parcels with redevelopment potential ([Section 4](vac_redev.qmd))
 
 The final maps included in the Housing Growth Plan will be:
 
@@ -67,7 +67,9 @@ Map symbology should use colors and patterns that improve overall readability, p
 | Statutory Exclusions | Areas excluded from the developable land inventory in Section 2. All statutory exclusion categories should be combined into a single layer. | Gray (`[hex code]`) |
 | Developable Land | Land not identified as excluded under the statutory criteria. This layer represents all land remaining after the exclusion analysis. |  |
 
+::: {.callout-caution appearance="simple" icon="false"}
 Map symbology should use colors and patterns that improve overall readability, provide clear visual distinction between categories, and remain accessible to users with color vision deficiencies.
+:::
 
 <br/>
 

@@ -6,9 +6,6 @@ number-depth: 2
 toc: true
 toc-depth: 5
 
-#title-block-banner: '#C6D4FB'
-#title-block-banner-color: '#333333'
-
 book:
   title: "Developable Land Inventory"
   author: "CT Office of Policy and Management, GIS Office"
@@ -25,9 +22,7 @@ book:
   favicon: CT-GIS-Office-favicon.png
   downloads: [pdf]
   sidebar:
-    logo: 'OPM_Horizontal_RGB.png'
-
-#bibliography: references.bib
+    logo: 'opm_giso_logo.png'
 
 format:
   html:
@@ -49,7 +44,7 @@ format:
     documentclass: scrreprt
     mainfont: Arimo
     sansfont: Poppins
-    pdf-standard: ua-2
+    #pdf-standard: ua-2
 
     
 editor: visual

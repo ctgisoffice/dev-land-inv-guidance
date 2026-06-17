@@ -2,6 +2,6 @@
 
 The following outputs are required for inclusion in the Housing Growth Plan report as part of the developable land inventory:
 
-1.  Two town-wide maps visualizing the developable land, statutory exclusions, vacant parcels, and areas with redevelopment potential (see Section 4 \[link\] for more details)
+1.  Three town-wide maps visualizing the developable land, statutory exclusions, vacant parcels, and areas with redevelopment potential (see [Section 5](map.qmd) for more details on mapping standards)
 
 2.  Narrative description of the methodology used to develop the inventory of developable land. This should include how vacant and potential redevelopment areas were identified, a summary of data sources used, how datasets were queried and processed, and the methods used to classify land into statutory exclusion categories.

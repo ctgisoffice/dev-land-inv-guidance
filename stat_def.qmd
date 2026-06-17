@@ -1,4 +1,4 @@
-# Statutory Exclusions
+# Statutory Exclusions {#sec-statutory-exclusions}
 
 Section 4(5) of PA 25-1 defines what developable land is and is not in the context of this planning process:
 
@@ -14,9 +14,9 @@ C.  Land subject to enforceable restrictions or prohibitions on development
 D.  Wetlands or watercourses, as defined in the Wetlands and Watercourses Act (CGS Chapter 440)
 E.  Contiguous land areas of 0.5 acres or more that are unsuitable for development due to steep slopes or other topographic conditions
 
-In addition to incorporating these statutory constraints, the final inventory may also document vacant land and land with potential for redevelopment. These areas provide important context for analyses done in the later phases of the development of the Housing Growth Plans, which will assess capacity for future housing growth (see \[link\] for more information). Guidance for identifying and analyzing vacant and potentially redevelopable land is provided in Section X.
+In addition to incorporating these statutory constraints, the final inventory may also document vacant land and land with potential for redevelopment. These areas provide important context for analyses done in the later phases of the development of the Housing Growth Plans, which will assess capacity for future housing growth (see \[link\] for more information). Guidance for identifying and analyzing vacant and potentially redevelopable land is provided in [Section 4](vac_redev.qmd).
 
-This section outlines each statutory constraint category, identifies recommended datasets for analysis, and provides technical guidance for preparing those datasets for inclusion in the final developable land inventory. The intent is to support consistent data preparation across municipalities and ensure that the resulting outputs meet the standards described in Section 5 \[link\].
+This section outlines each statutory constraint category, identifies recommended datasets for analysis, and provides technical guidance for preparing those datasets for inclusion in the final developable land inventory. The intent is to support consistent data preparation across municipalities and ensure that the resulting outputs meet the standards described in [Section 5](map.qmd).
 
 <br/>
 
@@ -28,7 +28,7 @@ For each statutory constraint category, the workflow will generally proceed as f
 2.  Filter datasets to the regional study area (i.e. municipality or planning region) and, where necessary, apply attribute queries or other selection criteria to isolate relevant features.
 3.  Review and verify selected areas for accuracy using available reference materials, including aerial imagery, local knowledge, municipal mapping resources, and other supporting datasets.
 
-Finally, the land areas for each category will be compiled and symbolized in accordance with the mapping standards described in Section 5 \[link\]. The final maps layouts will include the land area identified in this section. Inventories are recommended to include vacant land from Section 4.1 \[link\] and land for potential redevelopment from Section 4.2 \[link\], since these components will be used in subsequent phases of the Housing Growth Plan analyses.
+Finally, the land areas for each category will be compiled and symbolized in accordance with the mapping standards described in [Section 5](map.qmd). The final maps layouts will include the land area identified in this section. Inventories are recommended to include vacant land from [Section 4.1](vac_redev.qmd) and land for potential redevelopment from [Section 4.2](vac_redev.qmd), since these components will be used in subsequent phases of the Housing Growth Plan analyses.
 
 <br/>
 

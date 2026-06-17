@@ -98,7 +98,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Preface</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Summary</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -113,8 +113,8 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="./index.html" class="sidebar-logo-link">
-      <img src="./OPM_Horizontal_RGB.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
-      <img src="./OPM_Horizontal_RGB.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
+      <img src="./opm_giso_logo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="./opm_giso_logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
       </a>
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Developable Land Inventory</a> 
@@ -133,7 +133,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Preface</span></a>
+ <span class="menu-text">Summary</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -182,7 +182,14 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface">Preface</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary">Summary</a>
+  <ul>
+  <li><a href="#core-requirements" id="toc-core-requirements" class="nav-link" data-scroll-target="#core-requirements">Core Requirements</a></li>
+  <li><a href="#statutory-exclusions" id="toc-statutory-exclusions" class="nav-link" data-scroll-target="#statutory-exclusions">Statutory Exclusions</a></li>
+  <li><a href="#vacant-and-redevelopable-land" id="toc-vacant-and-redevelopable-land" class="nav-link" data-scroll-target="#vacant-and-redevelopable-land">Vacant and Redevelopable Land</a></li>
+  <li><a href="#mapping-standards" id="toc-mapping-standards" class="nav-link" data-scroll-target="#mapping-standards">Mapping Standards</a></li>
+  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps">Next Steps</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -215,11 +222,59 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="preface" class="level1 unnumbered">
-<h1 class="unnumbered">Preface</h1>
-<p>[Executive summary]</p>
+<section id="summary" class="level1 unnumbered">
+<h1 class="unnumbered">Summary</h1>
+<p>The <em>Developable Land Inventory Technical Guidance</em>, prepared by the Connecticut Office of Policy and Management’s GIS Office, provides a standardized, transparent framework for municipalities to identify land suitable for future residential or mixed‑use development as required under <a href="https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&amp;which_year=2025&amp;bill_num=8002">Connecticut Public Act 25‑1 (2025 Special Session)</a>. The guidance outlines the datasets, analytical methods, and mapping standards needed to produce a consistent, statewide inventory of developable land.</p>
+<p>The document emphasizes that identifying land as “developable” does not obligate development, nor does exclusion from the inventory permanently restrict future development opportunities. Instead, the inventory serves as a foundational input to each municipality’s Housing Growth Plan, supporting later phases such as suitability analysis and parcel‑level evaluation. The developable land inventory is not a permanent designation of a property’s development potential.</p>
+<p><br></p>
+<section id="core-requirements" class="level2">
+<h2 class="anchored" data-anchor-id="core-requirements">Core Requirements</h2>
+<p>In the Housing Growth Plans, the following should be included:</p>
+<ul>
+<li><p>Three town‑wide maps showing statutory exclusions, developable land, vacant parcels, and potential redevelopment areas.</p></li>
+<li><p>A narrative methodology describing data sources, queries, processing steps, and classification methods used in the analysis.</p></li>
+</ul>
+<p><br></p>
+</section>
+<section id="statutory-exclusions" class="level2">
+<h2 class="anchored" data-anchor-id="statutory-exclusions">Statutory Exclusions</h2>
+<p>PA 25‑1 defines five categories of land that must be excluded from the developable land inventory:</p>
+<ol type="A">
+<li>Land already committed to public use or purpose (public or private)</li>
+<li>Open space, parks, and recreation areas dedicated to the public or protected by a conservation easement</li>
+<li>Land subject to enforceable restrictions or prohibitions on development</li>
+<li>Wetlands or watercourses, as defined in the Wetlands and Watercourses Act (CGS Chapter 440)</li>
+<li>Contiguous land areas of 0.5 acres or more that are unsuitable for development due to steep slopes or other topographic conditions</li>
+</ol>
+<p>For each category, the guidance identifies recommended datasets and provides detailed instructions for filtering, querying, and validating features.</p>
+<p><br></p>
+</section>
+<section id="vacant-and-redevelopable-land" class="level2">
+<h2 class="anchored" data-anchor-id="vacant-and-redevelopable-land">Vacant and Redevelopable Land</h2>
+<p>Beyond statutory exclusions, municipalities are encouraged to identify:</p>
+<ul>
+<li><p>Vacant parcels</p></li>
+<li><p>Potentially redevelopable parcels</p></li>
+</ul>
+<p>These categories support later phases of the Housing Growth Plan process and and help assess future housing capacity.</p>
+<p><br></p>
+</section>
+<section id="mapping-standards" class="level2">
+<h2 class="anchored" data-anchor-id="mapping-standards">Mapping Standards</h2>
+<p>The guidance specifies three required maps and recommendations for symbology:</p>
+<ol type="1">
+<li><p>Statutory Exclusions Map</p></li>
+<li><p>Developable vs.&nbsp;Non‑Developable Land Map</p></li>
+<li><p>Developable Land Summary Map, including vacant and redevelopment‑potential parcels.</p></li>
+</ol>
+<p><br></p>
+</section>
+<section id="next-steps" class="level2">
+<h2 class="anchored" data-anchor-id="next-steps">Next Steps</h2>
+<p>The developable land inventory feeds directly into the Housing Growth Plan’s suitability analysis and parcel and zone identification.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>4&nbsp; Creating the Map – Developable Land Inventory</title>
+<title>5&nbsp; Creating the Maps – Developable Land Inventory</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -77,6 +77,14 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var sidebar = document.getElementById('quarto-sidebar');
+    var logo = sidebar.getElementsByTagName('img')[0];
+    
+    sidebar.appendChild(logo);
+  });
+</script>
 
 
 </head>
@@ -90,7 +98,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./map.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Creating the Map</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./map.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Creating the Maps</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -103,7 +111,11 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="./OPM_Horizontal_RGB.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="./OPM_Horizontal_RGB.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
+      </a>
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Developable Land Inventory</a> 
         <div class="sidebar-tools-main">
@@ -121,37 +133,43 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Introduction</span></a>
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./outputs.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Required Outputs</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Required Outputs</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./stat_def.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Statutory Exclusions</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Statutory Exclusions</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./vac_redev.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Identifying Vacant and Potential Land for Redevelopment</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Identifying Vacant and Potential Land for Redevelopment</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./map.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Creating the Map</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Creating the Maps</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./end.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Next Steps</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Next Steps</span></span></a>
   </div>
 </li>
     </ul>
@@ -164,8 +182,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#map-layers-and-symbology" id="toc-map-layers-and-symbology" class="nav-link active" data-scroll-target="#map-layers-and-symbology"><span class="header-section-number">4.1</span> Map Layers and Symbology</a></li>
-  <li><a href="#required-map-elements" id="toc-required-map-elements" class="nav-link" data-scroll-target="#required-map-elements"><span class="header-section-number">4.2</span> Required Map Elements</a></li>
+  <li><a href="#map-layers-and-symbology" id="toc-map-layers-and-symbology" class="nav-link active" data-scroll-target="#map-layers-and-symbology"><span class="header-section-number">5.1</span> Map Layers and Symbology</a></li>
+  <li><a href="#required-map-elements" id="toc-required-map-elements" class="nav-link" data-scroll-target="#required-map-elements"><span class="header-section-number">5.2</span> Required Map Elements</a></li>
   </ul>
 </nav>
     </div>
@@ -174,7 +192,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Creating the Map</span></h1>
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Creating the Maps</span></h1>
 </div>
 
 
@@ -191,51 +209,174 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>The Developable Land Inventory should be presented as a single municipality-wide map. The map should clearly distinguish between different land categories using simple, accessible symbology.</p>
-<section id="map-layers-and-symbology" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="map-layers-and-symbology"><span class="header-section-number">4.1</span> Map Layers and Symbology</h2>
-<p>The final map should include the following layers.</p>
+<p>The developable land inventory identifies land that meets the statutory definition of developable land under PA 25-1. This inventory serves as a foundational input to subsequent phases of the Housing Growth Plan process, including the suitability analysis [link] and the parcel and zone identification. These later steps incorporate additional planning considerations, local context, and policy objectives to evaluate where housing growth and affordable housing opportunities may be most appropriate.</p>
+<p>To support Housing Growth Plan reporting and review, the developable land inventory should be presented in the report as municipality-wide maps. The maps should clearly display the location and distribution of developable land using clear, accessible, and consistent symbology.</p>
+<p>The maps should incorporate the following data:</p>
+<ul>
+<li>Land identified as excluded from developable land (Section 3 [link])</li>
+<li>Identified vacant parcels (Section 4.1 [link])</li>
+<li>Identified parcels with redevelopment potential (Section 4.2 [link])</li>
+</ul>
+<p>The final maps included in the Housing Growth Plan will be:</p>
+<ol type="1">
+<li><strong>Statutory Exclusions Map</strong>: A municipality-wide map displaying each statutory exclusion category as a separate layer and symbolized distinctly to illustrate the distribution of land excluded from the developable land inventory.</li>
+<li><strong>Developable vs.&nbsp;Non-Developable Land Map</strong>: A municipality-wide map depicting all statutory exclusion categories combined into a single consolidated layer symbolized as non-developable land. All remaining land not subject to statutory exclusions is displayed as developable land, providing a simplified binary representation of land suitability across the municipality.</li>
+<li><strong>Developable Land Summary Map</strong>: A municipality-wide map displaying all statutory exclusion categories combined into a single exclusion layer, alongside a developable land layer representing all land remaining after the exclusion analysis. Identified vacant parcels and parcels with redevelopment potential should be displayed as separate overlays.</li>
+</ol>
+<section id="map-layers-and-symbology" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="map-layers-and-symbology"><span class="header-section-number">5.1</span> Map Layers and Symbology</h2>
+<p>All maps include the municipal boundary layer to delineate the geographic extent of the study area.</p>
+<p><strong>Dataset</strong>: <a href="https://geodata.ct.gov/datasets/ctmaps::ct-municipalities-with-fips/about">CT Municipalities (CT Geodata Portal)</a></p>
+<p><br></p>
+<p>Municipal parcel boundaries are included where appropriate to provide spatial context for interpretation of mapped datasets.</p>
+<p><strong>Dataset</strong>: <a href="https://geodata.ct.gov/datasets/ctmaps::connecticut-cama-and-parcel-layer/about">Connecticut CAMA and Parcel Layer (CT Geodata Portal)</a></p>
+<p><br></p>
+<ol type="1">
+<li><strong>Statutory Exclusions Map</strong></li>
+</ol>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 26%">
-<col style="width: 36%">
-<col style="width: 36%">
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;">Layer</th>
+<th style="text-align: left;">Map Layer (top to bottom)</th>
 <th>Description</th>
 <th>Recommended Symbology</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;"><strong>Statutory Exclusions</strong></td>
-<td>Areas not considered developable under Section 4(5) of PA 25-1. All statutory exclusion datasets should be merged into a single layer.</td>
-<td>Gray (<code>[hex code]</code>)</td>
+<td style="text-align: left;">Municipality boundary</td>
+<td>Municipal boundary delineating the extent of the study area.</td>
+<td></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><strong>Vacant Areas</strong></td>
-<td>Areas identified as vacant in Section X.</td>
-<td><code>[hex code]</code></td>
+<td style="text-align: left;">Parcels</td>
+<td>Municipal parcel boundaries.</td>
+<td>No fill; thin light-gray outlines.</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><strong>Potentially Developable Land</strong></td>
-<td>Areas identified as potentially developable in Section X.</td>
-<td><code>[hex code]</code></td>
+<td style="text-align: left;">Land already committed to public use or purpose</td>
+<td>Exclusion category described in Section 3.1.</td>
+<td></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><strong>Basemap</strong></td>
-<td>A simple reference basemap used to provide geographic context, should not compete visually with the inventory layers.</td>
-<td>Light, muted colors; avoid high-contrast imagery or dark backgrounds.</td>
+<td style="text-align: left;">Open space, parks, and recreation areas dedicated to the public or protected by a conservation easement</td>
+<td>Exclusion category described in Section 3.2.</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Land subject to enforceable restrictions or prohibitions on development</td>
+<td>Exclusion category described in Section 3.3.</td>
+<td></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Wetlands or watercourses, as defined in the Wetlands and Watercourses Act (CGS Chapter 440)</td>
+<td>Exclusion category described in Section 3.4.</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Areas of 0.5 acres or more of contiguous land that are unsuitable for development due to topography (such as steep slopes)</td>
+<td>Exclusion category described in Section 3.5.</td>
+<td></td>
 </tr>
 </tbody>
 </table>
-<p>The colors selected for vacant and potentially developable land should provide sufficient visual contrast and remain distinguishable for users with color vision deficiencies. This is a recommended cartographic best practice that improves map readability and accessibility.</p>
+<p><br></p>
+<ol start="2" type="1">
+<li><strong>Developable vs.&nbsp;Non-Developable Land Map</strong></li>
+</ol>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Map Layer (top to bottom)</th>
+<th>Description</th>
+<th>Recommended Symbology</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Municipality boundary</td>
+<td>Municipal boundary delineating the extent of the study area.</td>
+<td></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Statutory Exclusions</td>
+<td>Areas excluded from the developable land inventory in Section 2. All statutory exclusion categories should be combined into a single layer.</td>
+<td>Dark gray (<code>[hex code]</code>)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Developable Land</td>
+<td>Land not identified as excluded under the statutory criteria. This layer represents all land remaining after the exclusion analysis.</td>
+<td>Light gray</td>
+</tr>
+</tbody>
+</table>
+<p>Map symbology should use colors and patterns that improve overall readability, provide clear visual distinction between categories, and remain accessible to users with color vision deficiencies.</p>
+<p><br></p>
+<ol start="3" type="1">
+<li><strong>Developable Land Summary Map</strong></li>
+</ol>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Map Layer (top to bottom)</th>
+<th>Description</th>
+<th>Recommended Symbology</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Municipality boundary</td>
+<td>Municipal boundary delineating the extent of the study area.</td>
+<td></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">?Parcels</td>
+<td>Municipal parcel boundaries.</td>
+<td>No fill; thin light-gray outlines.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Vacant Areas</td>
+<td>Areas identified as vacant in Section 4.1.</td>
+<td></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Areas with Redevelopment Potential</td>
+<td>Areas identified as having redevelopment potential in Section 4.2.</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Statutory Exclusions</td>
+<td>Areas excluded from the developable land inventory in Section 2. All statutory exclusion categories should be combined into a single layer.</td>
+<td>Gray (<code>[hex code]</code>)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Developable Land</td>
+<td>Land not identified as excluded under the statutory criteria. This layer represents all land remaining after the exclusion analysis.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Map symbology should use colors and patterns that improve overall readability, provide clear visual distinction between categories, and remain accessible to users with color vision deficiencies.</p>
+<p><br></p>
 </section>
-<section id="required-map-elements" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="required-map-elements"><span class="header-section-number">4.2</span> Required Map Elements</h2>
-<p>All Developable Land Inventory maps should include:</p>
+<section id="required-map-elements" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="required-map-elements"><span class="header-section-number">5.2</span> Required Map Elements</h2>
+<p>All maps should include:</p>
 <ul>
 <li>Municipality-wide extent</li>
 <li>Clear map title</li>
@@ -652,12 +793,12 @@ ul.task-list li input[type="checkbox"] {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./vac_redev.html" class="pagination-link" aria-label="Identifying Vacant and Potential Land for Redevelopment">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Identifying Vacant and Potential Land for Redevelopment</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Identifying Vacant and Potential Land for Redevelopment</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./end.html" class="pagination-link" aria-label="Next Steps">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Next Steps</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Next Steps</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -45,6 +45,12 @@ format:
     mainfont: Arimo
     sansfont: Poppins
     #pdf-standard: ua-2
+    keep-tex: true
+    include-in-header:
+      text: |
+        \usepackage{booktabs}
+        \usepackage{array}
+        \renewcommand{\arraystretch}{1.2}
 
     
 editor: visual

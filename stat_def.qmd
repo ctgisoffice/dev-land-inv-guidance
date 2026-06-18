@@ -380,14 +380,6 @@ This layer has not been updated since 1997 and may not be accurate. For more acc
 
 <br/>
 
-#### CT Department of Agriculture Conservation Easements {#sec-ct-department-of-agriculture-conservation-easements}
-
-Link to be added once published
-
-**Dataset:**
-
-<br/>
-
 #### USGS Protected Areas Database of the United States {#sec-usgs-protected-areas-database-of-the-united-states}
 
 The [USGS Protected Areas Database of the United States (PAD-US)](https://www.usgs.gov/programs/gap-analysis-project/science/pad-us-data-overview) is a national geospatial dataset that inventories protected public lands and conservation areas across the United States. The dataset includes federal, state, local, and nonprofit conservation lands, as well as lands managed for recreation, natural resource protection, open space, and other protected uses.

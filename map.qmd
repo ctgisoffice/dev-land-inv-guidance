@@ -32,22 +32,53 @@ Municipal parcel boundaries are included where appropriate to provide spatial co
 
 1.  **Statutory Exclusions Map**
 
-| Map Layer (top to bottom) | Description | Recommended Symbology |
-|:-----------------------|------------------------|------------------------|
-| Municipality boundary | Municipal boundary delineating the extent of the study area. |  |
-| Parcels | Municipal parcel boundaries. | No fill; thin light-gray outlines. |
-| Land already committed to public use or purpose | Exclusion category described in Section 3.1. |  |
-| Open space, parks, and recreation areas dedicated to the public or protected by a conservation easement | Exclusion category described in Section 3.2. |  |
-| Land subject to enforceable restrictions or prohibitions on development | Exclusion category described in Section 3.3. |  |
-| Wetlands or watercourses, as defined in the Wetlands and Watercourses Act (CGS Chapter 440) | Exclusion category described in Section 3.4. |  |
-| Areas of 0.5 acres or more of contiguous land that are unsuitable for development due to topography (such as steep slopes) | Exclusion category described in Section 3.5. |  |
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+library(knitr)
+
+map_layers <- data.frame(
+  `Map Layer (top to bottom)` = c(
+    "Municipality boundary",
+    "Parcels",
+    "Land already committed to public use or purpose",
+    "Open space, parks, and recreation areas dedicated to the public or protected by a conservation easement",
+    "Land subject to enforceable restrictions or prohibitions on development",
+    "Wetlands or watercourses, as defined in the Wetlands and Watercourses Act (CGS Chapter 440)",
+    "Areas of 0.5 acres or more of contiguous land that are unsuitable for development due to topography (such as steep slopes)"
+  ),
+  `Description` = c(
+    "Municipal boundary delineating the extent of the study area.",
+    "Municipal parcel boundaries.",
+    "Exclusion category described in Section 3.1.",
+    "Exclusion category described in Section 3.2.",
+    "Exclusion category described in Section 3.3.",
+    "Exclusion category described in Section 3.4.",
+    "Exclusion category described in Section 3.5."
+  ),
+  `Recommended Symbology` = c(
+    "",
+    "No fill; thin light-gray outlines.",
+    "",
+    "",
+    "",
+    "",
+    ""
+  ),
+  check.names = FALSE
+)
+
+kable(map_layers, col.names = c("Map Layer (top to bottom)", "Description", "Recommended Symbology"))
+```
 
 <br/>
 
 2.  **Developable vs. Non-Developable Land Map**
 
 | Map Layer (top to bottom) | Description | Recommended Symbology |
-|:-----------------------|------------------------|------------------------|
+|:---|----|----|
 | Municipality boundary | Municipal boundary delineating the extent of the study area. |  |
 | Statutory Exclusions | Areas excluded from the developable land inventory in Section 2. All statutory exclusion categories should be combined into a single layer. | Dark gray (`[hex code]`) |
 | Developable Land | Land not identified as excluded under the statutory criteria. This layer represents all land remaining after the exclusion analysis. | Light gray |
@@ -59,7 +90,7 @@ Map symbology should use colors and patterns that improve overall readability, p
 3.  **Developable Land Summary Map**
 
 | Map Layer (top to bottom) | Description | Recommended Symbology |
-|:-----------------------|------------------------|------------------------|
+|:---|----|----|
 | Municipality boundary | Municipal boundary delineating the extent of the study area. |  |
 | ?Parcels | Municipal parcel boundaries. | No fill; thin light-gray outlines. |
 | Vacant Areas | Areas identified as vacant in Section 4.1. |  |

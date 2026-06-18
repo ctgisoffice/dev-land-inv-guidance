@@ -148,8 +148,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="./index.html" class="sidebar-logo-link">
-      <img src="./OPM_Horizontal_RGB.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
-      <img src="./OPM_Horizontal_RGB.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
+      <img src="./opm_giso_logo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="./opm_giso_logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
       </a>
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Developable Land Inventory</a> 
@@ -218,7 +218,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#vacant-parcels" id="toc-vacant-parcels" class="nav-link active" data-scroll-target="#vacant-parcels"><span class="header-section-number">4.1</span> Vacant Parcels</a></li>
-  <li><a href="#potentially-redevelopable-land" id="toc-potentially-redevelopable-land" class="nav-link" data-scroll-target="#potentially-redevelopable-land"><span class="header-section-number">4.2</span> Potentially Redevelopable Land</a></li>
+  <li><a href="#potentially-redevelopable-land" id="toc-potentially-redevelopable-land" class="nav-link" data-scroll-target="#potentially-redevelopable-land"><span class="header-section-number">4.2</span> Potentially Redevelopable Land</a>
+  <ul>
+  <li><a href="#brownfields" id="toc-brownfields" class="nav-link" data-scroll-target="#brownfields"><strong>Brownfields</strong></a></li>
+  <li><a href="#land-to-improvement-value-ratio" id="toc-land-to-improvement-value-ratio" class="nav-link" data-scroll-target="#land-to-improvement-value-ratio"><strong>Land-to-improvement value ratio</strong></a></li>
+  <li><a href="#parcel-size-relative-to-district-average" id="toc-parcel-size-relative-to-district-average" class="nav-link" data-scroll-target="#parcel-size-relative-to-district-average"><strong>Parcel size relative to district average</strong></a></li>
+  <li><a href="#floor-area-ratio-far-analysis" id="toc-floor-area-ratio-far-analysis" class="nav-link" data-scroll-target="#floor-area-ratio-far-analysis"><strong>Floor Area Ratio (FAR) analysis</strong></a></li>
+  <li><a href="#construction-and-renovation-year-clustering" id="toc-construction-and-renovation-year-clustering" class="nav-link" data-scroll-target="#construction-and-renovation-year-clustering"><strong>Construction and renovation year clustering</strong></a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -245,6 +252,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p>Beyond the statutory requirements, identifying vacant and potentially redevelopable parcels provides important context for the Housing Growth Plan and supports suitability analysis and further analyses in subsequent phases.</p>
+<p>This section describes queries developed to identify the parcels within these categories and a set of analytical approaches that can be used to evaluate redevelopment potential. Together, these methods offer a flexible toolkit for recognizing parcels that might support future housing development and for tailoring analyses to local priorities.</p>
+<p>It is recommended to carefully review outputs using local knowledge, supplemental data sources, and/or aerial imagery.</p>
+<p>For reference, the following datasets are used in the analyses:</p>
+<ul>
+<li><a href="https://geodata.ct.gov/datasets/ctmaps::connecticut-cama-and-parcel-layer/about">Connecticut CAMA and Parcel Layer (CT Geodata Portal)</a></li>
+<li><a href="https://data.ct.gov/Local-Government/2025-Connecticut-Parcel-and-CAMA-Data/rny9-6ak2/about_data">2025 Connecticut Parcel and CAMA Data (CT Open Data Portal)</a></li>
+</ul>
+<p>If using aerial imagery for review, high resoluation statewide imagery (leaf off, 4 bands, 3 inch pixel) are available for <a href="https://maps.cteco.uconn.edu/download/">download</a> or through a service through CT ECO.</p>
+<p>If using aerial imagery for review, high‑resolution statewide imagery (leaf‑off, 4‑band, 3‑inch pixel) is available through CT ECO for <a href="https://maps.cteco.uconn.edu/download/">download</a> or through <a href="https://maps.cteco.uconn.edu/map-services/">online services</a>. More information can be found on the <a href="https://maps.cteco.uconn.edu/data/flight2023/">2023 Aerial Imagery and Elevation</a> web page.</p>
+<p><br></p>
 <section id="vacant-parcels" class="level2" data-number="4.1">
 <h2 data-number="4.1" class="anchored" data-anchor-id="vacant-parcels"><span class="header-section-number">4.1</span> Vacant Parcels</h2>
 <p>Vacant parcels represent land that is either currently undeveloped or previously developed but now considered vacant and may present direct development opportunities. While no statewide dataset of vacant parcels exists, the statewide CAMA and parcel dataset can be queried to identify parcels labeled as vacant.</p>
@@ -265,6 +282,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>State Use (is): “500”</li>
 <li>State Use Description (contains): “vac”</li>
 </ul>
+<div style="text-align:center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Vacant_Parcels.png" class="img-fluid figure-img" alt="Example map of vacant parcels identified" width="350"></p>
+<figcaption><em>Example map of vacant parcels identified</em></figcaption>
+</figure>
+</div>
+</div>
 <p><br></p>
 <p><strong>Example query logic:</strong></p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>STATE_USE <span class="kw">IS</span> <span class="st">'%500%'</span>  </span>
@@ -273,32 +298,188 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="potentially-redevelopable-land" class="level2" data-number="4.2">
 <h2 data-number="4.2" class="anchored" data-anchor-id="potentially-redevelopable-land"><span class="header-section-number">4.2</span> Potentially Redevelopable Land</h2>
-<p>Potentially redevelopable land consists of previously developed parcels with characteristics suggesting they may be underutilized or suitable for redevelopment.</p>
-<p>Consider the following approaches:</p>
+<p>Potentially redevelopable land consists of previously developed parcels with characteristics suggesting they may be underutilized or suitable for redevelopment. Consider the following approaches:</p>
+<p><br></p>
+<section id="brownfields" class="level3">
+<h3 class="anchored" data-anchor-id="brownfields"><strong>Brownfields</strong></h3>
+<blockquote class="blockquote">
+<p>Previously contaminated or industrial sites undergoing or eligible for cleanup.</p>
+</blockquote>
+<p>The available data describing brownfield site locations is provided as an .xlsx file maintained by the Connecticut Department of Energy &amp; Environmental Protection (DEEP).</p>
+<p><strong>Dataset</strong>: <a href="https://portal.ct.gov/deep/remediation--site-clean-up/brownfields/brownfields-site-inventory">Connecticut Brownfields Inventory</a></p>
+<ol type="1">
+<li><p><strong>Spatializing the data</strong>: Since this data is provided in a tabular format, it is necessary to spatialize it before processing with further analysis. While geocoding is feasible, it is recommended to use the Latitude and Longitude fields to create points corresponding to each brownfield site. The CRS should be NAD 83 Connecticut State Plane (2011). The following resources provide details on translating the tabular latitude and longitude data into geospatial points:</p>
 <ul>
-<li><strong>Brownfields</strong>: Previously contaminated or industrial sites undergoing or eligible for cleanup.
-<ul>
-<li><em>[Analysis methodology to be provided]</em></li>
+<li>ArcGIS Pro: <a href="https://doc.esri.com/en/arcgis-pro/latest/tool-reference/data-management/xy-table-to-point.html?tabs=dialog">XY Table to Point</a></li>
+<li>QGIS: <a href="https://qgis-tuts-wu.readthedocs.io/en/latest/land_degradation_development/interpolation/loading_table.html">Create Point Layer from Table</a></li>
 </ul></li>
-<li><strong>Land-to-improvement value ratio</strong>: Analyze assessed land value to assessed improvements value in certain areas or districts to identify properties that may be underperforming (significantly higher than average land-to-improvements values)
+<li><p>Identifying brownfield parcels: Next, use the points to identify parcels that contain brownfield sites. This may be achieved with various queries, summary tools, or join tools that utilize spatial overlap. The following resources provide details and options for this process:</p>
 <ul>
-<li><em>[Analysis methodology to be provided]</em></li>
+<li>ArcGIS Pro: <a href="#0">Select by Location</a>, <a href="#0">Spatial Join</a>, <a href="#0">Summarize Within</a></li>
+<li>QGIS: <a href="#0">Extract by Location</a> or <a href="#0">Select by Location</a> within Vector Selection, <a href="#0">Join Attributes by Location</a></li>
 </ul></li>
-<li><strong>Parcel size relative to district average:</strong> Analyze parcel size by neighborhood or regulatory district to identify parcels that may be underutilized (significantly larger than the average) which may indicate an opportunity for infill development
+</ol>
+<div style="text-align:center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="brownfields.png" class="img-fluid figure-img" alt="Example map of brownfield site parcels identified" width="350"></p>
+<figcaption><em>Example map of brownfield site parcels identified</em></figcaption>
+</figure>
+</div>
+</div>
+<p><br></p>
+</section>
+<section id="land-to-improvement-value-ratio" class="level3">
+<h3 class="anchored" data-anchor-id="land-to-improvement-value-ratio"><strong>Land-to-improvement value ratio</strong></h3>
+<blockquote class="blockquote">
+<p>Analyze assessed land value to assessed improvements value in certain areas or districts to identify properties that may be underperforming (significantly higher than average land-to-improvements values)</p>
+</blockquote>
+<ol type="1">
+<li><p><strong>Calculating improvement values</strong>:</p>
+<p>A land-to-improvement (LTI) ratio compares a parcel’s appraised building value to the value of that parcel’s land area. Parcels with exceptionally high LTI ratios have potential for redevelopment with higher-performing structures.</p>
+<p>Improvement value can be found by totaling the combined appraised value of primary buildings, outbuildings (such as sheds and detached garages), and extra features (such as decks and patios). In the <a href="https://geodata.ct.gov/datasets/ctmaps::connecticut-cama-and-parcel-layer/about">Connecticut CAMA and Parcel Layer</a>, improvement values can be calculated by summing the “Appraised Building”, “Appraised Outbuilding”, and “Appraised Extra Feature” fields. The “Appraised Total” field should not be used in this analysis, as this field represents the combined appraised value of improvements and land.</p>
+<p><strong>Improvement</strong> = Appraised_Building + Appraised_Outbuilding + Appraised_Extra_Feature</p></li>
+<li><p><strong>Calculating LTI Ratios</strong></p>
+<p>After finding the total improvement value of each parcel, a new field of land-to-improvement ratios can be calculated. Divide the “Appraised Land” field by the newly created improvement field.</p>
+<p><strong>LTI_Ratio</strong> = Appraised_Land / Improvement</p></li>
+<li><p><strong>Interpreting the LTI Ratio</strong></p>
+<div>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">LTI Ratio</th>
+<th style="text-align: center;">Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">&lt; 1.0</td>
+<td style="text-align: center;">The building(s) are worth more than the land</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">= 1.0</td>
+<td style="text-align: center;">Land and structures are valued equally</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">&gt; 1.0</td>
+<td style="text-align: center;">The land value is equal to or higher than the improvement value, redevelopment may be more likely</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Because land and improvement values vary significantly across markets, any LTI threshold used to identify underperforming parcels should be based on local market conditions and development patterns.</p></li>
+</ol>
+<div style="text-align:center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="LTI_ratio.png" class="img-fluid figure-img" alt="Example map of LTI parcels identified using the applied threshold." width="350"></p>
+<figcaption><em>Example map of LTI parcels identified using the applied threshold.</em></figcaption>
+</figure>
+</div>
+</div>
+<p><br></p>
+</section>
+<section id="parcel-size-relative-to-district-average" class="level3">
+<h3 class="anchored" data-anchor-id="parcel-size-relative-to-district-average"><strong>Parcel size relative to district average</strong></h3>
+<blockquote class="blockquote">
+<p>Analyze parcel size by neighborhood or regulatory district to identify parcels that may be underutilized (significantly larger than the average) which may indicate an opportunity for infill development</p>
+</blockquote>
+<p>The feasibility of redevelopment efforts is also dependent on parcel size; accordingly, potentially redevelopable land analyses may include an inventory of parcels with the largest relative area within their neighborhood designation.</p>
+<p>The “Land Acres” field in the Statewide Parcel and CAMA dataset may have missing or incomplete data so it is recommended to use the “Shape Area” field or to derive acreage directly from the parcel geometry in GIS.</p>
 <ul>
-<li><em>[Analysis methodology to be provided]</em></li>
-</ul></li>
-<li><strong>Floor Area Ratio (FAR) analysis:</strong> Analyze Floor Area Ratios by neighborhood or district to identify parcels that have significantly lower than average ratios which may indicate infill or redevelopment opportunities
-<ul>
-<li><em>[Analysis methodology to be provided]</em></li>
-</ul></li>
-<li><strong>Construction and renovation year clustering</strong>: Analyze construction and renovation years to identify clusters of existing units in need of rehabilitation.
-<ul>
-<li><em>[Analysis methodology to be provided]</em></li>
-</ul></li>
+<li><p><strong>Normalizing parcel area by neighborhood</strong></p>
+<p>To identify parcels that are larger than others in their neighborhood, an analyst should select a threshold, such as the top 10% of parcel area within each neighborhood or district, to flag potential infill opportunities.</p></li>
 </ul>
+<div style="text-align:center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Relative_Size.png" class="img-fluid figure-img" alt="Example map of large parcels identified." width="350"></p>
+<figcaption><em>Example map of large parcels identified.</em></figcaption>
+</figure>
+</div>
+</div>
+<p><br></p>
+</section>
+<section id="floor-area-ratio-far-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="floor-area-ratio-far-analysis"><strong>Floor Area Ratio (FAR) analysis</strong></h3>
+<blockquote class="blockquote">
+<p>Analyze Floor Area Ratios by neighborhood or district to identify parcels that have significantly lower than average ratios which may indicate infill or redevelopment opportunities</p>
+</blockquote>
+<p>The floor area ratio (FAR) of a parcel’s primary building is the ratio of gross building area to lot or parcel area. Higher FAR values indicate higher building density, and lower potential for redevelopment. Whereas land-to-improvement ratio measures the economic value of existing buildings, the floor area ratio measures the physical space a building occupies, weighted by number of floors.</p>
+<p>The <a href="https://geodata.ct.gov/datasets/ctmaps::connecticut-cama-and-parcel-layer/about">Connecticut CAMA and Parcel Layer</a> field “Gross Area of Primary Building” represents the sum of all enclosed living and non-living building spaces. The gross building area is measured from a building’s exterior and factors in number of floors, extending beyond the building footprint.</p>
+<p>In some cases, the “Gross Area of Primary Building” field may have missing or incomplete data, in which case the “Living Area” field may be used as a substitute. Note that this is a more restrictive metric, as it only captures habitable, finished floor space rather than total enclosed building area.</p>
+<ol type="1">
+<li><p>Calculating the FAR</p>
+<p>A new field of FAR values can be calculated by dividing the “Gross Area of Primary Building” field by the parcel area field, such as the “Shape Area” field in the Connecticut CAMA and Parcel Layer.</p>
+<p><strong>FAR</strong> = Gross Floor Area / Total Lot Area</p>
+<p>As previously stated, the “Shape Area” field or a parcel geometry area calculation should be used over the “Land Acres” field, as the latter may have missing or incomplete data.</p></li>
+<li><p>Interpreting the FAR</p>
+<p>Unlike land-to-improvement ratios and relative parcel size, floor area ratio and potential for redevelopment have a negative relationship: higher FAR values indicate less possibility for redevelopment.</p>
+<div>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">FAR Ratio</th>
+<th style="text-align: center;">Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">&lt; 1.0</td>
+<td style="text-align: center;">The building’s total square footage is smaller than the lot. This indicates low-density development, such as single-family homes or suburban subdivisions.</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">= 1.0</td>
+<td style="text-align: center;">The total building size is exactly equal to the lot size. This means you could build a one-story building covering the entire lot, or a two-story building covering half the lot.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">&gt; 1.0</td>
+<td style="text-align: center;">: The building space exceeds the lot size, indicating multi-story, high-density development. For example, a 10-story building occupying 10% of a lot yields a high FAR.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>To identify underperforming parcels using FAR, select a threshold at the lower end of the distribution, such as parcels in the bottom 10% of FAR values within a neighborhood or district, as these represent properties where the built floor area is small relative to the land area, suggesting potential for more intensive development.</p>
+<div style="text-align:center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="FAR.png" class="img-fluid figure-img" alt="Example map identifying parcels based on low FAR values." width="350"></p>
+<figcaption><em>Example map identifying parcels based on low FAR values.</em></figcaption>
+</figure>
+</div>
+</div></li>
+</ol>
+<p><br></p>
+</section>
+<section id="construction-and-renovation-year-clustering" class="level3">
+<h3 class="anchored" data-anchor-id="construction-and-renovation-year-clustering"><strong>Construction and renovation year clustering</strong></h3>
+<blockquote class="blockquote">
+<p>Analyze construction and renovation years to identify clusters of existing units in need of rehabilitation.</p>
+</blockquote>
+<p>Construction and renovation year clustering offers insight into building aging patterns within municipalities, with the goal of identifying parcel clusters that may need rehabilitation.</p>
+<p>The <a href="https://geodata.ct.gov/datasets/ctmaps::connecticut-cama-and-parcel-layer/about">Connecticut CAMA and Parcel Layer</a> has multiple fields relevant to this analysis.</p>
+<ul>
+<li>“AYB” (Actual Year Built) field: The original construction date for each parcel’s primary building</li>
+<li>“EYB” (Effective Year Built) field: The building’s effective age, factoring in remodeling and renovations.</li>
+<li>“Depreciation” field: Percent values indicating the amount of depreciation a building has experienced.</li>
+</ul>
+<p>It is important to note that there are no statewide criteria for evaluating Effective Year Built. The calculation of effective building age may vary depending on the individual judgement of assessors and is a form of subjective data. Accordingly, if the AYB and EYB fields lack sufficient data or if municipalities have their own criteria for evaluating EYB, they may elect to use their own assessor data and property records.</p>
+<ol type="1">
+<li><p>Construction and renovation year clustering analysis</p>
+<p>This analysis uses a multivariate clustering tool in GIS to group parcels based on three fields simultaneously: original construction date (AYB), effective building age (EYB), and physical deterioration (Depreciation). Rather than applying a single threshold to one variable, multivariate clustering evaluates all three fields at once, automatically grouping parcels that share similar combinations of age, renovation history, and condition. The result is multiple groups of parcels, one of which will represent the oldest, least-renovated, and most deteriorated buildings in the study area, which are the parcels most likely to be candidates for rehabilitation or redevelopment</p></li>
+</ol>
+<p>[editing in development….]</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

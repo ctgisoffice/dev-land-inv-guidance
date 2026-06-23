@@ -46,7 +46,7 @@ format:
     sansfont: Poppins
     #pdf-standard: ua-2
     keep-tex: true
-    
+    df-print: kable
     include-before-body: cover.tex
     
     include-in-header:
@@ -60,6 +60,7 @@ format:
         \renewcommand{\arraystretch}{1.2}
         
         \AtBeginDocument{\let\maketitle\relax}
+        \usepackage{float}
 
     
 editor: visual

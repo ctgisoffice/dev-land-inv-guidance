@@ -38,9 +38,9 @@ Municipal parcel boundaries are included where appropriate to provide spatial co
 #| echo: false
 #| warning: false
 #| message: false
+#| ft.keepnext: true
 
-library(knitr)
-library(kableExtra)
+library(flextable)
 
 map_layers <- data.frame(
   `Map Layer (top to bottom)` = c(
@@ -53,13 +53,13 @@ map_layers <- data.frame(
     "Areas of 0.5 acres or more of contiguous land that are unsuitable for development due to topography (such as steep slopes)"
   ),
   `Description` = c(
-    "Municipal boundary delineating the extent of the study area.",
-    "Municipal parcel boundaries.",
-    "Exclusion category described in Section 3.1.",
-    "Exclusion category described in Section 3.2.",
-    "Exclusion category described in Section 3.3.",
-    "Exclusion category described in Section 3.4.",
-    "Exclusion category described in Section 3.5."
+    "Municipal boundary delineating the extent of the study area",
+    "Municipal parcel boundaries",
+    "Exclusion category described in Section 3.1",
+    "Exclusion category described in Section 3.2",
+    "Exclusion category described in Section 3.3",
+    "Exclusion category described in Section 3.4",
+    "Exclusion category described in Section 3.5"
   ),
   `Recommended Symbology` = c(
     "",
@@ -73,33 +73,36 @@ map_layers <- data.frame(
   check.names = FALSE
 )
 
-kable(
-  map_layers,
-  align = "ccc",
-  col.names = c(
-    "Map Layer (top to bottom)",
-    "Description",
-    "Recommended Symbology"
-  )
-) |>
-  kable_styling(full_width = TRUE) |>
-  column_spec(1, width = "33%") |>
-  column_spec(2, width = "33%") |>
-  column_spec(3, width = "34%")
+flextable(map_layers) |>
+  set_header_labels(
+    `Map Layer (top to bottom)` = "Map Layer (top to bottom)",
+    `Description` = "Description",
+    `Recommended Symbology` = "Recommended Symbology"
+  ) |>
+  width(j = 1, width = 2.8) |>
+  width(j = 2, width = 2.2) |>
+  width(j = 3, width = 1.5) |>
+  theme_vanilla() |>
+  valign(valign = "top", part = "all") |>
+  set_table_properties(layout = "fixed") |>
+  fontsize(size = 10, part = "all") |>
+  padding(padding = 4, part = "all")
+
 ```
 
 <br/>
 
 2.  **Developable vs. Non-Developable Land Map**
+
 ```{r}
 #| echo: false
 #| warning: false
 #| message: false
+#| ft.keepnext: true
 
-library(knitr)
-library(kableExtra)
+library(flextable)
 
-developable_layers <- data.frame(
+map_layers <- data.frame(
   `Map Layer (top to bottom)` = c(
     "Municipality boundary",
     "Statutory exclusions",
@@ -118,33 +121,37 @@ developable_layers <- data.frame(
   check.names = FALSE
 )
 
-kable(
-  developable_layers,
-  col.names = c(
-    "Map Layer (top to bottom)",
-    "Description",
-    "Recommended Symbology"
-  ),
-  align = "ccc"
-) |>
-  kable_styling(full_width = TRUE) |>
-  column_spec(1, width = "33%") |>
-  column_spec(2, width = "33%") |>
-  column_spec(3, width = "34%")
+flextable(map_layers) |>
+  set_header_labels(
+    `Map Layer (top to bottom)` = "Map Layer (top to bottom)",
+    `Description` = "Description",
+    `Recommended Symbology` = "Recommended Symbology"
+  ) |>
+  width(j = 1, width = 2.8) |>
+  width(j = 2, width = 2.2) |>
+  width(j = 3, width = 1.5) |>
+  theme_vanilla() |>
+  valign(valign = "top", part = "all") |>
+  set_table_properties(layout = "fixed") |>
+  fontsize(size = 10, part = "all") |>
+  padding(padding = 4, part = "all")
+
 ```
+
 
 <br/>
 
 3.  **Developable Land Summary Map**
+
 ```{r}
 #| echo: false
 #| warning: false
 #| message: false
+#| ft.keepnext: true
 
-library(knitr)
-library(kableExtra)
+library(flextable)
 
-vacant_redevelopment_layers <- data.frame(
+map_layers <- data.frame(
   `Map Layer (top to bottom)` = c(
     "Municipality boundary",
     "Parcels",
@@ -172,21 +179,22 @@ vacant_redevelopment_layers <- data.frame(
   check.names = FALSE
 )
 
-kable(
-  vacant_redevelopment_layers,
-  col.names = c(
-    "Map Layer (top to bottom)",
-    "Description",
-    "Recommended Symbology"
-  ),
-  # align = "ccc"
-) |>
-  kable_styling(full_width = TRUE) |>
-  column_spec(1, width = "33%") |>
-  column_spec(2, width = "33%") |>
-  column_spec(3, width = "34%")
-```
+flextable(map_layers) |>
+  set_header_labels(
+    `Map Layer (top to bottom)` = "Map Layer (top to bottom)",
+    `Description` = "Description",
+    `Recommended Symbology` = "Recommended Symbology"
+  ) |>
+  width(j = 1, width = 2.8) |>
+  width(j = 2, width = 2.2) |>
+  width(j = 3, width = 1.5) |>
+  theme_vanilla() |>
+  valign(valign = "top", part = "all") |>
+  set_table_properties(layout = "fixed") |>
+  fontsize(size = 10, part = "all") |>
+  padding(padding = 4, part = "all")
 
+```
 
 ::: {.callout-caution appearance="simple" icon="false"}
 Map symbology should use colors and patterns that improve overall readability, provide clear visual distinction between categories, and remain accessible to users with color vision deficiencies.

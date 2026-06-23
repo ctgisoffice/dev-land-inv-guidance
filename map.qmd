@@ -138,7 +138,6 @@ flextable(map_layers) |>
 
 ```
 
-
 <br/>
 
 3.  **Developable Land Summary Map**

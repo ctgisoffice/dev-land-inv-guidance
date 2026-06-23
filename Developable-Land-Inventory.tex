@@ -1766,32 +1766,71 @@ areas or districts to identify properties that may be underperforming
   \textbf{LTI\_Ratio} = Appraised\_Land / Improvement
 \item
   \textbf{Interpreting the LTI Ratio}
-
-  {\def\LTcaptype{none} % do not increment counter
-  \begin{longtable}[]{@{}
-    >{\centering\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}
-    >{\centering\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}@{}}
-  \toprule\noalign{}
-  \begin{minipage}[b]{\linewidth}\centering
-  LTI Ratio
-  \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-  Interpretation
-  \end{minipage} \\
-  \midrule\noalign{}
-  \endhead
-  \bottomrule\noalign{}
-  \endlastfoot
-  \textless{} 1.0 & The building(s) are worth more than the land \\
-  = 1.0 & Land and structures are valued equally \\
-  \textgreater{} 1.0 & The land value is equal to or higher than the
-  improvement value, redevelopment may be more likely \\
-  \end{longtable}
-  }
-
-  Because land and improvement values vary significantly across markets,
-  any LTI threshold used to identify underperforming parcels should be
-  based on local market conditions and development patterns.
 \end{enumerate}
+
+\global\setlength{\Oldarrayrulewidth}{\arrayrulewidth}
+
+\global\setlength{\Oldtabcolsep}{\tabcolsep}
+
+\setlength{\tabcolsep}{2pt}
+
+\renewcommand*{\arraystretch}{1.5}
+
+
+
+\providecommand{\ascline}[3]{\noalign{\global\arrayrulewidth #1}\arrayrulecolor[HTML]{#2}\cline{#3}}
+
+\begin{longtable*}[c]{|p{1.50in}|p{4.00in}}
+
+
+
+\ascline{1.5pt}{666666}{1-2}
+
+\multicolumn{1}{>{\centering}p{\dimexpr 1.5in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \textbf{LTI\ Ratio}}}}} & \multicolumn{1}{>{\centering}p{\dimexpr 4in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \textbf{Interpretation}}}}} \\
+
+\ascline{1.5pt}{666666}{1-2}\endfirsthead 
+
+\ascline{1.5pt}{666666}{1-2}
+
+\multicolumn{1}{>{\centering}p{\dimexpr 1.5in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \textbf{LTI\ Ratio}}}}} & \multicolumn{1}{>{\centering}p{\dimexpr 4in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \textbf{Interpretation}}}}} \\
+
+\ascline{1.5pt}{666666}{1-2}\endhead
+
+
+
+\multicolumn{1}{>{\centering}p{\dimexpr 1.5in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} <\ 1.0}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 4in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} The\ building(s)\ are\ worth\ more\ than\ the\ land}}}} \\
+
+\ascline{0.75pt}{666666}{1-2}
+
+
+
+\multicolumn{1}{>{\centering}p{\dimexpr 1.5in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} =\ 1.0}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 4in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Land\ and\ structures\ are\ valued\ equally}}}} \\
+
+\ascline{0.75pt}{666666}{1-2}
+
+
+
+\multicolumn{1}{>{\centering}p{\dimexpr 1.5in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} >\ 1.0}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 4in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} The\ land\ value\ is\ equal\ to\ or\ higher\ than\ the\ improvement\ value,\ redevelopment\ may\ be\ more\ likely}}}} \\
+
+\ascline{1.5pt}{666666}{1-2}
+
+
+
+\end{longtable*}
+
+
+
+\arrayrulecolor[HTML]{000000}
+
+\global\setlength{\arrayrulewidth}{\Oldarrayrulewidth}
+
+\global\setlength{\tabcolsep}{\Oldtabcolsep}
+
+\renewcommand*{\arraystretch}{1}
+
+\begin{verbatim}
+Because land and improvement values vary significantly across markets, any LTI threshold used to identify underperforming parcels should be based on local market conditions and development patterns.
+\end{verbatim}
 
 \begin{figure}[H]
 
@@ -1893,50 +1932,77 @@ enclosed building area.
   Unlike land-to-improvement ratios and relative parcel size, floor area
   ratio and potential for redevelopment have a negative relationship:
   higher FAR values indicate less possibility for redevelopment.
-
-  {\def\LTcaptype{none} % do not increment counter
-  \begin{longtable}[]{@{}
-    >{\centering\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}
-    >{\centering\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}@{}}
-  \toprule\noalign{}
-  \begin{minipage}[b]{\linewidth}\centering
-  FAR Ratio
-  \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-  Interpretation
-  \end{minipage} \\
-  \midrule\noalign{}
-  \endhead
-  \bottomrule\noalign{}
-  \endlastfoot
-  \textless{} 1.0 & The building's total square footage is smaller than
-  the lot. This indicates low-density development, such as single-family
-  homes or suburban subdivisions. \\
-  = 1.0 & The total building size is exactly equal to the lot size. This
-  means you could build a one-story building covering the entire lot, or
-  a two-story building covering half the lot. \\
-  \textgreater{} 1.0 & The building space exceeds the lot size,
-  indicating multi-story, high-density development. For example, a
-  10-story building occupying 10\% of a lot yields a high FAR. \\
-  \end{longtable}
-  }
-
-  To identify underperforming parcels using FAR, select a threshold at
-  the lower end of the distribution, such as parcels in the bottom 10\%
-  of FAR values within a neighborhood or district, as these represent
-  properties where the built floor area is small relative to the land
-  area, suggesting potential for more intensive development.
-
-  \begin{figure}[H]
-
-  {\centering \includegraphics[width=3.64583in,height=\textheight,keepaspectratio,alt={Example map identifying parcels based on low FAR values.}]{FAR.png}
-
-  }
-
-  \caption{\emph{Example map identifying parcels based on low FAR
-  values.}}
-
-  \end{figure}%
 \end{enumerate}
+
+\global\setlength{\Oldarrayrulewidth}{\arrayrulewidth}
+
+\global\setlength{\Oldtabcolsep}{\tabcolsep}
+
+\setlength{\tabcolsep}{2pt}
+
+\renewcommand*{\arraystretch}{1.5}
+
+
+
+\providecommand{\ascline}[3]{\noalign{\global\arrayrulewidth #1}\arrayrulecolor[HTML]{#2}\cline{#3}}
+
+\begin{longtable*}[c]{|p{1.50in}|p{4.00in}}
+
+
+
+\ascline{1.5pt}{666666}{1-2}
+
+\multicolumn{1}{>{\centering}p{\dimexpr 1.5in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \textbf{FAR\ Ratio}}}}} & \multicolumn{1}{>{\centering}p{\dimexpr 4in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \textbf{Interpretation}}}}} \\
+
+\ascline{1.5pt}{666666}{1-2}\endfirsthead 
+
+\ascline{1.5pt}{666666}{1-2}
+
+\multicolumn{1}{>{\centering}p{\dimexpr 1.5in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \textbf{FAR\ Ratio}}}}} & \multicolumn{1}{>{\centering}p{\dimexpr 4in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \textbf{Interpretation}}}}} \\
+
+\ascline{1.5pt}{666666}{1-2}\endhead
+
+
+
+\multicolumn{1}{>{\centering}p{\dimexpr 1.5in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} <\ 1.0}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 4in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} The\ building's\ total\ square\ footage\ is\ smaller\ than\ the\ lot.\ This\ indicates\ low-density\ development,\ such\ as\ single-family\ homes\ or\ suburban\ subdivisions.}}}} \\
+
+\ascline{0.75pt}{666666}{1-2}
+
+
+
+\multicolumn{1}{>{\centering}p{\dimexpr 1.5in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} =\ 1.0}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 4in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} The\ total\ building\ size\ is\ exactly\ equal\ to\ the\ lot\ size.\ This\ means\ you\ could\ build\ a\ one-story\ building\ covering\ the\ entire\ lot,\ or\ a\ two-story\ building\ covering\ half\ the\ lot.}}}} \\
+
+\ascline{0.75pt}{666666}{1-2}
+
+
+
+\multicolumn{1}{>{\centering}p{\dimexpr 1.5in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} >\ 1.0}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 4in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} The\ building\ space\ exceeds\ the\ lot\ size,\ indicating\ multi-story,\ high-density\ development.\ For\ example,\ a\ 10-story\ building\ occupying\ 10\%\ of\ a\ lot\ yields\ a\ high\ FAR.}}}} \\
+
+\ascline{1.5pt}{666666}{1-2}
+
+
+
+\end{longtable*}
+
+
+
+\arrayrulecolor[HTML]{000000}
+
+\global\setlength{\arrayrulewidth}{\Oldarrayrulewidth}
+
+\global\setlength{\tabcolsep}{\Oldtabcolsep}
+
+\renewcommand*{\arraystretch}{1}
+
+\begin{verbatim}
+To identify underperforming parcels using FAR, select a threshold at the lower end of the distribution, such as parcels in the bottom 10% of FAR values within a neighborhood or district, as these represent properties where the built floor area is small relative to the land area, suggesting potential for more intensive development.
+\end{verbatim}
+
+\begin{verbatim}
+::: {style="text-align:center;"}
+![*Example map identifying parcels based on low FAR values.*](FAR.png){fig-alt="Example map identifying parcels based on low FAR values." width="350"}
+:::
+\end{verbatim}
 
 \subsection{\texorpdfstring{\textbf{Construction and renovation year
 clustering}}{Construction and renovation year clustering}}\label{construction-and-renovation-year-clustering}

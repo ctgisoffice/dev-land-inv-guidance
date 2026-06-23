@@ -131,7 +131,9 @@ flextable(lti_table) |>
 
 ```
 
+
     Because land and improvement values vary significantly across markets, any LTI threshold used to identify underperforming parcels should be based on local market conditions and development patterns.
+
 
 ![*Example map of LTI parcels identified using the applied threshold.*](LTI_ratio.png){fig-alt="Example map of LTI parcels identified using the applied threshold." width="350"}
 
@@ -211,11 +213,9 @@ flextable(far_table) |>
 
     To identify underperforming parcels using FAR, select a threshold at the lower end of the distribution, such as parcels in the bottom 10% of FAR values within a neighborhood or district, as these represent properties where the built floor area is small relative to the land area, suggesting potential for more intensive development.
 
-```         
 ::: {style="text-align:center;"}
 ![*Example map identifying parcels based on low FAR values.*](FAR.png){fig-alt="Example map identifying parcels based on low FAR values." width="350"}
 :::
-```
 
 <br/>
 

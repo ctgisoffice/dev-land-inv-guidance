@@ -150,22 +150,14 @@
 
 
 \usepackage{booktabs}
-\usepackage{longtable}
 \usepackage{array}
-\usepackage{multirow}
-\usepackage{wrapfig}
-\usepackage{float}
-\usepackage{colortbl}
-\usepackage{pdflscape}
-\usepackage{tabu}
-\usepackage{threeparttable}
-\usepackage{threeparttablex}
-\usepackage[normalem]{ulem}
-\usepackage{makecell}
+\usepackage{graphicx}
 \usepackage{xcolor}
-\usepackage{booktabs}
-\usepackage{array}
+\usepackage{eso-pic}
+
 \renewcommand{\arraystretch}{1.2}
+
+\AtBeginDocument{\let\maketitle\relax}
 \KOMAoption{captions}{tableheading}
 \makeatletter
 \@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
@@ -254,6 +246,20 @@
 \begin{document}
 \maketitle
 
+\clearpage
+\thispagestyle{empty}
+
+\AddToShipoutPictureBG*{
+  \includegraphics[
+    width=\paperwidth,
+    height=\paperheight,
+    keepaspectratio=false
+  ]{DLI_cover.png}
+}
+
+\null
+\clearpage
+
 \renewcommand*\contentsname{Table of contents}
 {
 \setcounter{tocdepth}{4}
@@ -273,7 +279,7 @@ standardized, transparent framework for municipalities to identify land
 suitable for future residential or mixed‑use development as required
 under
 \href{https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&which_year=2025&bill_num=8002}{Connecticut
-Public Act 25‑1 (2025 Special Session)}. The guidance outlines the
+Public Act 25-1 (2025 Special Session)}. The guidance outlines the
 datasets, analytical methods, and mapping standards needed to produce a
 consistent, statewide inventory of developable land.
 
@@ -294,7 +300,7 @@ In the Housing Growth Plans, the following should be included:
 
 \begin{itemize}
 \item
-  Three town‑wide maps showing statutory exclusions, developable land,
+  Three town-wide maps showing statutory exclusions, developable land,
   vacant parcels, and potential redevelopment areas.
 \item
   A narrative methodology describing data sources, queries, processing
@@ -306,7 +312,7 @@ In the Housing Growth Plans, the following should be included:
 
 \markright{Statutory Exclusions}
 
-PA 25‑1 defines five categories of land that must be excluded from the
+PA 25-1 defines five categories of land that must be excluded from the
 developable land inventory:
 
 \begin{enumerate}
@@ -363,7 +369,7 @@ symbology:
 \item
   Statutory Exclusions Map
 \item
-  Developable vs.~Non‑Developable Land Map
+  Developable vs.~Non-Developable Land Map
 \item
   Developable Land Summary Map, including vacant and
   redevelopment‑potential parcels.
@@ -1535,6 +1541,40 @@ redevelopable parcels provides important context for the Housing Growth
 Plan and supports suitability analysis and further analyses in
 subsequent phases.
 
+This section describes queries developed to identify the parcels within
+these categories and a set of analytical approaches that can be used to
+evaluate redevelopment potential. Together, these methods offer a
+flexible toolkit for recognizing parcels that might support future
+housing development and for tailoring analyses to local priorities.
+
+It is recommended to carefully review outputs using local knowledge,
+supplemental data sources, and/or aerial imagery.
+
+For reference, the following datasets are used in the analyses:
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://geodata.ct.gov/datasets/ctmaps::connecticut-cama-and-parcel-layer/about}{Connecticut
+  CAMA and Parcel Layer (CT Geodata Portal)}
+\item
+  \href{https://data.ct.gov/Local-Government/2025-Connecticut-Parcel-and-CAMA-Data/rny9-6ak2/about_data}{2025
+  Connecticut Parcel and CAMA Data (CT Open Data Portal)}
+\end{itemize}
+
+If using aerial imagery for review, high resoluation statewide imagery
+(leaf off, 4 bands, 3 inch pixel) are available for
+\href{https://maps.cteco.uconn.edu/download/}{download} or through a
+service through CT ECO.
+
+If using aerial imagery for review, high‑resolution statewide imagery
+(leaf‑off, 4‑band, 3‑inch pixel) is available through CT ECO for
+\href{https://maps.cteco.uconn.edu/download/}{download} or through
+\href{https://maps.cteco.uconn.edu/map-services/}{online services}. More
+information can be found on the
+\href{https://maps.cteco.uconn.edu/data/flight2023/}{2023 Aerial Imagery
+and Elevation} web page.
+
 \section{Vacant Parcels}\label{vacant-parcels}
 
 Vacant parcels represent land that is either currently undeveloped or
@@ -1578,6 +1618,16 @@ use code and state use description fields.
   State Use Description (contains): ``vac''
 \end{itemize}
 
+\begin{figure}[H]
+
+{\centering \includegraphics[width=3.64583in,height=\textheight,keepaspectratio,alt={Example map of vacant parcels identified}]{Vacant_Parcels.png}
+
+}
+
+\caption{\emph{Example map of vacant parcels identified}}
+
+\end{figure}%
+
 \textbf{Example query logic:}
 
 \begin{Shaded}
@@ -1592,65 +1642,521 @@ Land}\label{potentially-redevelopable-land}
 
 Potentially redevelopable land consists of previously developed parcels
 with characteristics suggesting they may be underutilized or suitable
-for redevelopment.
+for redevelopment. Consider the following approaches:
 
-Consider the following approaches:
+\subsection{\texorpdfstring{\textbf{Brownfields}}{Brownfields}}\label{brownfields}
+
+\begin{quote}
+Previously contaminated or industrial sites undergoing or eligible for
+cleanup.
+\end{quote}
+
+The available data describing brownfield site locations is provided as
+an .xlsx file maintained by the Connecticut Department of Energy \&
+Environmental Protection (DEEP).
+
+\textbf{Dataset}:
+\href{https://portal.ct.gov/deep/remediation--site-clean-up/brownfields/brownfields-site-inventory}{Connecticut
+Brownfields Inventory}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{Spatializing the data}: Since this data is provided in a
+  tabular format, it is necessary to spatialize it before processing
+  with further analysis. While geocoding is feasible, it is recommended
+  to use the Latitude and Longitude fields to create points
+  corresponding to each brownfield site. The CRS should be NAD 83
+  Connecticut State Plane (2011). The following resources provide
+  details on translating the tabular latitude and longitude data into
+  geospatial points:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ArcGIS Pro:
+    \href{https://doc.esri.com/en/arcgis-pro/latest/tool-reference/data-management/xy-table-to-point.html?tabs=dialog}{XY
+    Table to Point}
+  \item
+    QGIS:
+    \href{https://qgis-tuts-wu.readthedocs.io/en/latest/land_degradation_development/interpolation/loading_table.html}{Create
+    Point Layer from Table}
+  \end{itemize}
+\item
+  Identifying brownfield parcels: Next, use the points to identify
+  parcels that contain brownfield sites. This may be achieved with
+  various queries, summary tools, or join tools that utilize spatial
+  overlap. The following resources provide details and options for this
+  process:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ArcGIS Pro: \hyperref[0]{Select by Location}, \hyperref[0]{Spatial
+    Join}, \hyperref[0]{Summarize Within}
+  \item
+    QGIS: \hyperref[0]{Extract by Location} or \hyperref[0]{Select by
+    Location} within Vector Selection, \hyperref[0]{Join Attributes by
+    Location}
+  \end{itemize}
+\end{enumerate}
+
+\begin{figure}[H]
+
+{\centering \includegraphics[width=3.64583in,height=\textheight,keepaspectratio,alt={Example map of brownfield site parcels identified}]{brownfields.png}
+
+}
+
+\caption{\emph{Example map of brownfield site parcels identified}}
+
+\end{figure}%
+
+\subsection{\texorpdfstring{\textbf{Land-to-improvement value
+ratio}}{Land-to-improvement value ratio}}\label{land-to-improvement-value-ratio}
+
+\begin{quote}
+Analyze assessed land value to assessed improvements value in certain
+areas or districts to identify properties that may be underperforming
+(significantly higher than average land-to-improvements values)
+\end{quote}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{Calculating improvement values}:
+
+  A land-to-improvement (LTI) ratio compares a parcel's appraised
+  building value to the value of that parcel's land area. Parcels with
+  exceptionally high LTI ratios have potential for redevelopment with
+  higher-performing structures.
+
+  Improvement value can be found by totaling the combined appraised
+  value of primary buildings, outbuildings (such as sheds and detached
+  garages), and extra features (such as decks and patios). In the
+  \href{https://geodata.ct.gov/datasets/ctmaps::connecticut-cama-and-parcel-layer/about}{Connecticut
+  CAMA and Parcel Layer}, improvement values can be calculated by
+  summing the ``Appraised Building'', ``Appraised Outbuilding'', and
+  ``Appraised Extra Feature'' fields. The ``Appraised Total'' field
+  should not be used in this analysis, as this field represents the
+  combined appraised value of improvements and land.
+
+  \textbf{Improvement} = Appraised\_Building + Appraised\_Outbuilding +
+  Appraised\_Extra\_Feature
+\item
+  \textbf{Calculating LTI Ratios}
+
+  After finding the total improvement value of each parcel, a new field
+  of land-to-improvement ratios can be calculated. Divide the
+  ``Appraised Land'' field by the newly created improvement field.
+
+  \textbf{LTI\_Ratio} = Appraised\_Land / Improvement
+\item
+  \textbf{Interpreting the LTI Ratio}
+
+  {\def\LTcaptype{none} % do not increment counter
+  \begin{longtable}[]{@{}
+    >{\centering\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}
+    >{\centering\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}@{}}
+  \toprule\noalign{}
+  \begin{minipage}[b]{\linewidth}\centering
+  LTI Ratio
+  \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+  Interpretation
+  \end{minipage} \\
+  \midrule\noalign{}
+  \endhead
+  \bottomrule\noalign{}
+  \endlastfoot
+  \textless{} 1.0 & The building(s) are worth more than the land \\
+  = 1.0 & Land and structures are valued equally \\
+  \textgreater{} 1.0 & The land value is equal to or higher than the
+  improvement value, redevelopment may be more likely \\
+  \end{longtable}
+  }
+
+  Because land and improvement values vary significantly across markets,
+  any LTI threshold used to identify underperforming parcels should be
+  based on local market conditions and development patterns.
+\end{enumerate}
+
+\begin{figure}[H]
+
+{\centering \includegraphics[width=3.64583in,height=\textheight,keepaspectratio,alt={Example map of LTI parcels identified using the applied threshold.}]{LTI_ratio.png}
+
+}
+
+\caption{\emph{Example map of LTI parcels identified using the applied
+threshold.}}
+
+\end{figure}%
+
+\subsection{\texorpdfstring{\textbf{Parcel size relative to district
+average}}{Parcel size relative to district average}}\label{parcel-size-relative-to-district-average}
+
+\begin{quote}
+Analyze parcel size by neighborhood or regulatory district to identify
+parcels that may be underutilized (significantly larger than the
+average) which may indicate an opportunity for infill development
+\end{quote}
+
+The feasibility of redevelopment efforts is also dependent on parcel
+size; accordingly, potentially redevelopable land analyses may include
+an inventory of parcels with the largest relative area within their
+neighborhood designation.
+
+The ``Land Acres'' field in the Statewide Parcel and CAMA dataset may
+have missing or incomplete data so it is recommended to use the ``Shape
+Area'' field or to derive acreage directly from the parcel geometry in
+GIS.
+
+\begin{itemize}
+\item
+  \textbf{Normalizing parcel area by neighborhood}
+
+  To identify parcels that are larger than others in their neighborhood,
+  an analyst should select a threshold, such as the top 10\% of parcel
+  area within each neighborhood or district, to flag potential infill
+  opportunities.
+\end{itemize}
+
+\begin{figure}[H]
+
+{\centering \includegraphics[width=3.64583in,height=\textheight,keepaspectratio,alt={Example map of large parcels identified.}]{Relative_Size.png}
+
+}
+
+\caption{\emph{Example map of large parcels identified.}}
+
+\end{figure}%
+
+\subsection{\texorpdfstring{\textbf{Floor Area Ratio (FAR)
+analysis}}{Floor Area Ratio (FAR) analysis}}\label{floor-area-ratio-far-analysis}
+
+\begin{quote}
+Analyze Floor Area Ratios by neighborhood or district to identify
+parcels that have significantly lower than average ratios which may
+indicate infill or redevelopment opportunities
+\end{quote}
+
+The floor area ratio (FAR) of a parcel's primary building is the ratio
+of gross building area to lot or parcel area. Higher FAR values indicate
+higher building density, and lower potential for redevelopment. Whereas
+land-to-improvement ratio measures the economic value of existing
+buildings, the floor area ratio measures the physical space a building
+occupies, weighted by number of floors.
+
+The
+\href{https://geodata.ct.gov/datasets/ctmaps::connecticut-cama-and-parcel-layer/about}{Connecticut
+CAMA and Parcel Layer} field ``Gross Area of Primary Building''
+represents the sum of all enclosed living and non-living building
+spaces. The gross building area is measured from a building's exterior
+and factors in number of floors, extending beyond the building
+footprint.
+
+In some cases, the ``Gross Area of Primary Building'' field may have
+missing or incomplete data, in which case the ``Living Area'' field may
+be used as a substitute. Note that this is a more restrictive metric, as
+it only captures habitable, finished floor space rather than total
+enclosed building area.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{Calculating the FAR}
+
+  A new field of FAR values can be calculated by dividing the ``Gross
+  Area of Primary Building'' field by the parcel area field, such as the
+  ``Shape Area'' field in the Connecticut CAMA and Parcel Layer.
+
+  \textbf{FAR} = Gross Floor Area / Total Lot Area
+
+  As previously stated, the ``Shape Area'' field or a parcel geometry
+  area calculation should be used over the ``Land Acres'' field, as the
+  latter may have missing or incomplete data.
+\item
+  \textbf{Interpreting the FAR}
+
+  Unlike land-to-improvement ratios and relative parcel size, floor area
+  ratio and potential for redevelopment have a negative relationship:
+  higher FAR values indicate less possibility for redevelopment.
+
+  {\def\LTcaptype{none} % do not increment counter
+  \begin{longtable}[]{@{}
+    >{\centering\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}
+    >{\centering\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}@{}}
+  \toprule\noalign{}
+  \begin{minipage}[b]{\linewidth}\centering
+  FAR Ratio
+  \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+  Interpretation
+  \end{minipage} \\
+  \midrule\noalign{}
+  \endhead
+  \bottomrule\noalign{}
+  \endlastfoot
+  \textless{} 1.0 & The building's total square footage is smaller than
+  the lot. This indicates low-density development, such as single-family
+  homes or suburban subdivisions. \\
+  = 1.0 & The total building size is exactly equal to the lot size. This
+  means you could build a one-story building covering the entire lot, or
+  a two-story building covering half the lot. \\
+  \textgreater{} 1.0 & The building space exceeds the lot size,
+  indicating multi-story, high-density development. For example, a
+  10-story building occupying 10\% of a lot yields a high FAR. \\
+  \end{longtable}
+  }
+
+  To identify underperforming parcels using FAR, select a threshold at
+  the lower end of the distribution, such as parcels in the bottom 10\%
+  of FAR values within a neighborhood or district, as these represent
+  properties where the built floor area is small relative to the land
+  area, suggesting potential for more intensive development.
+
+  \begin{figure}[H]
+
+  {\centering \includegraphics[width=3.64583in,height=\textheight,keepaspectratio,alt={Example map identifying parcels based on low FAR values.}]{FAR.png}
+
+  }
+
+  \caption{\emph{Example map identifying parcels based on low FAR
+  values.}}
+
+  \end{figure}%
+\end{enumerate}
+
+\subsection{\texorpdfstring{\textbf{Construction and renovation year
+clustering}}{Construction and renovation year clustering}}\label{construction-and-renovation-year-clustering}
+
+\begin{quote}
+Analyze construction and renovation years to identify clusters of
+existing units in need of rehabilitation.
+\end{quote}
+
+Construction and renovation year clustering offers insight into building
+aging patterns within municipalities, with the goal of identifying
+parcel clusters that may need rehabilitation.
+
+The
+\href{https://geodata.ct.gov/datasets/ctmaps::connecticut-cama-and-parcel-layer/about}{Connecticut
+CAMA and Parcel Layer} has multiple fields relevant to this analysis.
 
 \begin{itemize}
 \tightlist
 \item
-  \textbf{Brownfields}: Previously contaminated or industrial sites
-  undergoing or eligible for cleanup.
-
-  \begin{itemize}
-  \tightlist
-  \item
-    \emph{{[}Analysis methodology to be provided{]}}
-  \end{itemize}
+  ``AYB'' (Actual Year Built) field: The original construction date for
+  each parcel's primary building
 \item
-  \textbf{Land-to-improvement value ratio}: Analyze assessed land value
-  to assessed improvements value in certain areas or districts to
-  identify properties that may be underperforming (significantly higher
-  than average land-to-improvements values)
-
-  \begin{itemize}
-  \tightlist
-  \item
-    \emph{{[}Analysis methodology to be provided{]}}
-  \end{itemize}
+  ``EYB'' (Effective Year Built) field: The building's effective age,
+  factoring in remodeling and renovations.
 \item
-  \textbf{Parcel size relative to district average:} Analyze parcel size
-  by neighborhood or regulatory district to identify parcels that may be
-  underutilized (significantly larger than the average) which may
-  indicate an opportunity for infill development
-
-  \begin{itemize}
-  \tightlist
-  \item
-    \emph{{[}Analysis methodology to be provided{]}}
-  \end{itemize}
-\item
-  \textbf{Floor Area Ratio (FAR) analysis:} Analyze Floor Area Ratios by
-  neighborhood or district to identify parcels that have significantly
-  lower than average ratios which may indicate infill or redevelopment
-  opportunities
-
-  \begin{itemize}
-  \tightlist
-  \item
-    \emph{{[}Analysis methodology to be provided{]}}
-  \end{itemize}
-\item
-  \textbf{Construction and renovation year clustering}: Analyze
-  construction and renovation years to identify clusters of existing
-  units in need of rehabilitation.
-
-  \begin{itemize}
-  \tightlist
-  \item
-    \emph{{[}Analysis methodology to be provided{]}}
-  \end{itemize}
+  ``Depreciation'' field: Percent values indicating the amount of
+  depreciation a building has experienced.
 \end{itemize}
+
+It is important to note that there are no statewide criteria for
+evaluating Effective Year Built. The calculation of effective building
+age may vary depending on the individual judgement of assessors and is a
+form of subjective data. Accordingly, if the AYB and EYB fields lack
+sufficient data or if municipalities have their own criteria for
+evaluating EYB, they may elect to use their own assessor data and
+property records.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{Construction and renovation year clustering analysis}
+
+  This analysis uses a multivariate clustering tool in GIS to group
+  parcels based on three fields simultaneously: original construction
+  date (AYB), effective building age (EYB), and physical deterioration
+  (Depreciation). Rather than applying a single threshold to one
+  variable, multivariate clustering evaluates all three fields at once,
+  automatically grouping parcels that share similar combinations of age,
+  renovation history, and condition. The result is multiple groups of
+  parcels, one of which will represent the oldest, least-renovated, and
+  most deteriorated buildings in the study area, which are the parcels
+  most likely to be candidates for rehabilitation or redevelopment
+
+  \textbf{Why multivariate clustering?}
+
+  A simple threshold approach (for example, filtering only by
+  construction year) would miss properties that are old but have been
+  well-maintained, or flag properties that are deteriorated but have
+  been recently renovated. A multivariate analysis using the ``AYB'',
+  ``EYB'', and ``Depreciation'' fields together can be used to flag
+  groups of parcels with high redevelopment potential.
+
+  It is also important to use a clustering method that does not rely on
+  spatial relationships between parcels, meaning one that groups parcels
+  based purely on shared traits rather than proximity or adjacency.
+  Spatial clustering methods, such as K-nearest neighbor (KNN) or Queen
+  contiguity, which would traditionally be used for parcel data using
+  polygon geometry, identify parcels based on how close they are to each
+  other or whether they share edges or corners. Because the parcel layer
+  may be segmented by missing data, these methods will fail or produce
+  inaccurate clusters by attempting to connect parcels across large
+  gaps. Instead, a non-spatial multivariate clustering tool ensures that
+  all parcels with available data are assigned to a cluster with shared
+  features, regardless of where they are located. For more insight into
+  these methods and their limitations:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Brief introduction to concepts, with R examples:
+    \href{https://cran.r-project.org/web/packages/geostan/vignettes/spatial-weights-matrix.html}{Spatial
+    Weights Matrix}
+  \item
+    Description of spatial statistics:
+    \href{https://doc.esri.com/en/arcgis-pro/latest/tool-reference/spatial-statistics/modeling-spatial-relationships.html}{Modeling
+    Spatial Relationships}
+  \item
+    Overview of ESRI clustering tools and their applications:
+    \href{https://doc.esri.com/en/arcgis-pro/latest/tool-reference/spatial-statistics/an-overview-of-the-mapping-clusters-toolset.html}{Mapping
+    Clusters}
+  \end{itemize}
+
+  Instead, it is recommended to use a multivariate clustering tool that
+  relies only on the presence of shared traits. These tools identify
+  optimized seed locations, or initial parcels, by maximizing their
+  initial distance from each other, then repeatedly adjust these seeds
+  to minimize variability within clusters and increase variability
+  between clusters. In this way, all parcels with available data are
+  assigned to a cluster with shared features. Simplified, the process
+  is:
+
+  \emph{assign seeds → recompute and adjust seed location → repeat until
+  stable}
+
+  The following tools and settings are recommended for conducting this
+  analysis in GIS software:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ArcGIS Pro:
+    \href{https://doc.esri.com/en/arcgis-pro/latest/tool-reference/spatial-statistics/multivariate-clustering.html?tabs=dialog}{Multivariate
+    Clustering}
+  \item
+    QGIS:
+    \href{https://knowyourspace.dk/2021/04/09/using-the-attribute-based-clustering-plugin-qgis/}{Attribute
+    Based Clustering Plugin}
+  \end{itemize}
+
+  Recommended settings:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    K-means algorithm
+  \item
+    4 seeds (producing 4 clusters)
+  \item
+    Optimized seeds
+  \end{itemize}
+
+  For the ArcGIS Pro tool, there is an option to choose between the
+  K-means or K-medoids algorithm. K-medoids is robust to outliers, while
+  K-means is faster and operates more efficiently with large datasets;
+  accordingly, K-means is the recommended algorithm for this analysis
+  and is also the default option for the QGIS Attribute Based Clustering
+  Plugin.
+\item
+  \textbf{Data preparation}
+
+  Within the Statewide Parcel and CAMA data, the AYB and EYB fields may
+  include null placeholder values of 0, 15, or other extremely low
+  numbers. Placeholders may also take the form of years from the 1500s,
+  1600s, or 1700s. Accordingly, municipalities should evaluate the
+  distribution of AYB values in their CAMA data, identify any outliers
+  or apparent null placeholders, verify these against their oldest
+  historical buildings, and filter this data out prior to running the
+  clustering analysis.
+
+  Example filter queries include:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``EYB'' is not equal to 0
+  \item
+    ``AYB'' is greater than or equal to 1639 (the construction year of
+    the Henry Whitfield House, the oldest standing building in
+    Connecticut)
+  \item
+    ``AYB'' \textgreater= 1788 (the year of Connecticut's founding as a
+    state)
+  \item
+    ``AYB'' \textgreater= 1899 (a common placeholder year, as it is the
+    zero date in systems like SQL, Power BI, and SharePoint)
+  \end{itemize}
+\item
+  Interpreting results
+
+  Below is a sample series of boxplots automatically produced by running
+  the Multivariate Clustering tool in ArcGIS Pro. These boxplots
+  illustrate the distribution of data for the three fields of interest
+  and reveal which clusters contain the combination of traits most
+  relevant to this analysis. The target cluster will exhibit the lowest
+  AYB, lowest EYB, and highest depreciation percentage.
+
+  \includegraphics[width=8.33333in,height=\textheight,keepaspectratio]{mc_boxplot.png}
+
+  For example, the yellow cluster (cluster 4) contains parcels with
+  extremely low AYB, high depreciation percentage, and low EYB, while
+  the red cluster (cluster 2) contains parcels with low AYB, the highest
+  depreciation, and the lowest EYB. Accordingly, clusters 2 and 4 are
+  groups of interest for potential rehabilitation; in this case, cluster
+  2 would be isolated and included in a Potentially Redevelopable Land
+  inventory, as it has the highest depreciation and lowest EYB.
+
+  Note that AYB will naturally contain lower values than EYB, as it
+  reflects original construction rather than effective age. The oldest
+  buildings may have already undergone extensive renovation and
+  therefore may not exhibit similarly extreme Depreciation or EYB
+  values. Accordingly, Depreciation and EYB should be weighted more
+  heavily when deciding which cluster to isolate, as these variables
+  better reflect the current physical condition of properties.
+
+  The figure on the left (a) shows the results of the Multivariate
+  Clustering tool in ArcGIS Pro, where cluster colors on the map
+  correspond to those shown in the boxplots. The figure on the right (b)
+  shows the resulting map after isolating cluster 2, which represents
+  the end product of a construction and renovation year clustering
+  analysis.
+\end{enumerate}
+
+\begin{figure}
+
+\begin{minipage}[t]{0.50\linewidth}
+
+\begin{figure}[H]
+
+{\centering \includegraphics[width=3.125in,height=\textheight,keepaspectratio,alt={multivariate clustering box plot example}]{MultiVar.png}
+
+}
+
+\subcaption{a) Multivariate Clustering results}
+
+\end{figure}%
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.50\linewidth}
+
+\begin{figure}[H]
+
+{\centering \includegraphics[width=3.125in,height=\textheight,keepaspectratio,alt={multivariate clustering box plot example}]{MultiVar2.png}
+
+}
+
+\subcaption{b) Cluster 2 isolated}
+
+\end{figure}%
+
+\end{minipage}%
+
+\end{figure}%
 
 \bookmarksetup{startatroot}
 
@@ -1736,36 +2242,11 @@ CAMA and Parcel Layer (CT Geodata Portal)}
   \textbf{Statutory Exclusions Map}
 \end{enumerate}
 
-\begin{longtable}[t]{>{\raggedright\arraybackslash}p{7cm}>{\raggedright\arraybackslash}p{4cm}>{\raggedright\arraybackslash}p{4cm}}
-\caption{\label{tab:unnamed-chunk-1}Map Layers Used in Buildable Land Analysis}\\
-\toprule
-Map Layer (top to bottom) & Description & Recommended Symbology\\
-\midrule
-\endfirsthead
-\caption[]{Map Layers Used in Buildable Land Analysis \textit{(continued)}}\\
-\toprule
-Map Layer (top to bottom) & Description & Recommended Symbology\\
-\midrule
-\endhead
-
-\endfoot
-\bottomrule
-\endlastfoot
-Municipality boundary & Municipal boundary delineating the extent of the study area. & \\
-Parcels & Municipal parcel boundaries. & No fill; thin light-gray outlines.\\
-Land already committed to public use or purpose & Exclusion category described in Section 3.1. & \\
-Open space, parks, and recreation areas dedicated to the public or protected by a conservation easement & Exclusion category described in Section 3.2. & \\
-Land subject to enforceable restrictions or prohibitions on development & Exclusion category described in Section 3.3. & \\
-\addlinespace
-Wetlands or watercourses, as defined in the Wetlands and Watercourses Act (CGS Chapter 440) & Exclusion category described in Section 3.4. & \\
-Areas of 0.5 acres or more of contiguous land that are unsuitable for development due to topography (such as steep slopes) & Exclusion category described in Section 3.5. & \\*
-\end{longtable}
-
 {\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.5616}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.2785}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.1598}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Map Layer (top to bottom)

@@ -46,11 +46,20 @@ format:
     sansfont: Poppins
     #pdf-standard: ua-2
     keep-tex: true
+    
+    include-before-body: cover.tex
+    
     include-in-header:
       text: |
         \usepackage{booktabs}
         \usepackage{array}
+        \usepackage{graphicx}
+        \usepackage{xcolor}
+        \usepackage{eso-pic}
+
         \renewcommand{\arraystretch}{1.2}
+        
+        \AtBeginDocument{\let\maketitle\relax}
 
     
 editor: visual

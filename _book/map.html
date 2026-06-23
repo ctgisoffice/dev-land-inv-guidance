@@ -77,6 +77,10 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+
+<link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+
 <script>
   document.addEventListener("DOMContentLoaded", function() {
     var sidebar = document.getElementById('quarto-sidebar');
@@ -223,6 +227,7 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Developable vs.&nbsp;Non-Developable Land Map</strong>: A municipality-wide map depicting all statutory exclusion categories combined into a single consolidated layer symbolized as non-developable land. All remaining land not subject to statutory exclusions is displayed as developable land, providing a simplified binary representation of land suitability across the municipality.</li>
 <li><strong>Developable Land Summary Map</strong>: A municipality-wide map displaying all statutory exclusion categories combined into a single exclusion layer, alongside a developable land layer representing all land remaining after the exclusion analysis. Identified vacant parcels and parcels with redevelopment potential should be displayed as separate overlays.</li>
 </ol>
+<p><br></p>
 <section id="map-layers-and-symbology" class="level2" data-number="5.1">
 <h2 data-number="5.1" class="anchored" data-anchor-id="map-layers-and-symbology"><span class="header-section-number">5.1</span> Map Layers and Symbology</h2>
 <p>All maps include the municipal boundary layer to delineate the geographic extent of the study area.</p>
@@ -236,54 +241,49 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 <div class="cell">
 <div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small">
-<colgroup>
-<col style="width: 56%">
-<col style="width: 27%">
-<col style="width: 15%">
-</colgroup>
+<table class="table caption-top table-sm table-striped small">
 <thead>
 <tr class="header">
-<th style="text-align: left;">Map Layer (top to bottom)</th>
-<th style="text-align: left;">Description</th>
-<th style="text-align: left;">Recommended Symbology</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">Map Layer (top to bottom)</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">Description</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">Recommended Symbology</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">Municipality boundary</td>
-<td style="text-align: left;">Municipal boundary delineating the extent of the study area.</td>
-<td style="text-align: left;"></td>
+<td style="text-align: center; width: 33%;">Municipality boundary</td>
+<td style="text-align: center; width: 33%;">Municipal boundary delineating the extent of the study area.</td>
+<td style="text-align: center; width: 34%;"></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Parcels</td>
-<td style="text-align: left;">Municipal parcel boundaries.</td>
-<td style="text-align: left;">No fill; thin light-gray outlines.</td>
+<td style="text-align: center; width: 33%;">Parcels</td>
+<td style="text-align: center; width: 33%;">Municipal parcel boundaries.</td>
+<td style="text-align: center; width: 34%;">No fill; thin light-gray outlines.</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Land already committed to public use or purpose</td>
-<td style="text-align: left;">Exclusion category described in Section 3.1.</td>
-<td style="text-align: left;"></td>
+<td style="text-align: center; width: 33%;">Land already committed to public use or purpose</td>
+<td style="text-align: center; width: 33%;">Exclusion category described in Section 3.1.</td>
+<td style="text-align: center; width: 34%;"></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Open space, parks, and recreation areas dedicated to the public or protected by a conservation easement</td>
-<td style="text-align: left;">Exclusion category described in Section 3.2.</td>
-<td style="text-align: left;"></td>
+<td style="text-align: center; width: 33%;">Open space, parks, and recreation areas dedicated to the public or protected by a conservation easement</td>
+<td style="text-align: center; width: 33%;">Exclusion category described in Section 3.2.</td>
+<td style="text-align: center; width: 34%;"></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Land subject to enforceable restrictions or prohibitions on development</td>
-<td style="text-align: left;">Exclusion category described in Section 3.3.</td>
-<td style="text-align: left;"></td>
+<td style="text-align: center; width: 33%;">Land subject to enforceable restrictions or prohibitions on development</td>
+<td style="text-align: center; width: 33%;">Exclusion category described in Section 3.3.</td>
+<td style="text-align: center; width: 34%;"></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Wetlands or watercourses, as defined in the Wetlands and Watercourses Act (CGS Chapter 440)</td>
-<td style="text-align: left;">Exclusion category described in Section 3.4.</td>
-<td style="text-align: left;"></td>
+<td style="text-align: center; width: 33%;">Wetlands or watercourses, as defined in the Wetlands and Watercourses Act (CGS Chapter 440)</td>
+<td style="text-align: center; width: 33%;">Exclusion category described in Section 3.4.</td>
+<td style="text-align: center; width: 34%;"></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Areas of 0.5 acres or more of contiguous land that are unsuitable for development due to topography (such as steep slopes)</td>
-<td style="text-align: left;">Exclusion category described in Section 3.5.</td>
-<td style="text-align: left;"></td>
+<td style="text-align: center; width: 33%;">Areas of 0.5 acres or more of contiguous land that are unsuitable for development due to topography (such as steep slopes)</td>
+<td style="text-align: center; width: 33%;">Exclusion category described in Section 3.5.</td>
+<td style="text-align: center; width: 34%;"></td>
 </tr>
 </tbody>
 </table>
@@ -293,88 +293,90 @@ ul.task-list li input[type="checkbox"] {
 <ol start="2" type="1">
 <li><strong>Developable vs.&nbsp;Non-Developable Land Map</strong></li>
 </ol>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table caption-top table-sm table-striped small">
 <thead>
 <tr class="header">
-<th style="text-align: left;">Map Layer (top to bottom)</th>
-<th>Description</th>
-<th>Recommended Symbology</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">Map Layer (top to bottom)</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">Description</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">Recommended Symbology</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">Municipality boundary</td>
-<td>Municipal boundary delineating the extent of the study area.</td>
-<td></td>
+<td style="text-align: center; width: 33%;">Municipality boundary</td>
+<td style="text-align: center; width: 33%;">Municipal boundary delineating the extent of the study area.</td>
+<td style="text-align: center; width: 34%;"></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Statutory Exclusions</td>
-<td>Areas excluded from the developable land inventory in Section 2. All statutory exclusion categories should be combined into a single layer.</td>
-<td>Dark gray (<code>[hex code]</code>)</td>
+<td style="text-align: center; width: 33%;">Statutory exclusions</td>
+<td style="text-align: center; width: 33%;">Areas excluded from the developable land inventory in Section 2. All statutory exclusion categories should be combined into a single layer.</td>
+<td style="text-align: center; width: 34%;">Dark gray ([hex code])</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Developable Land</td>
-<td>Land not identified as excluded under the statutory criteria. This layer represents all land remaining after the exclusion analysis.</td>
-<td>Light gray</td>
+<td style="text-align: center; width: 33%;">Developable land</td>
+<td style="text-align: center; width: 33%;">Land not identified as excluded under the statutory criteria. This layer represents all land remaining after the exclusion analysis.</td>
+<td style="text-align: center; width: 34%;">Light gray</td>
 </tr>
 </tbody>
 </table>
-<p>Map symbology should use colors and patterns that improve overall readability, provide clear visual distinction between categories, and remain accessible to users with color vision deficiencies.</p>
+</div>
+</div>
+<!-- | Map Layer (top to bottom) | Description | Recommended Symbology | -->
+<!-- |:-----------------------|------------------------|------------------------| -->
+<!-- | Municipality boundary | Municipal boundary delineating the extent of the study area. |  | -->
+<!-- | Statutory Exclusions | Areas excluded from the developable land inventory in Section 2. All statutory exclusion categories should be combined into a single layer. | Dark gray (`[hex code]`) | -->
+<!-- | Developable Land | Land not identified as excluded under the statutory criteria. This layer represents all land remaining after the exclusion analysis. | Light gray | -->
 <p><br></p>
 <ol start="3" type="1">
 <li><strong>Developable Land Summary Map</strong></li>
 </ol>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table caption-top table-sm table-striped small">
 <thead>
 <tr class="header">
-<th style="text-align: left;">Map Layer (top to bottom)</th>
-<th>Description</th>
-<th>Recommended Symbology</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Map Layer (top to bottom)</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Description</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Recommended Symbology</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">Municipality boundary</td>
-<td>Municipal boundary delineating the extent of the study area.</td>
-<td></td>
+<td style="text-align: left; width: 33%;">Municipality boundary</td>
+<td style="text-align: left; width: 33%;">Municipal boundary delineating the extent of the study area.</td>
+<td style="text-align: left; width: 34%;"></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">?Parcels</td>
-<td>Municipal parcel boundaries.</td>
-<td>No fill; thin light-gray outlines.</td>
+<td style="text-align: left; width: 33%;">Parcels</td>
+<td style="text-align: left; width: 33%;">Municipal parcel boundaries.</td>
+<td style="text-align: left; width: 34%;">No fill; thin light-gray outlines.</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Vacant Areas</td>
-<td>Areas identified as vacant in Section 4.1.</td>
-<td></td>
+<td style="text-align: left; width: 33%;">Vacant Areas</td>
+<td style="text-align: left; width: 33%;">Areas identified as vacant in Section 4.1.</td>
+<td style="text-align: left; width: 34%;"></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Areas with Redevelopment Potential</td>
-<td>Areas identified as having redevelopment potential in Section 4.2.</td>
-<td></td>
+<td style="text-align: left; width: 33%;">Areas with Redevelopment Potential</td>
+<td style="text-align: left; width: 33%;">Areas identified as having redevelopment potential in Section 4.2.</td>
+<td style="text-align: left; width: 34%;"></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Statutory Exclusions</td>
-<td>Areas excluded from the developable land inventory in Section 2. All statutory exclusion categories should be combined into a single layer.</td>
-<td>Gray (<code>[hex code]</code>)</td>
+<td style="text-align: left; width: 33%;">Statutory Exclusions</td>
+<td style="text-align: left; width: 33%;">Areas excluded from the developable land inventory in Section 2. All statutory exclusion categories should be combined into a single layer.</td>
+<td style="text-align: left; width: 34%;">Gray ([hex code])</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Developable Land</td>
-<td>Land not identified as excluded under the statutory criteria. This layer represents all land remaining after the exclusion analysis.</td>
-<td></td>
+<td style="text-align: left; width: 33%;">Developable Land</td>
+<td style="text-align: left; width: 33%;">Land not identified as excluded under the statutory criteria. This layer represents all land remaining after the exclusion analysis.</td>
+<td style="text-align: left; width: 34%;"></td>
 </tr>
 </tbody>
 </table>
+</div>
+</div>
 <div class="callout callout-style-simple callout-caution no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">

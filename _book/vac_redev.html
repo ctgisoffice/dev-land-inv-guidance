@@ -413,11 +413,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>The <a href="https://geodata.ct.gov/datasets/ctmaps::connecticut-cama-and-parcel-layer/about">Connecticut CAMA and Parcel Layer</a> field “Gross Area of Primary Building” represents the sum of all enclosed living and non-living building spaces. The gross building area is measured from a building’s exterior and factors in number of floors, extending beyond the building footprint.</p>
 <p>In some cases, the “Gross Area of Primary Building” field may have missing or incomplete data, in which case the “Living Area” field may be used as a substitute. Note that this is a more restrictive metric, as it only captures habitable, finished floor space rather than total enclosed building area.</p>
 <ol type="1">
-<li><p>Calculating the FAR</p>
+<li><p><strong>Calculating the FAR</strong></p>
 <p>A new field of FAR values can be calculated by dividing the “Gross Area of Primary Building” field by the parcel area field, such as the “Shape Area” field in the Connecticut CAMA and Parcel Layer.</p>
 <p><strong>FAR</strong> = Gross Floor Area / Total Lot Area</p>
 <p>As previously stated, the “Shape Area” field or a parcel geometry area calculation should be used over the “Land Acres” field, as the latter may have missing or incomplete data.</p></li>
-<li><p>Interpreting the FAR</p>
+<li><p><strong>Interpreting the FAR</strong></p>
 <p>Unlike land-to-improvement ratios and relative parcel size, floor area ratio and potential for redevelopment have a negative relationship: higher FAR values indicate less possibility for redevelopment.</p>
 <div>
 <table class="caption-top table">
@@ -442,7 +442,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="odd">
 <td style="text-align: center;">&gt; 1.0</td>
-<td style="text-align: center;">: The building space exceeds the lot size, indicating multi-story, high-density development. For example, a 10-story building occupying 10% of a lot yields a high FAR.</td>
+<td style="text-align: center;">The building space exceeds the lot size, indicating multi-story, high-density development. For example, a 10-story building occupying 10% of a lot yields a high FAR.</td>
 </tr>
 </tbody>
 </table>
@@ -473,10 +473,70 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <p>It is important to note that there are no statewide criteria for evaluating Effective Year Built. The calculation of effective building age may vary depending on the individual judgement of assessors and is a form of subjective data. Accordingly, if the AYB and EYB fields lack sufficient data or if municipalities have their own criteria for evaluating EYB, they may elect to use their own assessor data and property records.</p>
 <ol type="1">
-<li><p>Construction and renovation year clustering analysis</p>
-<p>This analysis uses a multivariate clustering tool in GIS to group parcels based on three fields simultaneously: original construction date (AYB), effective building age (EYB), and physical deterioration (Depreciation). Rather than applying a single threshold to one variable, multivariate clustering evaluates all three fields at once, automatically grouping parcels that share similar combinations of age, renovation history, and condition. The result is multiple groups of parcels, one of which will represent the oldest, least-renovated, and most deteriorated buildings in the study area, which are the parcels most likely to be candidates for rehabilitation or redevelopment</p></li>
+<li><p><strong>Construction and renovation year clustering analysis</strong></p>
+<p>This analysis uses a multivariate clustering tool in GIS to group parcels based on three fields simultaneously: original construction date (AYB), effective building age (EYB), and physical deterioration (Depreciation). Rather than applying a single threshold to one variable, multivariate clustering evaluates all three fields at once, automatically grouping parcels that share similar combinations of age, renovation history, and condition. The result is multiple groups of parcels, one of which will represent the oldest, least-renovated, and most deteriorated buildings in the study area, which are the parcels most likely to be candidates for rehabilitation or redevelopment</p>
+<p><strong>Why multivariate clustering?</strong></p>
+<p>A simple threshold approach (for example, filtering only by construction year) would miss properties that are old but have been well-maintained, or flag properties that are deteriorated but have been recently renovated. A multivariate analysis using the “AYB”, “EYB”, and “Depreciation” fields together can be used to flag groups of parcels with high redevelopment potential.</p>
+<p>It is also important to use a clustering method that does not rely on spatial relationships between parcels, meaning one that groups parcels based purely on shared traits rather than proximity or adjacency. Spatial clustering methods, such as K-nearest neighbor (KNN) or Queen contiguity, which would traditionally be used for parcel data using polygon geometry, identify parcels based on how close they are to each other or whether they share edges or corners. Because the parcel layer may be segmented by missing data, these methods will fail or produce inaccurate clusters by attempting to connect parcels across large gaps. Instead, a non-spatial multivariate clustering tool ensures that all parcels with available data are assigned to a cluster with shared features, regardless of where they are located. For more insight into these methods and their limitations:</p>
+<ul>
+<li>Brief introduction to concepts, with R examples: <a href="https://cran.r-project.org/web/packages/geostan/vignettes/spatial-weights-matrix.html">Spatial Weights Matrix</a></li>
+<li>Description of spatial statistics: <a href="https://doc.esri.com/en/arcgis-pro/latest/tool-reference/spatial-statistics/modeling-spatial-relationships.html">Modeling Spatial Relationships</a></li>
+<li>Overview of ESRI clustering tools and their applications: <a href="https://doc.esri.com/en/arcgis-pro/latest/tool-reference/spatial-statistics/an-overview-of-the-mapping-clusters-toolset.html">Mapping Clusters</a></li>
+</ul>
+<p>Instead, it is recommended to use a multivariate clustering tool that relies only on the presence of shared traits. These tools identify optimized seed locations, or initial parcels, by maximizing their initial distance from each other, then repeatedly adjust these seeds to minimize variability within clusters and increase variability between clusters. In this way, all parcels with available data are assigned to a cluster with shared features. Simplified, the process is:</p>
+<div>
+<p><em>assign seeds → recompute and adjust seed location → repeat until stable</em></p>
+</div>
+<p>The following tools and settings are recommended for conducting this analysis in GIS software:</p>
+<ul>
+<li>ArcGIS Pro: <a href="https://doc.esri.com/en/arcgis-pro/latest/tool-reference/spatial-statistics/multivariate-clustering.html?tabs=dialog">Multivariate Clustering</a></li>
+<li>QGIS: <a href="https://knowyourspace.dk/2021/04/09/using-the-attribute-based-clustering-plugin-qgis/">Attribute Based Clustering Plugin</a></li>
+</ul>
+<p>Recommended settings:</p>
+<ul>
+<li>K-means algorithm</li>
+<li>4 seeds (producing 4 clusters)</li>
+<li>Optimized seeds</li>
+</ul>
+<p>For the ArcGIS Pro tool, there is an option to choose between the K-means or K-medoids algorithm. K-medoids is robust to outliers, while K-means is faster and operates more efficiently with large datasets; accordingly, K-means is the recommended algorithm for this analysis and is also the default option for the QGIS Attribute Based Clustering Plugin.</p></li>
+<li><p><strong>Data preparation</strong></p>
+<p>Within the Statewide Parcel and CAMA data, the AYB and EYB fields may include null placeholder values of 0, 15, or other extremely low numbers. Placeholders may also take the form of years from the 1500s, 1600s, or 1700s. Accordingly, municipalities should evaluate the distribution of AYB values in their CAMA data, identify any outliers or apparent null placeholders, verify these against their oldest historical buildings, and filter this data out prior to running the clustering analysis.</p>
+<p>Example filter queries include:</p>
+<ul>
+<li>“EYB” is not equal to 0</li>
+<li>“AYB” is greater than or equal to 1639 (the construction year of the Henry Whitfield House, the oldest standing building in Connecticut)</li>
+<li>“AYB” &gt;= 1788 (the year of Connecticut’s founding as a state)</li>
+<li>“AYB” &gt;= 1899 (a common placeholder year, as it is the zero date in systems like SQL, Power BI, and SharePoint)</li>
+</ul></li>
+<li><p>Interpreting results</p>
+<p>Below is a sample series of boxplots automatically produced by running the Multivariate Clustering tool in ArcGIS Pro. These boxplots illustrate the distribution of data for the three fields of interest and reveal which clusters contain the combination of traits most relevant to this analysis. The target cluster will exhibit the lowest AYB, lowest EYB, and highest depreciation percentage.</p>
+<div style="text-align:center;">
+<p><img src="mc_boxplot.png" class="img-fluid" alt="multivariate clustering box plot example" width="800"></p>
+</div>
+<p>For example, the yellow cluster (cluster 4) contains parcels with extremely low AYB, high depreciation percentage, and low EYB, while the red cluster (cluster 2) contains parcels with low AYB, the highest depreciation, and the lowest EYB. Accordingly, clusters 2 and 4 are groups of interest for potential rehabilitation; in this case, cluster 2 would be isolated and included in a Potentially Redevelopable Land inventory, as it has the highest depreciation and lowest EYB.</p>
+<p>Note that AYB will naturally contain lower values than EYB, as it reflects original construction rather than effective age. The oldest buildings may have already undergone extensive renovation and therefore may not exhibit similarly extreme Depreciation or EYB values. Accordingly, Depreciation and EYB should be weighted more heavily when deciding which cluster to isolate, as these variables better reflect the current physical condition of properties.</p>
+<p>The figure on the left (a) shows the results of the Multivariate Clustering tool in ArcGIS Pro, where cluster colors on the map correspond to those shown in the boxplots. The figure on the right (b) shows the resulting map after isolating cluster 2, which represents the end product of a construction and renovation year clustering analysis.</p></li>
 </ol>
-<p>[editing in development….]</p>
+<div class="quarto-layout-panel" style="text-align:center;" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="MultiVar.png" class="img-fluid figure-img" alt="multivariate clustering box plot example" width="300"></p>
+<figcaption>a) Multivariate Clustering results</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="MultiVar2.png" class="img-fluid figure-img" alt="multivariate clustering box plot example" width="300"></p>
+<figcaption>b) Cluster 2 isolated</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
 
 
 </section>

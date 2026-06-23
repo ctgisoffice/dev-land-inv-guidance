@@ -77,6 +77,10 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<link href="site_libs/tabwid-1.1.3/tabwid.css" rel="stylesheet">
+
+<script src="site_libs/tabwid-1.1.3/tabwid.js"></script>
+
 <script>
   document.addEventListener("DOMContentLoaded", function() {
     var sidebar = document.getElementById('quarto-sidebar');
@@ -223,6 +227,7 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Developable vs.&nbsp;Non-Developable Land Map</strong>: A municipality-wide map depicting all statutory exclusion categories combined into a single consolidated layer symbolized as non-developable land. All remaining land not subject to statutory exclusions is displayed as developable land, providing a simplified binary representation of land suitability across the municipality.</li>
 <li><strong>Developable Land Summary Map</strong>: A municipality-wide map displaying all statutory exclusion categories combined into a single exclusion layer, alongside a developable land layer representing all land remaining after the exclusion analysis. Identified vacant parcels and parcels with redevelopment potential should be displayed as separate overlays.</li>
 </ol>
+<p><br></p>
 <section id="map-layers-and-symbology" class="level2" data-number="5.1">
 <h2 data-number="5.1" class="anchored" data-anchor-id="map-layers-and-symbology"><span class="header-section-number">5.1</span> Map Layers and Symbology</h2>
 <p>All maps include the municipal boundary layer to delineate the geographic extent of the study area.</p>
@@ -234,147 +239,29 @@ ul.task-list li input[type="checkbox"] {
 <ol type="1">
 <li><strong>Statutory Exclusions Map</strong></li>
 </ol>
-<div class="cell">
+<div class="cell" data-ft.keepnext="true">
 <div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small">
-<colgroup>
-<col style="width: 56%">
-<col style="width: 27%">
-<col style="width: 15%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Map Layer (top to bottom)</th>
-<th style="text-align: left;">Description</th>
-<th style="text-align: left;">Recommended Symbology</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Municipality boundary</td>
-<td style="text-align: left;">Municipal boundary delineating the extent of the study area.</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Parcels</td>
-<td style="text-align: left;">Municipal parcel boundaries.</td>
-<td style="text-align: left;">No fill; thin light-gray outlines.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Land already committed to public use or purpose</td>
-<td style="text-align: left;">Exclusion category described in Section 3.1.</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Open space, parks, and recreation areas dedicated to the public or protected by a conservation easement</td>
-<td style="text-align: left;">Exclusion category described in Section 3.2.</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Land subject to enforceable restrictions or prohibitions on development</td>
-<td style="text-align: left;">Exclusion category described in Section 3.3.</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Wetlands or watercourses, as defined in the Wetlands and Watercourses Act (CGS Chapter 440)</td>
-<td style="text-align: left;">Exclusion category described in Section 3.4.</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Areas of 0.5 acres or more of contiguous land that are unsuitable for development due to topography (such as steep slopes)</td>
-<td style="text-align: left;">Exclusion category described in Section 3.5.</td>
-<td style="text-align: left;"></td>
-</tr>
-</tbody>
-</table>
+<div class="tabwid"><style>.cl-bcfe20e0{}.cl-bcec563a{font-family:'Arial';font-size:10pt;font-weight:bold;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-bcec568a{font-family:'Arial';font-size:10pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-bcf51d60{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:4pt;padding-top:4pt;padding-left:4pt;padding-right:4pt;line-height: 1;background-color:transparent;}.cl-bcf55e74{width:2.8in;background-color:transparent;vertical-align: top;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-bcf55e88{width:2.2in;background-color:transparent;vertical-align: top;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-bcf55e92{width:1.5in;background-color:transparent;vertical-align: top;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-bcf55e9c{width:2.8in;background-color:transparent;vertical-align: top;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-bcf55ea6{width:2.2in;background-color:transparent;vertical-align: top;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-bcf55ea7{width:1.5in;background-color:transparent;vertical-align: top;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-bcf55eb0{width:2.8in;background-color:transparent;vertical-align: top;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-bcf55eb1{width:2.2in;background-color:transparent;vertical-align: top;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-bcf55eba{width:1.5in;background-color:transparent;vertical-align: top;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-bcf55ec4{width:2.8in;background-color:transparent;vertical-align: top;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-bcf55ec5{width:2.2in;background-color:transparent;vertical-align: top;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-bcf55ece{width:1.5in;background-color:transparent;vertical-align: top;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing="true" class="cl-bcfe20e0"><thead><tr style="overflow-wrap:break-word;"><th class="cl-bcf55e74"><p class="cl-bcf51d60"><span class="cl-bcec563a">Map Layer (top to bottom)</span></p></th><th class="cl-bcf55e88"><p class="cl-bcf51d60"><span class="cl-bcec563a">Description</span></p></th><th class="cl-bcf55e92"><p class="cl-bcf51d60"><span class="cl-bcec563a">Recommended Symbology</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-bcf55e9c"><p class="cl-bcf51d60"><span class="cl-bcec568a">Municipality boundary</span></p></td><td class="cl-bcf55ea6"><p class="cl-bcf51d60"><span class="cl-bcec568a">Municipal boundary delineating the extent of the study area</span></p></td><td class="cl-bcf55ea7"><p class="cl-bcf51d60"><span class="cl-bcec568a"></span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-bcf55eb0"><p class="cl-bcf51d60"><span class="cl-bcec568a">Parcels</span></p></td><td class="cl-bcf55eb1"><p class="cl-bcf51d60"><span class="cl-bcec568a">Municipal parcel boundaries</span></p></td><td class="cl-bcf55eba"><p class="cl-bcf51d60"><span class="cl-bcec568a">No fill; thin light-gray outlines.</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-bcf55eb0"><p class="cl-bcf51d60"><span class="cl-bcec568a">Land already committed to public use or purpose</span></p></td><td class="cl-bcf55eb1"><p class="cl-bcf51d60"><span class="cl-bcec568a">Exclusion category described in Section 3.1</span></p></td><td class="cl-bcf55eba"><p class="cl-bcf51d60"><span class="cl-bcec568a"></span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-bcf55eb0"><p class="cl-bcf51d60"><span class="cl-bcec568a">Open space, parks, and recreation areas dedicated to the public or protected by a conservation easement</span></p></td><td class="cl-bcf55eb1"><p class="cl-bcf51d60"><span class="cl-bcec568a">Exclusion category described in Section 3.2</span></p></td><td class="cl-bcf55eba"><p class="cl-bcf51d60"><span class="cl-bcec568a"></span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-bcf55eb0"><p class="cl-bcf51d60"><span class="cl-bcec568a">Land subject to enforceable restrictions or prohibitions on development</span></p></td><td class="cl-bcf55eb1"><p class="cl-bcf51d60"><span class="cl-bcec568a">Exclusion category described in Section 3.3</span></p></td><td class="cl-bcf55eba"><p class="cl-bcf51d60"><span class="cl-bcec568a"></span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-bcf55eb0"><p class="cl-bcf51d60"><span class="cl-bcec568a">Wetlands or watercourses, as defined in the Wetlands and Watercourses Act (CGS Chapter 440)</span></p></td><td class="cl-bcf55eb1"><p class="cl-bcf51d60"><span class="cl-bcec568a">Exclusion category described in Section 3.4</span></p></td><td class="cl-bcf55eba"><p class="cl-bcf51d60"><span class="cl-bcec568a"></span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-bcf55ec4"><p class="cl-bcf51d60"><span class="cl-bcec568a">Areas of 0.5 acres or more of contiguous land that are unsuitable for development due to topography (such as steep slopes)</span></p></td><td class="cl-bcf55ec5"><p class="cl-bcf51d60"><span class="cl-bcec568a">Exclusion category described in Section 3.5</span></p></td><td class="cl-bcf55ece"><p class="cl-bcf51d60"><span class="cl-bcec568a"></span></p></td></tr></tbody></table></div>
 </div>
 </div>
 <p><br></p>
 <ol start="2" type="1">
 <li><strong>Developable vs.&nbsp;Non-Developable Land Map</strong></li>
 </ol>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Map Layer (top to bottom)</th>
-<th>Description</th>
-<th>Recommended Symbology</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Municipality boundary</td>
-<td>Municipal boundary delineating the extent of the study area.</td>
-<td></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Statutory Exclusions</td>
-<td>Areas excluded from the developable land inventory in Section 2. All statutory exclusion categories should be combined into a single layer.</td>
-<td>Dark gray (<code>[hex code]</code>)</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Developable Land</td>
-<td>Land not identified as excluded under the statutory criteria. This layer represents all land remaining after the exclusion analysis.</td>
-<td>Light gray</td>
-</tr>
-</tbody>
-</table>
-<p>Map symbology should use colors and patterns that improve overall readability, provide clear visual distinction between categories, and remain accessible to users with color vision deficiencies.</p>
+<div class="cell" data-ft.keepnext="true">
+<div class="cell-output-display">
+<div class="tabwid"><style>.cl-bd2b45a2{}.cl-bd1991a4{font-family:'Arial';font-size:10pt;font-weight:bold;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-bd1991b8{font-family:'Arial';font-size:10pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-bd20076e{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:4pt;padding-top:4pt;padding-left:4pt;padding-right:4pt;line-height: 1;background-color:transparent;}.cl-bd203ad6{width:2.8in;background-color:transparent;vertical-align: top;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-bd203ae0{width:2.2in;background-color:transparent;vertical-align: top;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-bd203aea{width:1.5in;background-color:transparent;vertical-align: top;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-bd203af4{width:2.8in;background-color:transparent;vertical-align: top;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-bd203af5{width:2.2in;background-color:transparent;vertical-align: top;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-bd203af6{width:1.5in;background-color:transparent;vertical-align: top;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-bd203afe{width:2.8in;background-color:transparent;vertical-align: top;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-bd203aff{width:2.2in;background-color:transparent;vertical-align: top;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-bd203b08{width:1.5in;background-color:transparent;vertical-align: top;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-bd203b09{width:2.8in;background-color:transparent;vertical-align: top;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-bd203b12{width:2.2in;background-color:transparent;vertical-align: top;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-bd203b13{width:1.5in;background-color:transparent;vertical-align: top;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing="true" class="cl-bd2b45a2"><thead><tr style="overflow-wrap:break-word;"><th class="cl-bd203ad6"><p class="cl-bd20076e"><span class="cl-bd1991a4">Map Layer (top to bottom)</span></p></th><th class="cl-bd203ae0"><p class="cl-bd20076e"><span class="cl-bd1991a4">Description</span></p></th><th class="cl-bd203aea"><p class="cl-bd20076e"><span class="cl-bd1991a4">Recommended Symbology</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-bd203af4"><p class="cl-bd20076e"><span class="cl-bd1991b8">Municipality boundary</span></p></td><td class="cl-bd203af5"><p class="cl-bd20076e"><span class="cl-bd1991b8">Municipal boundary delineating the extent of the study area.</span></p></td><td class="cl-bd203af6"><p class="cl-bd20076e"><span class="cl-bd1991b8"></span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-bd203afe"><p class="cl-bd20076e"><span class="cl-bd1991b8">Statutory exclusions</span></p></td><td class="cl-bd203aff"><p class="cl-bd20076e"><span class="cl-bd1991b8">Areas excluded from the developable land inventory in Section 2. All statutory exclusion categories should be combined into a single layer.</span></p></td><td class="cl-bd203b08"><p class="cl-bd20076e"><span class="cl-bd1991b8">Dark gray ([hex code])</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-bd203b09"><p class="cl-bd20076e"><span class="cl-bd1991b8">Developable land</span></p></td><td class="cl-bd203b12"><p class="cl-bd20076e"><span class="cl-bd1991b8">Land not identified as excluded under the statutory criteria. This layer represents all land remaining after the exclusion analysis.</span></p></td><td class="cl-bd203b13"><p class="cl-bd20076e"><span class="cl-bd1991b8">Light gray</span></p></td></tr></tbody></table></div>
+</div>
+</div>
 <p><br></p>
 <ol start="3" type="1">
 <li><strong>Developable Land Summary Map</strong></li>
 </ol>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Map Layer (top to bottom)</th>
-<th>Description</th>
-<th>Recommended Symbology</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Municipality boundary</td>
-<td>Municipal boundary delineating the extent of the study area.</td>
-<td></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">?Parcels</td>
-<td>Municipal parcel boundaries.</td>
-<td>No fill; thin light-gray outlines.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Vacant Areas</td>
-<td>Areas identified as vacant in Section 4.1.</td>
-<td></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Areas with Redevelopment Potential</td>
-<td>Areas identified as having redevelopment potential in Section 4.2.</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Statutory Exclusions</td>
-<td>Areas excluded from the developable land inventory in Section 2. All statutory exclusion categories should be combined into a single layer.</td>
-<td>Gray (<code>[hex code]</code>)</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Developable Land</td>
-<td>Land not identified as excluded under the statutory criteria. This layer represents all land remaining after the exclusion analysis.</td>
-<td></td>
-</tr>
-</tbody>
-</table>
+<div class="cell" data-ft.keepnext="true">
+<div class="cell-output-display">
+<div class="tabwid"><style>.cl-bd693c9a{}.cl-bd58f538{font-family:'Arial';font-size:10pt;font-weight:bold;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-bd58f560{font-family:'Arial';font-size:10pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-bd602b50{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:4pt;padding-top:4pt;padding-left:4pt;padding-right:4pt;line-height: 1;background-color:transparent;}.cl-bd60790c{width:2.8in;background-color:transparent;vertical-align: top;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-bd60792a{width:2.2in;background-color:transparent;vertical-align: top;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-bd60792b{width:1.5in;background-color:transparent;vertical-align: top;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-bd607934{width:2.8in;background-color:transparent;vertical-align: top;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-bd60793e{width:2.2in;background-color:transparent;vertical-align: top;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-bd60793f{width:1.5in;background-color:transparent;vertical-align: top;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-bd607948{width:2.8in;background-color:transparent;vertical-align: top;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-bd607949{width:2.2in;background-color:transparent;vertical-align: top;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-bd607952{width:1.5in;background-color:transparent;vertical-align: top;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-bd607953{width:2.8in;background-color:transparent;vertical-align: top;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-bd60795c{width:2.2in;background-color:transparent;vertical-align: top;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-bd60795d{width:1.5in;background-color:transparent;vertical-align: top;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing="true" class="cl-bd693c9a"><thead><tr style="overflow-wrap:break-word;"><th class="cl-bd60790c"><p class="cl-bd602b50"><span class="cl-bd58f538">Map Layer (top to bottom)</span></p></th><th class="cl-bd60792a"><p class="cl-bd602b50"><span class="cl-bd58f538">Description</span></p></th><th class="cl-bd60792b"><p class="cl-bd602b50"><span class="cl-bd58f538">Recommended Symbology</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-bd607934"><p class="cl-bd602b50"><span class="cl-bd58f560">Municipality boundary</span></p></td><td class="cl-bd60793e"><p class="cl-bd602b50"><span class="cl-bd58f560">Municipal boundary delineating the extent of the study area.</span></p></td><td class="cl-bd60793f"><p class="cl-bd602b50"><span class="cl-bd58f560"></span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-bd607948"><p class="cl-bd602b50"><span class="cl-bd58f560">Parcels</span></p></td><td class="cl-bd607949"><p class="cl-bd602b50"><span class="cl-bd58f560">Municipal parcel boundaries.</span></p></td><td class="cl-bd607952"><p class="cl-bd602b50"><span class="cl-bd58f560">No fill; thin light-gray outlines.</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-bd607948"><p class="cl-bd602b50"><span class="cl-bd58f560">Vacant Areas</span></p></td><td class="cl-bd607949"><p class="cl-bd602b50"><span class="cl-bd58f560">Areas identified as vacant in Section 4.1.</span></p></td><td class="cl-bd607952"><p class="cl-bd602b50"><span class="cl-bd58f560"></span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-bd607948"><p class="cl-bd602b50"><span class="cl-bd58f560">Areas with Redevelopment Potential</span></p></td><td class="cl-bd607949"><p class="cl-bd602b50"><span class="cl-bd58f560">Areas identified as having redevelopment potential in Section 4.2.</span></p></td><td class="cl-bd607952"><p class="cl-bd602b50"><span class="cl-bd58f560"></span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-bd607948"><p class="cl-bd602b50"><span class="cl-bd58f560">Statutory Exclusions</span></p></td><td class="cl-bd607949"><p class="cl-bd602b50"><span class="cl-bd58f560">Areas excluded from the developable land inventory in Section 2. All statutory exclusion categories should be combined into a single layer.</span></p></td><td class="cl-bd607952"><p class="cl-bd602b50"><span class="cl-bd58f560">Gray ([hex code])</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-bd607953"><p class="cl-bd602b50"><span class="cl-bd58f560">Developable Land</span></p></td><td class="cl-bd60795c"><p class="cl-bd602b50"><span class="cl-bd58f560">Land not identified as excluded under the statutory criteria. This layer represents all land remaining after the exclusion analysis.</span></p></td><td class="cl-bd60795d"><p class="cl-bd602b50"><span class="cl-bd58f560"></span></p></td></tr></tbody></table></div>
+</div>
+</div>
 <div class="callout callout-style-simple callout-caution no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">

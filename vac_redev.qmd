@@ -19,18 +19,14 @@ If using aerial imagery for review, high‑resolution statewide imagery (leaf‑
 
 Vacant parcels represent land that is either currently undeveloped or previously developed but now considered vacant and may present direct development opportunities. While no statewide dataset of vacant parcels exists, the statewide CAMA and parcel dataset can be queried to identify parcels labeled as vacant.
 
-We have completed a statewide queried feature layer as a hosted feature layer view on ArcGIS Online. This can be used as a starting point for local analysis, or a new query analysis can be started on a full CAMA and parcel dataset.
-
-**Dataset:** [Connecticut Vacant Parcels (\*\*CT Geodata Portal)](https://ctmaps.maps.arcgis.com/home/item.html?id=1e733783ba524d26b540961257bb0bcb#overview)
-
-::: {.callout-note appearance="simple"}
+::: {.callout-warning appearance="simple" icon="false"}
 Please note that terminology is not standardized across municipalities statewide; however, many jurisdictions use similar naming conventions and descriptions that can provide useful indicators for identifying parcels that may fit within a given category.
 :::
 
-The following text-based queries were developed for the statewide parcel dataset to identify parcels that are likely vacant based on the state use code and state use description fields.
+Recommended query:
 
-- State Use (is): "500"
-- State Use Description (contains): "vac"
+- State_Use for code "500"
+- State_Use_Description for values such as “vac”, "vacant", or "vacancy"
 
 ::: {style="text-align:center;"}
 ![*Example map of vacant parcels identified*](Vacant_Parcels.png){fig-alt="Example map of vacant parcels identified" width="350"}
@@ -42,8 +38,17 @@ The following text-based queries were developed for the statewide parcel dataset
 
 ``` sql
 STATE_USE IS '%500%'  
+    
 OR STATE_USE_DESCRIPTION CONTAINS '%VAC%'
 ```
+
+::: {.callout-note appearance="simple" icon="false"}
+We have completed a statewide queried feature layer of vacant parcels, available as a hosted feature layer on the CT Housing Data Hub. This can be used as a starting point for local analysis or a new query analysis can be started on a full CAMA and parcel dataset.
+
+**Dataset:** [Connecticut Vacant Parcels (CT Geodata Portal)](https://ctmaps.maps.arcgis.com/home/item.html?id=1e733783ba524d26b540961257bb0bcb#overview)
+
+Full SQL queries used to generate this dataset are available in our [GitHub repository](https://github.com/ctgisoffice/housing/blob/main/SQL_Vacant_Land_Parcels.sql).
+:::
 
 <br/>
 

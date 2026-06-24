@@ -138,10 +138,8 @@ img <- image_border(img, color = "gray", geometry = "2x2")
 image_write(img, "excl_map_bordered.png")
 ```
 
-
 ::: {style="text-align:center;"}
-![*Example Statutory Exclusions Map*  <br> 
-[View full-size map](https://github.com/ctgisoffice/dev-land-inv-guidance/blob/master/excl_map.png?raw=true)](excl_map_bordered.png){fig-alt="Example Statutory Exclusions Map"}
+![*Example Statutory Exclusions Map* <br> [View full-size map](https://github.com/ctgisoffice/dev-land-inv-guidance/blob/master/excl_map.png?raw=true)](excl_map_bordered.png){fig-alt="Example Statutory Exclusions Map"}
 :::
 
 <br/>
@@ -220,7 +218,6 @@ ft <- set_table_properties(ft, layout = "fixed") |>
 ft
 ```
 
-
 ```{r}
 #| echo: false
 #| warning: false
@@ -233,12 +230,10 @@ img <- image_border(img, color = "gray", geometry = "2x2")
 image_write(img, "bw_map_bordered.png")
 ```
 
-
-
 ::: {style="text-align:center;"}
-![*Example Developable vs. Non-Developable Land Map*  <br> 
-[View full-size map](https://github.com/ctgisoffice/dev-land-inv-guidance/blob/master/bw_map.png?raw=true)](bw_map_bordered.png){fig-alt="Example Developable vs. Non-Developable Land Map"}
+![*Example Developable vs. Non-Developable Land Map* <br> [View full-size map](https://github.com/ctgisoffice/dev-land-inv-guidance/blob/master/bw_map.png?raw=true)](bw_map_bordered.png){fig-alt="Example Developable vs. Non-Developable Land Map"}
 :::
+
 <br/>
 
 3.  **Developable Land Summary Map**
@@ -330,7 +325,6 @@ ft <- set_table_properties(ft, layout = "fixed") |>
 ft
 ```
 
-
 ```{r}
 #| echo: false
 #| warning: false
@@ -344,8 +338,7 @@ image_write(img, "summary_map_bordered.png")
 ```
 
 ::: {style="text-align:center;"}
-![*Example Developable Land Summary Map*  <br> 
-[View full-size map](https://github.com/ctgisoffice/dev-land-inv-guidance/blob/master/summary_map.png?raw=true)](summary_map_bordered.png){fig-alt="Example Developable Land Summary Map"}
+![*Example Developable Land Summary Map* <br> [View full-size map](https://github.com/ctgisoffice/dev-land-inv-guidance/blob/master/summary_map.png?raw=true)](summary_map_bordered.png){fig-alt="Example Developable Land Summary Map"}
 :::
 
 <br/>
@@ -363,6 +356,4 @@ All maps should include:
 - Municipality-wide extent
 - Clear map title
 - Municipality name
-- Scale bar or representative fraction
-- North arrow
 - Legend identifying all mapped categories

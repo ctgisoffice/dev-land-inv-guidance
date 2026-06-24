@@ -90,6 +90,25 @@ flextable(map_layers) |>
 
 ```
 
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+library(magick)
+
+img <- image_read("excl_map.png")
+img <- image_border(img, color = "gray", geometry = "2x2")
+
+image_write(img, "excl_map_bordered.png")
+```
+
+
+
+::: {style="text-align:center;"}
+![*Example Statutory Exclusions Map*  <br> 
+link test](excl_map_bordered.png){fig-alt="Example Statutory Exclusions Map"}
+:::
+
 <br/>
 
 2.  **Developable vs. Non-Developable Land Map**

@@ -11,8 +11,6 @@ For reference, the following datasets are used in the analyses:
 - [Connecticut CAMA and Parcel Layer (CT Geodata Portal)](https://geodata.ct.gov/datasets/ctmaps::connecticut-cama-and-parcel-layer/about)
 - [2025 Connecticut Parcel and CAMA Data (CT Open Data Portal)](https://data.ct.gov/Local-Government/2025-Connecticut-Parcel-and-CAMA-Data/rny9-6ak2/about_data)
 
-If using aerial imagery for review, high resoluation statewide imagery (leaf off, 4 bands, 3 inch pixel) are available for [download](https://maps.cteco.uconn.edu/download/) or through a service through CT ECO.
-
 If using aerial imagery for review, high‑resolution statewide imagery (leaf‑off, 4‑band, 3‑inch pixel) is available through CT ECO for [download](https://maps.cteco.uconn.edu/download/) or through [online services](https://maps.cteco.uconn.edu/map-services/). More information can be found on the [2023 Aerial Imagery and Elevation](https://maps.cteco.uconn.edu/data/flight2023/) web page.
 
 <br/>
@@ -99,6 +97,8 @@ The available data describing brownfield site locations is provided as an .xlsx 
 
 3.  **Interpreting the LTI Ratio**
 
+    Because land and improvement values vary significantly across markets, any LTI threshold used to identify underperforming parcels should be based on local market conditions and development patterns.
+
 ```{r}
 #| echo: false
 #| warning: false
@@ -131,11 +131,9 @@ flextable(lti_table) |>
 
 ```
 
-
-    Because land and improvement values vary significantly across markets, any LTI threshold used to identify underperforming parcels should be based on local market conditions and development patterns.
-
-
-![*Example map of LTI parcels identified using the applied threshold.*](LTI_ratio.png){fig-alt="Example map of LTI parcels identified using the applied threshold." width="350"}
+::: {style="text-align:center;"}
+![*Example map of LTI parcels identified using an applied threshold.*](LTI_ratio.png){fig-alt="Example map of LTI parcels identified using the applied threshold." width="350"}
+:::
 
 <br/>
 
@@ -179,6 +177,8 @@ In some cases, the "Gross Area of Primary Building" field may have missing or in
 
     Unlike land-to-improvement ratios and relative parcel size, floor area ratio and potential for redevelopment have a negative relationship: higher FAR values indicate less possibility for redevelopment.
 
+    To identify underperforming parcels using FAR, select a threshold at the lower end of the distribution as these represent properties where the built floor area is small relative to the land area, suggesting potential for more intensive development.
+
 ```{r}
 #| echo: false
 #| warning: false
@@ -210,8 +210,6 @@ flextable(far_table) |>
   padding(padding = 4, part = "all")
 
 ```
-
-    To identify underperforming parcels using FAR, select a threshold at the lower end of the distribution, such as parcels in the bottom 10% of FAR values within a neighborhood or district, as these represent properties where the built floor area is small relative to the land area, suggesting potential for more intensive development.
 
 ::: {style="text-align:center;"}
 ![*Example map identifying parcels based on low FAR values.*](FAR.png){fig-alt="Example map identifying parcels based on low FAR values." width="350"}

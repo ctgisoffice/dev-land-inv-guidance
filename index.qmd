@@ -1,8 +1,8 @@
 # Summary {.unnumbered}
 
-The *Developable Land Inventory Technical Guidance*, prepared by the Connecticut Office of Policy and Management’s GIS Office, provides a standardized, transparent framework for municipalities to identify land suitable for future residential or mixed‑use development as required under [Connecticut Public Act 25-1 (2025 Special Session)](https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&which_year=2025&bill_num=8002). The guidance outlines the datasets, analytical methods, and mapping standards needed to produce a consistent, statewide inventory of developable land.
+The *Developable Land Inventory Technical Guidance*, prepared by the Connecticut Office of Policy and Management’s GIS Office, provides a standardized, transparent framework for municipalities to identify land suitable for future residential or mixed-use development as required under [Connecticut Public Act 25-1 (2025 Special Session)](https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&which_year=2025&bill_num=8002). The guidance outlines the datasets, analytical methods, and mapping standards needed to produce a consistent, statewide inventory of developable land.
 
-The document emphasizes that identifying land as “developable” does not obligate development, nor does exclusion from the inventory permanently restrict future development opportunities. Instead, the inventory serves as a foundational input to each municipality’s Housing Growth Plan, supporting later phases such as suitability analysis and parcel‑level evaluation. The developable land inventory is not a permanent designation of a property's development potential.
+The document emphasizes that identifying land as “developable” does not obligate development, nor does exclusion from the inventory permanently restrict future development opportunities. Instead, the inventory serves as a foundational input to each municipality’s Housing Growth Plan, supporting later phases such as suitability analysis and parcel-level evaluation. The developable land inventory is not a permanent designation of a property's development potential.
 
 <br/>
 
@@ -50,7 +50,7 @@ The guidance specifies three required maps and recommendations for symbology:
 
 2.  Developable vs. Non-Developable Land Map
 
-3.  Developable Land Summary Map, including vacant and redevelopment‑potential parcels.
+3.  Developable Land Summary Map, including vacant and redevelopment-potential parcels.
 
 <br/>
 

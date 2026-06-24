@@ -282,16 +282,6 @@ We recommend utilizing the parcel dataset. The CT GIS Office aggregates municipa
 Please note that terminology is not standardized across municipalities statewide; however, many jurisdictions use similar naming conventions and land use descriptions that can provide useful indicators for identifying parcels that may fit within a given category.
 :::
 
-We have completed a statewide queried filtered feature layer as a hosted feature layer view on AGOL using the queries above. This can be used as a starting point for local analysis, or a new query analysis can be started on a full CAMA and parcel.
-
-**Dataset:** [Connecticut Open Space Parcels (CT Geodata Portal)](https://ctmaps.maps.arcgis.com/home/item.html?id=8264f13efc0241798d6d1c821bffc2aa)
-
-The following screening queries were developed for the statewide parcel dataset to identify parcels that are likely publicly committed based on owner name and land use description fields.
-
-::: {.callout-warning appearance="simple" icon="false"}
-Please note that terminology is not standardized across municipalities statewide; however, many jurisdictions use similar naming conventions and land use descriptions that can provide useful indicators for identifying parcels that may fit within a given category.
-:::
-
 <br/>
 
 ##### A. Owner and Co-Owner Queries
@@ -299,9 +289,7 @@ Please note that terminology is not standardized across municipalities statewide
 Search the owner (“Owner”) and co-owner ("Co_Owner") fields for terms that contain conservation related ownerships, including:
 
 - Land trust
-
-  “Conservation or conservancy
-
+- Conservation or conservancy
 - Land alliance
 
 <br/>

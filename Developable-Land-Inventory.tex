@@ -135,6 +135,12 @@
 \def\fps@figure{htbp}
 \makeatother
 
+\ifLuaTeX
+  \usepackage{luacolor}
+  \usepackage[soul]{lua-ul}
+\else
+  \usepackage{soul}
+\fi
 
 
 
@@ -291,11 +297,10 @@ The \emph{Developable Land Inventory Technical Guidance}, prepared by
 the Connecticut Office of Policy and Management's GIS Office, provides a
 standardized, transparent framework for municipalities to identify land
 suitable for future residential or mixed-use development as required
-under
-\href{https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&which_year=2025&bill_num=8002}{Connecticut
-Public Act 25-1 (2025 Special Session)}. The guidance outlines the
-datasets, analytical methods, and mapping standards needed to produce a
-consistent, statewide inventory of developable land.
+under \href{https://cga.ct.gov/2026/sup/chap_124b.htm}{CGS §§ 8-13bb and
+8-13cc}. The guidance outlines the datasets, analytical methods, and
+mapping standards needed to produce a consistent, statewide inventory of
+developable land.
 
 The document emphasizes that identifying land as ``developable'' does
 not obligate development, nor does exclusion from the inventory
@@ -315,10 +320,10 @@ In the Housing Growth Plans, the following should be included:
 \begin{itemize}
 \item
   Three town-wide maps showing statutory exclusions, developable land,
-  vacant parcels, and potential redevelopment areas.
+  vacant parcels, and potential redevelopment areas
 \item
   A narrative methodology describing data sources, queries, processing
-  steps, and classification methods used in the analysis.
+  steps, and classification methods used in the analysis
 \end{itemize}
 
 \section*{Statutory Exclusions}\label{statutory-exclusions}
@@ -326,7 +331,8 @@ In the Housing Growth Plans, the following should be included:
 
 \markright{Statutory Exclusions}
 
-PA 25-1 defines five categories of land that must be excluded from the
+\href{https://cga.ct.gov/2026/sup/chap_124b.htm\#sec_8-13aa}{CGS §§
+8-13aa} defines five categories of land that must be excluded from the
 developable land inventory:
 
 \begin{enumerate}
@@ -386,7 +392,7 @@ symbology:
   Developable vs.~Non-Developable Land Map
 \item
   Developable Land Summary Map, including vacant and
-  redevelopment-potential parcels.
+  redevelopment-potential parcels
 \end{enumerate}
 
 \section*{Next Steps}\label{next-steps}
@@ -406,13 +412,13 @@ Plan's suitability analysis and parcel and zone identification.
 This documentation provides technical guidance for preparing the
 municipal developable land inventory required for inclusion in the
 Housing Growth Plans under
-\href{https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&which_year=2025&bill_num=8002}{Connecticut
-Public Act No.~25-1 of the November 2025 Special Session} (PA 25-1). The
-inventory identifies land that meets the statutory definition of
-developable land in Section 4(5) of PA 25-1 and serves as a foundational
-input to the Housing Growth Plan process. This guidance is intended to
-support a consistent and transparent analytical approach across
-municipalities.
+\href{https://cga.ct.gov/2026/sup/chap_124b.htm}{Connecticut General
+Statutes (CGS) §§ 8-13bb and 8-13cc}. The inventory identifies land that
+meets the statutory definition of developable land in
+\href{https://cga.ct.gov/2026/sup/chap_124b.htm\#sec_8-13aa}{CGS §§
+8-13aa} and serves as a foundational input to the Housing Growth Plan
+process. This guidance is intended to support a consistent and
+transparent analytical approach across municipalities.
 
 \begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, breakable, colback=white, colframe=quarto-callout-note-color-frame, left=2mm, leftrule=.75mm, opacityback=0, rightrule=.15mm, toprule=.15mm]
 \begin{minipage}[t]{5.5mm}
@@ -427,7 +433,8 @@ development on that land, nor does exclusion from the inventory limit
 future development opportunities outside the context of the Housing
 Growth Plan process. The developable land inventory is not a permanent
 designation of a property's development potential. Rather, it is a
-necessary step in preparing a Housing Growth Plan under
+necessary step in preparing a Housing Growth Plan under CGS §§ 8-13bb
+and 8-13cc.
 
 \end{minipage}%
 \end{tcolorbox}
@@ -450,22 +457,24 @@ judgment where appropriate.
 
 For additional information on Housing Growth Plans and the role of the
 developable land inventory within that framework, municipalities should
-refer to the Housing Growth Plan Guidance {[}link{]}.
+refer to the Housing Growth Plan Guidance {[}link coming soon{]}.
 
 The sections that follow describe each statutory exclusion from
 developable land and the recommended methods for identifying and
 documenting those exclusions. The document also outlines approaches for
-identifying vacant and potentially redevelopable land and provides
+identifying vacant and potentially redevelopable land, and provides
 guidance for assembling the final inventory and associated mapping
 products.\\
 
 \section{Use of this Guidance}\label{use-of-this-guidance}
 
 This document provides recommended methodologies for preparing a
-developable land inventory under PA 25-1. Municipalities may use
-alternative data sources or analytical approaches where appropriate,
-provided that the resulting inventory is consistent with the
-requirements of PA 25-1 and is adequately documented.
+developable land inventory under
+\href{https://cga.ct.gov/2026/sup/chap_124b.htm}{CGS §§ 8-13aa, 8-13bb,
+and 8-13cc}. Municipalities may use alternative data sources or
+analytical approaches where appropriate, provided that the resulting
+inventory is consistent with the requirements of these statutes and is
+adequately documented.
 
 \bookmarksetup{startatroot}
 
@@ -492,8 +501,9 @@ Plan report as part of the developable land inventory:
 
 \chapter{Statutory Exclusions}\label{sec-statutory-exclusions}
 
-Section 4(5) of PA 25-1 defines what developable land is and is not in
-the context of this planning process:
+\href{https://cga.ct.gov/2026/sup/chap_124b.htm\#sec_8-13aa}{CGS §§
+8-13aa} defines what developable land is and is not in the context of
+this planning process:
 
 \begin{quote}
 \emph{(5) ``Developable land'' means land, including any land owned by
@@ -521,8 +531,8 @@ residential or mixed-use development.
 
 Under the statute, several types of land are defined as areas that
 should be excluded from the developable land inventory for the purposes
-of Housing Growth Plans. The statutory exclusions identified in Section
-4(5) of PA 25-1 are:
+of Housing Growth Plans. The statutory exclusions identified in CGS §§
+8-13aa are:
 
 \begin{enumerate}
 \def\labelenumi{\Alph{enumi}.}
@@ -543,25 +553,25 @@ of Housing Growth Plans. The statutory exclusions identified in Section
   development due to steep slopes or other topographic conditions
 \end{enumerate}
 
-In addition to incorporating these statutory constraints, the final
-inventory may also document vacant land and land with potential for
-redevelopment. These areas provide important context for analyses done
-in the later phases of the development of the Housing Growth Plans,
-which will assess capacity for future housing growth (see {[}link{]} for
-more information). Guidance for identifying and analyzing vacant and
-potentially redevelopable land is provided in
-\href{vac_redev.qmd}{Section 4}.
+In addition to incorporating these categories, the final inventory may
+also document vacant land and land with potential for redevelopment.
+These areas provide important context for the development of other
+pieces of the Housing Growth Plans, which will use \ul{suitability
+analyses} {[}link coming soon{]} to complete a more detailed assessment
+on capacity for future housing growth. Guidance for identifying and
+analyzing vacant and potentially redevelopable land is provided in
+\hyperref[0]{Section 4}.
 
-This section outlines each statutory constraint category, identifies
+This section outlines each statutory exclusion category, identifies
 recommended datasets for analysis, and provides technical guidance for
 preparing those datasets for inclusion in the final developable land
 inventory. The intent is to support consistent data preparation across
-municipalities and ensure that the resulting outputs meet the standards
-described in \href{map.qmd}{Section 5}.
+municipalities and ensure that the resulting outputs meet the mapping
+standards described in \href{map.qmd}{Section 5}.
 
 \textbf{Workflow Overview}
 
-For each statutory constraint category, the workflow will generally
+For each statutory exclusion category, the workflow will generally
 proceed as follows:
 
 \begin{enumerate}
@@ -634,7 +644,7 @@ Examples of land committed to public use or purpose include:
 
 There is no single comprehensive dataset of publicly committed land in
 Connecticut. The following sources, used in combination, should capture
-most qualifying parcels and land area. Some overlap across sources is
+qualifying parcels and land area. Some overlap across sources is
 expected, but each may also identify areas the others miss. See the
 ``Technical Guidance'' section below for more details about using,
 filtering, spatializing, and querying these datasets.
@@ -662,58 +672,37 @@ utility providers.
 
 \subsubsection{Parcel and CAMA Data}\label{sec-parcel-and-cama-data}
 
-We recommend starting with the parcel dataset. The CT GIS Office
-aggregates municipal parcel data annually. While locally published
-datasets may also be available, the statewide aggregation is publicly
-accessible through the CT Geodata Portal. This data is not edited or
-transformed by the CT GIS Office; questions about data quality or
-completeness should be directed to the local town assessor. For more
-information on CT parcel data aggregation, see
-\href{https://geodata.ct.gov/pages/parcels}{the CT Geodata Portal page
-on parcels}.
+We recommend utilizing the parcel dataset. The CT GIS Office aggregates
+municipal parcel data annually. While locally published datasets may
+also be available, the statewide aggregation is publicly accessible
+through the CT Geodata Portal and the CT Housing Data Hub. This data is
+not edited or transformed by the CT GIS Office; questions about data
+quality or completeness should be directed to the local town assessor.
+For more information on CT parcel data aggregation, see the
+\href{https://geodata.ct.gov/pages/parcels}{CT Geodata Portal page on
+parcels}.
 
-\textbf{Links to datasets:}
+\textbf{Parcel geometry}:
+\href{https://housingmaps.ct.gov/datasets/ctmaps::connecticut-cama-and-parcel-layer/about}{Connecticut
+CAMA and Parcel Layer (CT Geodata Portal)}
 
-\begin{itemize}
-\tightlist
-\item
-  \href{https://geodata.ct.gov/datasets/ctmaps::connecticut-cama-and-parcel-layer/about}{Connecticut
-  CAMA and Parcel Layer (CT Geodata Portal)}
-\item
-  \href{https://data.ct.gov/Local-Government/2025-Connecticut-Parcel-and-CAMA-Data/rny9-6ak2/about_data}{2025
-  Connecticut Parcel and CAMA Data (CT Open Data Portal)}
-\end{itemize}
+\textbf{CAMA data}:
+\href{https://data.ct.gov/Local-Government/2025-Connecticut-Parcel-and-CAMA-Data/rny9-6ak2/about_data}{2025
+Connecticut Parcel and CAMA Data (CT Open Data Portal)}
 
-We have completed a statewide queried feature layer as a hosted feature
-layer view on ArcGIS Online using the owner name and state use queries
-below. This can be used as a starting point for local analysis, or a new
-query analysis can be started on a full CAMA and parcel dataset.
-
-\textbf{Dataset:}
-\href{https://ctmaps.maps.arcgis.com/home/item.html?id=ee917ce4b44d488cbba7df730b8583dc}{Connecticut
-Public Use Parcels (**CT Geodata Portal)}
-
-The following screening queries were developed for the statewide parcel
-dataset to identify parcels that are likely publicly committed based on
-owner name and land use description fields.
-
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, breakable, colback=white, colframe=quarto-callout-note-color-frame, left=2mm, leftrule=.75mm, opacityback=0, rightrule=.15mm, toprule=.15mm]
-\begin{minipage}[t]{5.5mm}
-\textcolor{quarto-callout-note-color}{\faInfo}
-\end{minipage}%
-\begin{minipage}[t]{\textwidth - 5.5mm}
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, breakable, colback=white, colframe=quarto-callout-warning-color-frame, left=2mm, leftrule=.75mm, opacityback=0, rightrule=.15mm, toprule=.15mm]
 
 Please note that terminology is not standardized across municipalities
 statewide; however, many jurisdictions use similar naming conventions
 and land use descriptions that can provide useful indicators for
 identifying parcels that may fit within a given category.
 
-\end{minipage}%
 \end{tcolorbox}
 
 \paragraph{A. Owner Name Queries}\label{a.-owner-name-queries}
 
-Search the owner's name field (``Owner\_Name'') for terms including:
+Search the ownership attributes, ``Owner'' and ``Co\_Owner'', for terms
+including:
 
 \begin{itemize}
 \tightlist
@@ -722,25 +711,15 @@ Search the owner's name field (``Owner\_Name'') for terms including:
 \item
   ``Town of''
 \item
-  ``State of Connecticut'' or ``State of''
-\item
-  ``U.S. Dept''
-\item
-  ``U.S. Dept'' or ``US Dept'', ``U S Government'', ``US Government'',
-  ``U.S. Government''
+  ``State of''
 \item
   ``United States of America''
 \item
-  ``Board of Ed''
-\item
-  ``Housing Authority'' or ``Housing Auth''
-\item
-  ``School District'' or ``School Dist''
+  ``School District''
 \item
   ``Public Works''
 \item
-  ``Water Auth'', ``Sewer Auth'', ``Power Co'', ``National Rail'',
-  ``Passenger Co''
+  ``Water Authority''
 \end{itemize}
 
 \textbf{Example query logic:}
@@ -751,61 +730,58 @@ Search the owner's name field (``Owner\_Name'') for terms including:
 
 \KeywordTok{OR}\NormalTok{ OWNER\_NAME }\KeywordTok{LIKE} \StringTok{\textquotesingle{}\%TOWN OF\%\textquotesingle{}}
 
-\KeywordTok{OR}\NormalTok{ OWNER\_NAME }\KeywordTok{LIKE} \StringTok{\textquotesingle{}\%STATE OF CONNECTICUT\%\textquotesingle{}}
-
-\KeywordTok{OR}\NormalTok{ OWNER\_NAME }\KeywordTok{LIKE} \StringTok{\textquotesingle{}\%U.S. DEPT\%\textquotesingle{}}
+\KeywordTok{OR}\NormalTok{ OWNER\_NAME }\KeywordTok{LIKE} \StringTok{\textquotesingle{}\%STATE OF\%\textquotesingle{}}
 \end{Highlighting}
 \end{Shaded}
 
 \paragraph{B. State Use and State Use Description
 Queries}\label{b.-state-use-and-state-use-description-queries}
 
-Search use (``Use'') or use description (``Use\_Desc'') fields for
-publicly oriented institutional and civic uses, including:
+Search state use (``State\_Use'') or use state use description
+(``State\_Use\_Description'') fields for terms related publicly oriented
+institutional and civic uses, including:
 
 \begin{itemize}
 \tightlist
 \item
-  ``Post'' for Postal Service (no false positives)
+  Postal Service
 \item
-  ``State'' for state lands (no false positives)
+  State
 \item
-  ``Fed'' for federal lands (1 false positive)
+  Federal
 \item
-  ``Education'' or ``Educ''
+  Education
 \item
-  ``Library'' or ``Libr''
+  Library
 \item
-  ``Museum''
+  Hospital
 \item
-  ``Cemetery'' or ``Cemet''
+  Cemetery
 \item
-  ``Fire station'' or ``Fire''
+  Fire
 \item
-  ``Police'' or ``Pol''
+  Police
 \item
-  ``Recreation''
+  Recreation
 \item
-  ``Municipal'' or ``Munic''
+  Municipal
 \item
   Government
 \item
-  Public facility
+  Utility
 \end{itemize}
 
 \textbf{Example query logic:}
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{USE\_DESC }\KeywordTok{LIKE} \StringTok{\textquotesingle{}\%SCHOOL\%\textquotesingle{}}
+\NormalTok{STATE\_USE\_DESCRIPTION }\KeywordTok{LIKE} \StringTok{\textquotesingle{}\%STATE\%\textquotesingle{}}
+    
+\KeywordTok{OR}\NormalTok{ STATE\_USE\_DESCRIPTION }\KeywordTok{LIKE} \StringTok{\textquotesingle{}\%FED\%\textquotesingle{}}
+    
+\KeywordTok{OR}\NormalTok{ STATE\_USE\_DESCRIPTION }\KeywordTok{LIKE} \StringTok{\textquotesingle{}\%EDUC\%\textquotesingle{}}
 
-\KeywordTok{OR}\NormalTok{ USE\_DESC }\KeywordTok{LIKE} \StringTok{\textquotesingle{}\%LIBRARY\%\textquotesingle{}}
-
-\KeywordTok{OR}\NormalTok{ USE\_DESC }\KeywordTok{LIKE} \StringTok{\textquotesingle{}\%MUSEUM\%\textquotesingle{}}
-
-\KeywordTok{OR}\NormalTok{ USE\_DESC }\KeywordTok{LIKE} \StringTok{\textquotesingle{}\%HOSPITAL\%\textquotesingle{}}
-
-\KeywordTok{OR}\NormalTok{ USE\_DESC }\KeywordTok{LIKE} \StringTok{\textquotesingle{}\%CEMETERY\%\textquotesingle{}}
+\KeywordTok{OR}\NormalTok{ STATE\_USE\_DESCRIPTION }\KeywordTok{LIKE} \StringTok{\textquotesingle{}\%LIBR\%\textquotesingle{}}
 \end{Highlighting}
 \end{Shaded}
 
@@ -823,8 +799,8 @@ used to identify ROW areas through parcel attribute information.
 
 \textbf{Identifying Rights-of-Way in the Parcel Dataset}
 
-Rights-of-way may be identified using keyword searches within the
-{[}FIELD NAME{]} field of the parcel dataset. Common keywords may
+Rights-of-way may be identified using keyword searches within the State
+Use Description field of the parcel dataset. Common keywords may
 include:
 
 \begin{itemize}
@@ -832,16 +808,16 @@ include:
 \item
   ``ROW''
 \item
-  ``Right of Way''
+  ``Rights of Way''
 \end{itemize}
 
 \textbf{Example query logic:}
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{USE\_DESC }\KeywordTok{LIKE} \StringTok{\textquotesingle{}\%ROW\%\textquotesingle{}}
+\NormalTok{STATE\_USE\_DESCRIPTION }\KeywordTok{LIKE} \StringTok{\textquotesingle{}\%ROW\%\textquotesingle{}}
 
-\KeywordTok{OR}\NormalTok{ USE\_DESC }\KeywordTok{LIKE} \StringTok{\textquotesingle{}\%Right of Way\%\textquotesingle{}}
+\KeywordTok{OR}\NormalTok{ STATE\_USE\_DESCRIPTION }\KeywordTok{LIKE} \StringTok{\textquotesingle{}\%RIGHTS OF WAY\%\textquotesingle{}}
 \end{Highlighting}
 \end{Shaded}
 
@@ -875,6 +851,24 @@ coverage. In these cases, the unassigned or residual land area between
 mapped parcel polygons and the municipal boundary may represent public
 rights-of-way or other unmapped areas.
 
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, breakable, colback=white, colframe=quarto-callout-note-color-frame, left=2mm, leftrule=.75mm, opacityback=0, rightrule=.15mm, toprule=.15mm]
+
+We have completed a statewide queried feature layer of public use
+parcels, available as a hosted feature layer on the CT Housing Data Hub,
+using the logic and keywords above. This can be used as a starting point
+for local analysis or a new query analysis can be started on a full CAMA
+and parcel dataset.
+
+\textbf{Dataset:}
+\href{https://ctmaps.maps.arcgis.com/home/item.html?id=ee917ce4b44d488cbba7df730b8583dc}{Connecticut
+Public Use Parcels (CT Geodata Portal)}
+
+Full SQL queries used to generate this dataset are available in our
+\href{https://github.com/ctgisoffice/housing/blob/main/SQL_Public_Use_Parcels.sql}{GitHub
+repository}.
+
+\end{tcolorbox}
+
 \subsubsection{CT Education Directory}\label{sec-ct-education-directory}
 
 There is no publicly available statewide GIS dataset representing public
@@ -893,8 +887,8 @@ spatial geometry, the records must first be spatialized through a
 geocoding process to generate point features representing individual
 school locations. Once geocoded, the resulting point dataset can be used
 to identify associated parcel polygons through a spatial selection or
-spatial join operation, whereby parcels containing or intersecting
-school point locations are selected.
+spatial join operation, whereby parcels containing or intersecting point
+locations are selected.
 
 Following the spatial selection process, identified parcels should be
 reviewed and verified using available parcel ownership and land use
@@ -912,16 +906,25 @@ Geocoding references:
 \tightlist
 \item
   \href{https://geospatial.yale.edu/tutorials-geocoding}{Yale Center for
-  Geospatial Solutions Lessons: \textbf{Geocoding}}
-\end{itemize}
-
-Parcel Selection from Points Reference:
-
-\begin{itemize}
-\tightlist
+  Geospatial Solutions Lessons: Geocoding}
 \item
-  {[}placeholder{]}
+  \href{https://gisgeography.com/geocoding/}{Geocoding: Longitude and
+  Latitude by Address}
 \end{itemize}
+
+After geocoding addresses to points, use this process to identify and
+extract polygons (parcels) based on their co-location with associated
+point features:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Ensure matching coordinate systems
+\item
+  Perform a spatial selection (often referred to as Select by Location)
+\item
+  Export or save the selected polygons
+\end{enumerate}
 
 \subsubsection{OpenStreetMap}\label{sec-openstreetmap}
 
@@ -1015,69 +1018,49 @@ utility providers.
 
 Land owned or permanently protected by land trusts should generally be
 considered protected open space and excluded from developable land
-inventories.No comprehensive statewide GIS dataset exists for land trust
-holdings in Connecticut.The Connecticut Land Conservation Council (CLCC)
-maintains a statewide directory of Connecticut land trusts that can be
-used to identify organizations operating within a municipality or
+inventories. No comprehensive statewide GIS dataset exists for land
+trust holdings in Connecticut.The Connecticut Land Conservation Council
+(CLCC) maintains a statewide directory of Connecticut land trusts that
+can be used to identify organizations operating within a municipality or
 region.
 
 \textbf{Source:}
 \href{https://ctconservation.org/what-is-a-land-trust/\#maps}{CLCC Land
 Trust Inventory (CLCC)}
 
-The GIS Office Open Space Parcels layer {[}link{]} includes land trusts
-as identified through ownership from the parcel and CAMA dataset. See
-the Open Space Parcel and CAMA data section for more details.
+The
+\href{https://ctmaps.maps.arcgis.com/home/item.html?id=8264f13efc0241798d6d1c821bffc2aa\#overview}{Connecticut
+Open Space Parcels (CT Geodata Portal)} layer includes land trusts as
+identified through ownership from the parcel and CAMA dataset. See the
+\textbf{Parcel and CAMA Data} section below for more details.
 
 \subsubsection{Parcel and CAMA Data}\label{sec-parcel-and-cama-data2}
 
-We recommend starting with the parcel dataset. The CT GIS Office
-aggregates municipal parcel data annually. While locally published
-datasets may also be available, the statewide aggregation is publicly
-accessible through the CT Geodata Portal. This data is not edited or
-transformed by the CT GIS Office; questions about data quality or
-completeness should be directed to the local town assessor. For more
-information on CT parcel data aggregation, see
-\href{https://geodata.ct.gov/pages/parcels}{the CT Geodata Portal page
-on parcels}.
+We recommend utilizing the parcel dataset. The CT GIS Office aggregates
+municipal parcel data annually. While locally published datasets may
+also be available, the statewide aggregation is publicly accessible
+through the CT Geodata Portal and the CT Housing Data Hub. This data is
+not edited or transformed by the CT GIS Office; questions about data
+quality or completeness should be directed to the local town assessor.
+For more information on CT parcel data aggregation, see the
+\href{https://geodata.ct.gov/pages/parcels}{CT Geodata Portal page on
+parcels}.
 
-\textbf{Links to datasets:}
+\textbf{Parcel geometry}:
+\href{https://housingmaps.ct.gov/datasets/ctmaps::connecticut-cama-and-parcel-layer/about}{Connecticut
+CAMA and Parcel Layer (CT Geodata Portal)}
 
-\begin{itemize}
-\tightlist
-\item
-  \href{https://geodata.ct.gov/datasets/ctmaps::connecticut-cama-and-parcel-layer/about}{Connecticut
-  CAMA and Parcel Layer (CT Geodata Portal)}
-\item
-  \href{https://data.ct.gov/Local-Government/2025-Connecticut-Parcel-and-CAMA-Data/rny9-6ak2/about_data}{2025
-  Connecticut Parcel and CAMA Data (CT Open Data Portal)}
-\end{itemize}
+\textbf{CAMA data}:
+\href{https://data.ct.gov/Local-Government/2025-Connecticut-Parcel-and-CAMA-Data/rny9-6ak2/about_data}{2025
+Connecticut Parcel and CAMA Data (CT Open Data Portal)}
 
-We have completed a statewide queried filtered feature layer as a hosted
-feature layer view on AGOL using the queries above. This can be used as
-a starting point for local analysis, or a new query analysis can be
-started on a full CAMA and parcel.
-
-\textbf{Dataset:}
-\href{https://ctmaps.maps.arcgis.com/home/item.html?id=8264f13efc0241798d6d1c821bffc2aa}{Connecticut
-Open Space Parcels (**CT Geodata Portal)}
-
-The following screening queries were developed for the statewide parcel
-dataset to identify parcels that are likely publicly committed based on
-owner name and land use description fields.
-
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, breakable, colback=white, colframe=quarto-callout-note-color-frame, left=2mm, leftrule=.75mm, opacityback=0, rightrule=.15mm, toprule=.15mm]
-\begin{minipage}[t]{5.5mm}
-\textcolor{quarto-callout-note-color}{\faInfo}
-\end{minipage}%
-\begin{minipage}[t]{\textwidth - 5.5mm}
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, breakable, colback=white, colframe=quarto-callout-warning-color-frame, left=2mm, leftrule=.75mm, opacityback=0, rightrule=.15mm, toprule=.15mm]
 
 Please note that terminology is not standardized across municipalities
 statewide; however, many jurisdictions use similar naming conventions
 and land use descriptions that can provide useful indicators for
 identifying parcels that may fit within a given category.
 
-\end{minipage}%
 \end{tcolorbox}
 
 \paragraph{A. Owner and Co-Owner
@@ -1089,41 +1072,40 @@ terms that contain conservation related ownerships, including:
 \begin{itemize}
 \tightlist
 \item
-  ``Land trust''
+  Land trust
 \item
-  ``Conservation'' or ``conservancy''
+  Conservation or conservancy
 \item
-  ``Land alliance''
+  Land alliance
 \end{itemize}
 
 \textbf{Example query logic:}
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{OWNER\_NAME }\KeywordTok{LIKE} \StringTok{\textquotesingle{}\%Land trust\%\textquotesingle{}}
+\NormalTok{OWNER }\KeywordTok{LIKE} \StringTok{\textquotesingle{}\%LAND TRUST\%\textquotesingle{}}
+    
+\KeywordTok{OR}\NormalTok{ OWNER }\StringTok{\textquotesingle{}\%CONSERVATION\%\textquotesingle{}}
 
-\KeywordTok{OR}\NormalTok{ OWNER\_NAME }\KeywordTok{LIKE} \StringTok{\textquotesingle{}\%Conservation\%\textquotesingle{}}
-
-\KeywordTok{OR}\NormalTok{ OWNER\_NAME }\KeywordTok{LIKE} \StringTok{\textquotesingle{}\%Land alliance\%\textquotesingle{}}
+\KeywordTok{OR}\NormalTok{ OWNER }\StringTok{\textquotesingle{}\%LAND ALLIANCE\%\textquotesingle{}}
 \end{Highlighting}
 \end{Shaded}
 
-\paragraph{B. State Use Description
-Queries}\label{b.-state-use-description-queries}
+\paragraph{\texorpdfstring{B. \textbf{\emph{State Use and State Use
+Description
+Queries}}}{B. State Use and State Use Description Queries}}\label{b.-state-use-and-state-use-description-queries-1}
 
-Search the owner (``Owner'') and co-owner (``Co\_Owner'') fields for
-terms that contain conservation related ownerships, including: Search
-state use description field (``State\_Use\_Description'') for open space
-and recreation codes, including:
+Search state use and state use description for open space and recreation
+terms, including::
 
 \begin{itemize}
 \tightlist
 \item
-  ``490'' (from
-  \href{https://portal.ct.gov/doag/commissioner/commissioner/public-act-490---the-basics?language=en_US}{PA
-  490})
+  Open (for Open Space)
 \item
-  ``Open'' (for Open Space)
+  Forest
+\item
+  Recreational
 \end{itemize}
 
 \textbf{Example query logic:}
@@ -1137,6 +1119,24 @@ and recreation codes, including:
 \KeywordTok{OR}\NormalTok{ OWNER\_NAME }\KeywordTok{LIKE} \StringTok{\textquotesingle{}\%Land alliance\%\textquotesingle{}}
 \end{Highlighting}
 \end{Shaded}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, breakable, colback=white, colframe=quarto-callout-note-color-frame, left=2mm, leftrule=.75mm, opacityback=0, rightrule=.15mm, toprule=.15mm]
+
+We have completed a statewide queried feature layer of open space
+parcels, available as a hosted feature layer on the CT Housing Data Hub,
+using the logic and keywords above. This can be used as a starting point
+for local analysis or a new query analysis can be started on a full CAMA
+and parcel dataset.
+
+\textbf{Dataset:}
+\href{https://ctmaps.maps.arcgis.com/home/item.html?id=8264f13efc0241798d6d1c821bffc2aa\#overview}{Connecticut
+Open Space Parcels (CT Geodata Portal)}
+
+Full SQL queries used to generate this dataset are available in our
+\href{https://github.com/ctgisoffice/housing/blob/main/SQL_Open_Space_Parcels.sql}{GitHub
+repository}.
+
+\end{tcolorbox}
 
 \subsubsection{CT DEEP Property}\label{sec-ct-deep-property}
 
@@ -1164,8 +1164,8 @@ by DEEP.}
 \end{quote}
 
 This dataset is regularly maintained by CT DEEP and should be used to
-ensure that all properties identified through the parcel query in
-Section X.x are fully accounted for.
+ensure that all properties identified through the parcel query in the
+\textbf{Parcel and CAMA Data} section above are fully accounted for.
 
 \subsubsection{CT DEEP Protected Open Space
 (2011)}\label{sec-ct-deep-protected-open-space-2011}
@@ -1173,7 +1173,7 @@ Section X.x are fully accounted for.
 This was created as part of the CT DEEP Protected Open Space Mapping
 (POSM) Project in 2011. Not all CT towns are included in this inventory.
 See more detailed information about the contents of the dataset in the
-data description on the portal page.
+data description on the data page.
 
 \textbf{Dataset:}
 \href{https://geodata.ct.gov/maps/80c5e61b6e86423d9089350785e709a3/about}{2011
@@ -1203,8 +1203,9 @@ Open Space (CT Geodata Portal)}
 
 This layer has not been updated since 2004 and may not be accurate, so
 it should be used as reference only. For more information on this
-dataset, see the CT Eco Federal Open Space guide here:
-https://cteco.uconn.edu/guides/Federal\_Open\_Space.htm
+dataset, see the
+\href{https://cteco.uconn.edu/guides/Federal_Open_Space.htm}{CT Eco
+Federal Open Space Guide}.
 
 \subsubsection{CT DEEP 1997 Municipal and Private Open Space
 Property}\label{sec-ct-deep-1997-municipal-and-private-open-space-property}
@@ -1218,6 +1219,7 @@ within the State of Connecticut.
 \href{https://geodata.ct.gov/datasets/CTDEEP::1997-municipal-and-private-open-space/about}{1997
 Municipal and Private Open Space (CT Geodata Portal)}
 
+\begin{quote}
 Municipal and Private Open Space Property contains parcels owned by
 municipalities, land trusts and other private entities throughout the
 state. Generally, these parcels are open space and include schools,
@@ -1225,6 +1227,7 @@ cemeteries, recreation, conservation and preservation land. This layer
 can be used with the Federal Property and DEP Property layers for a more
 comprehensive understanding of open space and recreation land throughout
 the State of Connecticut.
+\end{quote}
 
 This layer has not been updated since 1997 and may not be accurate. For
 more accurate and current open space parcel data, please see the
@@ -1245,14 +1248,14 @@ and other protected uses.
 
 \textbf{Dataset:}
 \href{https://usgs.maps.arcgis.com/home/item.html?id=80c7a138989c4cf8937c4502371d6e99}{PAD-US
-Protection Mechanism Category (ArcGIS Online)}
+Protection Mechanism Category (CT Housing Data Hub)}
 
 PAD-US can serve as an important reference dataset for identifying
-existing protected and open space lands that may qualify as constrained
-under this methodology. Because the dataset compiles information from
-many agencies and organizations, it should be used in conjunction with
-parcel data, local open space inventories, and other authoritative state
-or municipal sources.
+existing protected and open space lands that may be excluded under this
+methodology. Because the dataset compiles information from many agencies
+and organizations, it should be used in conjunction with parcel data,
+local open space inventories, and other authoritative state or municipal
+sources.
 
 The PAD-US program maintains published documentation and methodology
 describing data sources, compilation methods, protection
@@ -1267,7 +1270,9 @@ protected lands analysis.
 development}\label{land-subject-to-enforceable-restrictions-or-prohibitions-on-development}
 
 This category includes land where development is legally restricted by
-deed, agreement, or other enforceable instruments.
+deed, agreement, or other enforceable instruments. Some properties in
+this category may be covered in other exclusion categories, such as
+public use or open space.
 
 Examples include:
 
@@ -1276,25 +1281,29 @@ Examples include:
 \item
   Deed-restricted properties
 \item
-  {[}other?{]}
+  Easements
+\item
+  Land Trust agreements
 \end{itemize}
 
-\subsection{Guidance}\label{guidance}
+\subsection{Guidance on deed-restricted
+properties}\label{guidance-on-deed-restricted-properties}
 
 To the extent that municipality-wide restriction data is digitially
 available, include it in the developable lands inventory at this stage.
-Detailed parcel-level research on specific restrictions will become
-important in later phases of the Housing Growth Plan when specific sites
+Detailed parcel-level research on specific deed-restrictions will become
+important in other parts of the Housing Growth Plan when specific sites
 are being evaluated.
 
 \section{Wetlands or watercourses, as defined in the Wetlands and
 Watercourses Act (CGS Chapter
 440)}\label{wetlands-or-watercourses-as-defined-in-the-wetlands-and-watercourses-act-cgs-chapter-440}
 
-Wetlands and watercourses are defined under the CT Wetlands and
-Watercourses Act (C.G.S. Chapter 440{[}link{]}) and include inland
-wetlands, watercourses, and related regulated areas subject to
-environmental protection and development limitations.
+Wetlands and watercourses are defined under the
+\href{https://www.cga.ct.gov/2019/pub/chap_440.htm}{CT Wetlands and
+Watercourses Act (C.G.S. Chapter 440)} and include inland wetlands,
+watercourses, and related regulated areas subject to environmental
+protection and development limitations.
 
 Connecticut wetlands and watercourses are defined as follows:
 
@@ -1337,30 +1346,31 @@ are Inland Wetlands and Watercourses Defined in Connecticut?}
   Set}
 \item
   \hyperref[sec-local-data3]{Local data}
+\item
+  \hyperref[sec-nwi]{National Wetlands Inventory}
 \end{enumerate}
 
 \subsection{Technical Guidance}\label{technical-guidance-2}
 
 \subsubsection{Soils Inland Wetland}\label{sec-soils-inland-wetland}
 
-This dataset from CT DEEP is derived from Connecticut SSURGO data and
-identifies wetland and non‑wetland soils as defined by the Connecticut
-Inland Wetlands and Watercourses Act
-(\href{https://www.cga.ct.gov/2019/pub/chap_440.htm}{C.G.S. Chapter
-440}).
+This dataset from CT DEEP is derived from Connecticut Soil Survey
+Geographic Database (SSURGO) data and identifies wetland and non‑wetland
+soils as defined by the Connecticut Inland Wetlands and Watercourses
+Act.
 
 \textbf{Dataset:}
 \href{https://geodata.ct.gov/datasets/CTDEEP::soils-inland-wetland/about}{Soils
 Inland Wetland (CT Geodata Portal)}
 
-The Soil Survey Geographic Database (SSURGO) contains soil information
-compiled by the National Cooperative Soil Survey over the course of
-nearly a century, and the State of Connecticut defines inland wetlands
-based on soil characteristics. Under the Connecticut Inland Wetlands and
-Watercourses Act, wetland soils include any soil types designated as
-poorly drained, very poorly drained, alluvial, or floodplain by the
-National Cooperative Soil Survey, as periodically amended by the Natural
-Resources Conservation Service of the U.S. Department of Agriculture.
+The SSURGO contains soil information compiled by the National
+Cooperative Soil Survey over the course of nearly a century, and the
+State of Connecticut defines inland wetlands based on soil
+characteristics. Under the Connecticut Inland Wetlands and Watercourses
+Act, wetland soils include any soil types designated as poorly drained,
+very poorly drained, alluvial, or floodplain by the National Cooperative
+Soil Survey, as periodically amended by the Natural Resources
+Conservation Service of the U.S. Department of Agriculture.
 
 To delineate soil-defined inland wetlands, the CT DEEP Inland Wetland
 Soils feature layer should be queried using the ``CTInlWet'' attribute
@@ -1368,7 +1378,7 @@ field, selecting records where the value equals ``CT wetland.'' The
 selected polygons represent soils meeting Connecticut's regulatory
 wetland criteria and provide a statewide representation of inland
 wetland areas for mapping and analysis purposes. The resulting dataset
-may be included in the final map described in Section X.\\
+may be included in the final map described in \href{map.qmd}{Section 5}.
 
 \subsubsection{High Resolution Tidal Marsh
 Datasets}\label{sec-high-resolution-tidal-marsh-datasets}
@@ -1414,7 +1424,7 @@ hydrography data for Connecticut will eventually be provided through the
 USGS 3D Hydrography Program (3DHP), which is currently in development
 and will offer a higher‑resolution surface water dataset. Once the 3DHP
 for Connecticut is completed and released, it will replace the NHD as
-the recommended dataset in this guidance.
+the recommended dataset in this guidance (estimated 2027/2028).
 
 As part of the Connecticut Hydrography Set, the Hydrography Poly layer
 includes polygon features that represent areas of water for rivers,
@@ -1434,7 +1444,7 @@ Although the NHD provides information locations of marshes, Connecticut
 inland wetlands are defined by soil type by statutes
 (\href{https://www.cga.ct.gov/2019/pub/chap_440.htm}{C.G.S. Chapter
 440}) and this data should take priority over the NHD marshes category.
-See the Soils Inland Wetland{[}link{]} section for more details on
+See the \textbf{Soils Inland Wetland} section above for more details on
 inland wetlands data.
 
 \end{minipage}%
@@ -1445,6 +1455,19 @@ inland wetlands data.
 Datasets may be available from your municipality's inland wetlands
 agency. If available, local mapping can provide greater detail and more
 current information than statewide datasets.
+
+\subsubsection{National Wetlands Inventory}\label{sec-nwi}
+
+The National Wetlands Inventory (NWI), maintained by the U.S. Fish \&
+Wildlife Service, provides a comprehensive, nationwide dataset of
+wetland locations and types. While Connecticut defines wetlands by
+statute based on hydric soils, which may differ from the federal
+classification approach, the NWI can still serve as a useful
+supplemental reference when analyzing wetland coverage.
+
+\textbf{Dataset}:
+\href{https://housing-ctmaps.hub.arcgis.com/maps/9afd2367671f43eaa4cf3972edd32350/about}{USA
+Wetlands (CT Housing Data Hub)}
 
 \section{Areas of 0.5 acres or more of contiguous land that are
 unsuitable for development due to topography (such as steep
@@ -1478,13 +1501,14 @@ this planning analysis.
 Areas}\label{sec-connecticut-steep-slope-areas}
 
 This dataset was derived from the 2023 Digital Elevation Model (DEM)
-generated from the 2023 spring imagery and lidar capture. The steep
-slopes layer was developed from 10-foot and 2-foot per pixel DEM data
-and identifies areas classified as Moderate (10\%--15\%), Steep
-(15\%--20\%), and Very Steep (20\%+) slopes. The feature layer is
-provided as polygons and includes fields identifying the municipality
-and COG. Detailed methodology for the development of this dataset is
-available on the CT Geodata Portal data page.
+generated from the
+\href{https://maps.cteco.uconn.edu/data/flight2023/}{2023 spring imagery
+and lidar capture}. The steep slopes layer was developed from 10-foot
+and 2-foot per pixel DEM data and identifies areas classified as
+Moderate (10\%--15\%), Steep (15\%--20\%), and Very Steep (20\%+)
+slopes. The feature layer is provided as polygons and includes fields
+identifying the municipality and COG. Detailed methodology for the
+development of this dataset is available on the data page.
 
 \textbf{Dataset:}
 \href{https://geodata.ct.gov/maps/64e698b122464435a56172f576f3d2a6/about}{Connecticut
@@ -1515,7 +1539,7 @@ Connecticut. It represents a digital soil survey and provides detailed
 soil geographic information developed through the National Cooperative
 Soil Survey program. It is generally the most detailed level of soil
 data available for statewide analysis. Additional information and
-metadata are available on the CT Geodata Portal data page.
+metadata are available on the data page.
 
 \textbf{Dataset:}
 \href{https://geodata.ct.gov/datasets/CTDEEP::soils-all-soils/about}{Soils
@@ -1531,8 +1555,7 @@ This dataset is a polygon and line feature-based layer describing the
 solid material that underlies soil or other unconsolidated material
 across Connecticut. It represents mapped bedrock geology and is intended
 for use in understanding underlying geologic conditions at a statewide
-scale. Additional information is available on the CT Geodata Portal data
-page.
+scale. Additional information is available on the data page.
 
 \textbf{Dataset:}
 \href{https://geodata.ct.gov/maps/a765e96b0c05413da1dcbea0ae86707d/about}{Bedrock
@@ -1542,8 +1565,9 @@ To use this layer, query the dataset for the area of interest and review
 the mapped bedrock units in relation to shallow bedrock or other
 considerations.
 
-See more information about Statewide Geologic Maps here:
-\url{https://portal.ct.gov/DEEP/Geology/Statewide-Geologic-Maps}
+See more information from CT DEEP about
+\href{https://portal.ct.gov/DEEP/Geology/Statewide-Geologic-Maps}{Statewide
+Geologic Maps}.
 
 \bookmarksetup{startatroot}
 
@@ -1592,39 +1616,24 @@ development opportunities. While no statewide dataset of vacant parcels
 exists, the statewide CAMA and parcel dataset can be queried to identify
 parcels labeled as vacant.
 
-We have completed a statewide queried feature layer as a hosted feature
-layer view on ArcGIS Online. This can be used as a starting point for
-local analysis, or a new query analysis can be started on a full CAMA
-and parcel dataset.
-
-\textbf{Dataset:}
-\href{https://ctmaps.maps.arcgis.com/home/item.html?id=1e733783ba524d26b540961257bb0bcb\#overview}{Connecticut
-Vacant Parcels (**CT Geodata Portal)}
-
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, breakable, colback=white, colframe=quarto-callout-note-color-frame, left=2mm, leftrule=.75mm, opacityback=0, rightrule=.15mm, toprule=.15mm]
-\begin{minipage}[t]{5.5mm}
-\textcolor{quarto-callout-note-color}{\faInfo}
-\end{minipage}%
-\begin{minipage}[t]{\textwidth - 5.5mm}
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, breakable, colback=white, colframe=quarto-callout-warning-color-frame, left=2mm, leftrule=.75mm, opacityback=0, rightrule=.15mm, toprule=.15mm]
 
 Please note that terminology is not standardized across municipalities
 statewide; however, many jurisdictions use similar naming conventions
 and descriptions that can provide useful indicators for identifying
 parcels that may fit within a given category.
 
-\end{minipage}%
 \end{tcolorbox}
 
-The following text-based queries were developed for the statewide parcel
-dataset to identify parcels that are likely vacant based on the state
-use code and state use description fields.
+Recommended query:
 
 \begin{itemize}
 \tightlist
 \item
-  State Use (is): ``500''
+  State\_Use for code ``500''
 \item
-  State Use Description (contains): ``vac''
+  State\_Use\_Description for values such as ``vac'', ``vacant'', or
+  ``vacancy''
 \end{itemize}
 
 \begin{figure}[H]
@@ -1642,9 +1651,27 @@ use code and state use description fields.
 \begin{Shaded}
 \begin{Highlighting}[]
 \NormalTok{STATE\_USE }\KeywordTok{IS} \StringTok{\textquotesingle{}\%500\%\textquotesingle{}}  
+    
 \KeywordTok{OR}\NormalTok{ STATE\_USE\_DESCRIPTION }\KeywordTok{CONTAINS} \StringTok{\textquotesingle{}\%VAC\%\textquotesingle{}}
 \end{Highlighting}
 \end{Shaded}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, breakable, colback=white, colframe=quarto-callout-note-color-frame, left=2mm, leftrule=.75mm, opacityback=0, rightrule=.15mm, toprule=.15mm]
+
+We have completed a statewide queried feature layer of vacant parcels,
+available as a hosted feature layer on the CT Housing Data Hub. This can
+be used as a starting point for local analysis or a new query analysis
+can be started on a full CAMA and parcel dataset.
+
+\textbf{Dataset:}
+\href{https://ctmaps.maps.arcgis.com/home/item.html?id=1e733783ba524d26b540961257bb0bcb\#overview}{Connecticut
+Vacant Parcels (CT Geodata Portal)}
+
+Full SQL queries used to generate this dataset are available in our
+\href{https://github.com/ctgisoffice/housing/blob/main/SQL_Vacant_Land_Parcels.sql}{GitHub
+repository}.
+
+\end{tcolorbox}
 
 \section{Potentially Redevelopable
 Land}\label{potentially-redevelopable-land}
@@ -2653,10 +2680,6 @@ All maps should include:
   Clear map title
 \item
   Municipality name
-\item
-  Scale bar or representative fraction
-\item
-  North arrow
 \item
   Legend identifying all mapped categories
 \end{itemize}

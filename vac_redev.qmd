@@ -8,7 +8,7 @@ It is recommended to carefully review outputs using local knowledge, supplementa
 
 For reference, the following datasets are used in the analyses:
 
-**Parcel geometry**: [Connecticut CAMA and Parcel Layer (CT Geodata Portal)](https://housingmaps.ct.gov/datasets/ctmaps::connecticut-cama-and-parcel-layer/about)
+**Parcel geometry**: [Connecticut CAMA and Parcel Layer (CT Housing Data Hub)](https://housingmaps.ct.gov/datasets/ctmaps::connecticut-cama-and-parcel-layer/about)
 
 **CAMA data**: [2025 Connecticut Parcel and CAMA Data (CT Open Data Portal)](https://data.ct.gov/Local-Government/2025-Connecticut-Parcel-and-CAMA-Data/rny9-6ak2/about_data)
 
@@ -46,7 +46,7 @@ OR STATE_USE_DESCRIPTION CONTAINS '%VAC%'
 ::: {.callout-note appearance="simple" icon="false"}
 We have completed a statewide queried feature layer of vacant parcels, available as a hosted feature layer on the CT Housing Data Hub. This can be used as a starting point for local analysis or a new query analysis can be started on a full CAMA and parcel dataset.
 
-**Dataset:** [Connecticut Vacant Parcels (CT Geodata Portal)](https://ctmaps.maps.arcgis.com/home/item.html?id=1e733783ba524d26b540961257bb0bcb#overview)
+**Dataset:** [Connecticut Vacant Parcels (CT Housing Data Hub)](https://housingmaps.ct.gov/datasets/ctmaps::connecticut-vacant-parcels/about)
 
 Full SQL queries used to generate this dataset are available in our [GitHub repository](https://github.com/ctgisoffice/housing/blob/main/SQL_Vacant_Land_Parcels.sql).
 :::
@@ -65,7 +65,7 @@ Potentially redevelopable land consists of previously developed parcels with cha
 
 The available data describing brownfield site locations is provided as an .xlsx file maintained by the Connecticut Department of Energy & Environmental Protection (CT DEEP).
 
-**Dataset**: [Connecticut Brownfields Inventory](https://portal.ct.gov/deep/remediation--site-clean-up/brownfields/brownfields-site-inventory)
+**Dataset**: [Connecticut Brownfields Inventory (CT DEEP)](https://portal.ct.gov/deep/remediation--site-clean-up/brownfields/brownfields-site-inventory)
 
 1.  **Spatializing the data**: Since this data is provided in a tabular format, it is necessary to spatialize it before processing with further analysis. While geocoding is feasible, it is recommended to use the Latitude and Longitude fields to create points corresponding to each brownfield site. The CRS should be NAD 83 Connecticut State Plane (2011). The following resources provide details on translating the tabular latitude and longitude data into geospatial points:
 

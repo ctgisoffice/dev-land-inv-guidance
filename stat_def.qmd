@@ -1,12 +1,12 @@
 # Statutory Exclusions {#sec-statutory-exclusions}
 
-[CGS §§ 8-13aa](https://cga.ct.gov/2026/sup/chap_124b.htm#sec_8-13aa) defines what developable land is and is not in the context of this planning process:
+[CGS § 8-13aa](https://cga.ct.gov/2026/sup/chap_124b.htm#sec_8-13aa) defines what developable land is and is not in the context of this planning process:
 
 > *(5) "Developable land" means land, including any land owned by the state or a political subdivision of the state, including a municipality, that, as of January 1, 2026, can be feasibly developed or redeveloped into a residential development or a mixed-use development, as defined in section 8-13m of the general statutes, provided the feasibility of such development or redevelopment is based on commercially reasonable assumptions. "Developable land" does not include: (A) Land already committed to a public use or purpose, whether publicly or privately owned; (B) open space, parks and recreation areas that are dedicated to the public or subject to a recorded conservation easement; (C) land that is subject to an enforceable restriction on or prohibition of development, provided any such restriction or prohibition is not imposed by any zoning regulations or ordinance adopted by a municipality; (D) wetlands or watercourses, as defined in chapter 440 of the general statutes; and (E) areas of one-half or more acres of contiguous land that are unsuitable for development due to topographic features, such as steep slopes;*
 
 This developable land inventory is a high-level description of land with a municipality that has opportunity for development or redevelopment of residential or mixed-use development.
 
-Under the statute, several types of land are defined as areas that should be excluded from the developable land inventory for the purposes of Housing Growth Plans. The statutory exclusions identified in CGS §§ 8-13aa are:
+Under the statute, several types of land are defined as areas that should be excluded from the developable land inventory for the purposes of Housing Growth Plans. The statutory exclusions identified in CGS § 8-13aa are:
 
 A.  Land already committed to public use or purpose (public or private)
 B.  Open space, parks, and recreation areas dedicated to the public or protected by a conservation easement

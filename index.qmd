@@ -18,7 +18,7 @@ In the Housing Growth Plans, the following should be included:
 
 ## Statutory Exclusions
 
-[C.G.S. §§ 8-13aa](https://cga.ct.gov/2026/sup/chap_124b.htm#sec_8-13aa) defines five categories of land that must be excluded from the developable land inventory:
+[C.G.S. § 8-13aa](https://cga.ct.gov/2026/sup/chap_124b.htm#sec_8-13aa) defines five categories of land that must be excluded from the developable land inventory:
 
 A.  Land already committed to public use or purpose (public or private)
 B.  Open space, parks, and recreation areas dedicated to the public or protected by a conservation easement

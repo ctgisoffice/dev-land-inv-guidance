@@ -1,6 +1,6 @@
 # Creating the Maps
 
-The developable land inventory identifies land that meets the statutory definition of developable land under C.G.S. §§ 8-13aa. This inventory serves as a foundational input to subsequent phases of the Housing Growth Plan process, including the suitability analysis and the parcel and zone identification. These later steps will incorporate additional planning considerations, local context, and policy objectives to evaluate where housing growth and affordable housing opportunities may be most appropriate.
+The developable land inventory identifies land that meets the statutory definition of developable land under C.G.S. § 8-13aa. This inventory serves as a foundational input to subsequent phases of the Housing Growth Plan process, including the suitability analysis and the parcel and zone identification. These later steps will incorporate additional planning considerations, local context, and policy objectives to evaluate where housing growth and affordable housing opportunities may be most appropriate.
 
 To support Housing Growth Plan reporting and review, the developable land inventory should be presented in the report as municipality-wide maps. The maps should clearly display the location and distribution of developable land using clear, accessible, and consistent symbology.
 

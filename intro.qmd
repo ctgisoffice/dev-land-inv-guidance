@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This documentation provides technical guidance for preparing the municipal developable land inventory required for inclusion in the Housing Growth Plans under [Connecticut General Statutes (C.G.S.) §§ 8-13bb and 8-13cc](https://cga.ct.gov/2026/sup/chap_124b.htm). The inventory identifies land that meets the statutory definition of developable land in [C.G.S. §§ 8-13aa](https://cga.ct.gov/2026/sup/chap_124b.htm#sec_8-13aa) and serves as a foundational input to the Housing Growth Plan process. This guidance is intended to support a consistent and transparent analytical approach across municipalities.
+This documentation provides technical guidance for preparing the municipal developable land inventory required for inclusion in the Housing Growth Plans under [Connecticut General Statutes (C.G.S.) §§ 8-13bb and 8-13cc](https://cga.ct.gov/2026/sup/chap_124b.htm). The inventory identifies land that meets the statutory definition of developable land in [C.G.S. § 8-13aa](https://cga.ct.gov/2026/sup/chap_124b.htm#sec_8-13aa) and serves as a foundational input to the Housing Growth Plan process. This guidance is intended to support a consistent and transparent analytical approach across municipalities.
 
 ::: {.callout-note appearance="simple"}
 ## A note about developable land

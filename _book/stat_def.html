@@ -70,7 +70,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="quarto:offset" content="./">
 <link href="./vac_redev.html" rel="next">
 <link href="./outputs.html" rel="prev">
-<link href="./CT-GIS-Office-favicon.png" rel="icon" type="image/png">
+<link href="./logos/CT-GIS-Office-favicon.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -148,8 +148,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="./index.html" class="sidebar-logo-link">
-      <img src="./opm_giso_logo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
-      <img src="./opm_giso_logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
+      <img src="./logos/opm_giso_logo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="./logos/opm_giso_logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
       </a>
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Developable Land Inventory</a> 
@@ -377,7 +377,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<p><br></p>
 <section id="a.-owner-name-queries" class="level5">
 <h5 class="anchored" data-anchor-id="a.-owner-name-queries">A. Owner Name Queries</h5>
 <p>Search the ownership attributes, “Owner” and “Co_Owner”, for terms including:</p>
@@ -390,7 +389,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>“Public Works”</li>
 <li>“Water Authority”</li>
 </ul>
-<p><br></p>
 <p><strong>Example query logic:</strong></p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>OWNER_NAME <span class="kw">LIKE</span> <span class="st">'%CITY OF%'</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -417,7 +415,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Government</li>
 <li>Utility</li>
 </ul>
-<p><br></p>
 <p><strong>Example query logic:</strong></p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>STATE_USE_DESCRIPTION <span class="kw">LIKE</span> <span class="st">'%STATE%'</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    </span>
@@ -438,12 +435,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>“ROW”</li>
 <li>“Rights of Way”</li>
 </ul>
-<p><br></p>
 <p><strong>Example query logic:</strong></p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>STATE_USE_DESCRIPTION <span class="kw">LIKE</span> <span class="st">'%ROW%'</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">OR</span> STATE_USE_DESCRIPTION <span class="kw">LIKE</span> <span class="st">'%RIGHTS OF WAY%'</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><br></p>
 <p>Because parcel data are compiled from municipal assessor records, terminology and attribute completeness vary considerably across jurisdictions. As a result, some municipalities may not consistently identify rights-of-way using standardized naming conventions or parcel attributes.</p>
 <p>Where ROW polygons are present but not clearly identified through attribute queries, additional review methods may be necessary, including:</p>
 <ul>
@@ -453,6 +448,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Identification of narrow linear parcels associated with transportation or utility corridors</li>
 </ul>
 <p>In municipalities where dedicated ROW polygons are not included in the parcel dataset, approximate rights-of-way areas may be derived by comparing the municipal boundary polygon to the aggregate parcel coverage. In these cases, the unassigned or residual land area between mapped parcel polygons and the municipal boundary may represent public rights-of-way or other unmapped areas.</p>
+<p><br></p>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -481,15 +477,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <p>After geocoding addresses to points, use this process to identify and extract polygons (parcels) based on their co-location with associated point features:</p>
 <ol type="1">
-<li><p>Ensure matching coordinate systems</p></li>
-<li><p>Perform a spatial selection (often referred to as Select by Location)</p></li>
-<li><p>Export or save the selected polygons</p></li>
+<li>Ensure matching coordinate systems</li>
+<li>Perform a spatial selection (often referred to as Select by Location)</li>
+<li>Export or save the selected polygons</li>
 </ol>
 <p><br></p>
 </section>
 <section id="sec-openstreetmap" class="level4">
 <h4 class="anchored" data-anchor-id="sec-openstreetmap">OpenStreetMap</h4>
 <p>OpenStreetMap (OSM) data may be used to identify features and land uses such as cemeteries, schools, libraries, parks, and other civic, recreational, or institutional facilities. OSM is a crowd-sourced geographic database maintained by volunteer contributors, and data completeness, positional accuracy, and attribute consistency can vary across locations. As a result, OSM should be used as a supplemental reference source to assist in feature identification and screening rather than as a primary authoritative dataset. Features identified through OSM should be reviewed and verified using authoritative GIS data, parcel information, aerial imagery, or other reliable sources where available.</p>
+<p><strong>Link</strong>: <a href="https://www.openstreetmap.org/">OpenStreetMap</a></p>
 <p><br></p>
 </section>
 </section>
@@ -562,7 +559,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Conservation or conservancy</li>
 <li>Land alliance</li>
 </ul>
-<p><br></p>
 <p><strong>Example query logic:</strong></p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>OWNER <span class="kw">LIKE</span> <span class="st">'%LAND TRUST%'</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    </span>
@@ -579,13 +575,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Forest</li>
 <li>Recreational</li>
 </ul>
-<p><br></p>
 <p><strong>Example query logic:</strong></p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>OWNER_NAME <span class="kw">LIKE</span> <span class="st">'%Land trust%'</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="kw">OR</span> OWNER_NAME <span class="kw">LIKE</span> <span class="st">'%Conservation%'</span></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="kw">OR</span> OWNER_NAME <span class="kw">LIKE</span> <span class="st">'%Land alliance%'</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><br></p>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -642,6 +638,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>PAD-US can serve as an important reference dataset for identifying existing protected and open space lands that may be excluded under this methodology. Because the dataset compiles information from many agencies and organizations, it should be used in conjunction with parcel data, local open space inventories, and other authoritative state or municipal sources.</p>
 <p>The PAD-US program maintains published documentation and methodology describing data sources, compilation methods, protection classifications, and update processes. Users should review the official documentation to understand dataset limitations and interpretation considerations.</p>
 <p>Use this layer as a supplemental reference source for open space and protected lands analysis.</p>
+<p><br></p>
 </section>
 </section>
 </section>
@@ -697,10 +694,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h4 class="anchored" data-anchor-id="sec-high-resolution-tidal-marsh-datasets">High Resolution Tidal Marsh Datasets</h4>
 <p>Detailed tidal wetland mapping is available through CT DEEP and was developed using high-resolution lidar and aerial imagery survey of all the protected coastal marshland across the state of Connecticut. The data are available through the CT ECO geoSAP viewer and may be downloaded for GIS analysis.</p>
 <p><strong>Dataset:</strong> <a href="https://maps.cteco.uconn.edu/projects/highres_marsh/">High Resolution Marsh Mapping (CT ECO)</a></p>
-<div class="callout callout-style-simple callout-note">
+<div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
-<i class="callout-icon"></i>
+<i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
 <p>Municipalities located within Connecticut’s coastal areas should incorporate tidal wetland data into their developable land inventory to account for these regulated environmental resources.</p>
@@ -715,13 +712,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><strong>Dataset:</strong> <a href="https://geodata.ct.gov/maps/ef85cf0c55394065a8a74ea97fbd7ede/about">Connecticut Hydrography Set (CT Geodata Portal)</a></p>
 <p>At this time, the NHD remains the best available statewide geospatial dataset for identifying surface water features across Connecticut. As of October 1, 2023, the NHD was retired. NHD data will continue to be available but no longer maintained or updated. The most current hydrography data for Connecticut will eventually be provided through the USGS 3D Hydrography Program (3DHP), which is currently in development and will offer a higher‑resolution surface water dataset. Once the 3DHP for Connecticut is completed and released, it will replace the NHD as the recommended dataset in this guidance (estimated 2027/2028).</p>
 <p>As part of the Connecticut Hydrography Set, the Hydrography Poly layer includes polygon features that represent areas of water for rivers, streams, brooks, reservoirs, lakes, ponds, bays, coves, and harbors. Polygon features also depict inundation areas, marshes, dams, aqueducts, canals, tidal flats, shoals, rocks, channels, and island. For this analysis, the polygon features will give the best surface area cover estimation of surface water in CT.</p>
-<div class="callout callout-style-simple callout-note">
+<div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
-<i class="callout-icon"></i>
+<i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<p>Although the NHD provides information locations of marshes, Connecticut inland wetlands are defined by soil type by statutes (<a href="https://www.cga.ct.gov/2019/pub/chap_440.htm">C.G.S. Chapter 440</a>) and this data should take priority over the NHD marshes category. See the <strong>Soils Inland Wetland</strong> section above for more details on inland wetlands data.</p>
+<p>Although the NHD provides information locations of marshes, the “marsh” category should not be used here. Connecticut inland wetlands are defined by soil type by statutes (<a href="https://www.cga.ct.gov/2019/pub/chap_440.htm">C.G.S. Chapter 440</a>) and this data should take priority over the NHD marshes category. See the <strong>Soils Inland Wetland</strong> section above for more details on inland wetlands data.</p>
 </div>
 </div>
 </div>
@@ -736,12 +733,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h4 class="anchored" data-anchor-id="sec-nwi">National Wetlands Inventory</h4>
 <p>The National Wetlands Inventory (NWI), maintained by the U.S. Fish &amp; Wildlife Service, provides a comprehensive, nationwide dataset of wetland locations and types. While Connecticut defines wetlands by statute based on hydric soils, which may differ from the federal classification approach, the NWI can still serve as a useful supplemental reference when analyzing wetland coverage.</p>
 <p><strong>Dataset</strong>: <a href="https://housing-ctmaps.hub.arcgis.com/maps/9afd2367671f43eaa4cf3972edd32350/about">USA Wetlands (CT Housing Data Hub)</a></p>
+<p><br></p>
 </section>
 </section>
 </section>
 <section id="areas-of-0.5-acres-or-more-of-contiguous-land-that-are-unsuitable-for-development-due-to-topography-such-as-steep-slopes" class="level2" data-number="3.5">
 <h2 data-number="3.5" class="anchored" data-anchor-id="areas-of-0.5-acres-or-more-of-contiguous-land-that-are-unsuitable-for-development-due-to-topography-such-as-steep-slopes"><span class="header-section-number">3.5</span> Areas of 0.5 acres or more of contiguous land that are unsuitable for development due to topography (such as steep slopes)</h2>
 <p>Areas with unsuitable topography may not be reasonably available for development due to physical site constraints. While steep slopes are explicitly mentioned in the statutes and should be excluded from the developable land inventory, other considerations may include areas with significant soil erosion hazards and areas with shallow bedrock. While some of these areas may be technically developable, towns may consider excluding them from the developable land inventory for the purposes of this planning analysis.</p>
+<p><br></p>
 <section id="recommended-datasets-3" class="level3">
 <h3 class="anchored" data-anchor-id="recommended-datasets-3">Recommended Datasets</h3>
 <ul>

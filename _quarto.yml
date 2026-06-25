@@ -19,10 +19,10 @@ book:
     - map.qmd
     - end.qmd
   page-footer: "CT GIS Office, July 2026 V1.0"
-  favicon: CT-GIS-Office-favicon.png
+  favicon: logos/CT-GIS-Office-favicon.png
   downloads: [pdf]
   sidebar:
-    logo: 'opm_giso_logo.png'
+    logo: 'logos/opm_giso_logo.png'
 
 format:
   html:

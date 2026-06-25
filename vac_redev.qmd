@@ -1,6 +1,6 @@
 # Identifying Vacant and Potential Land for Redevelopment
 
-Beyond the statutory requirements, identifying vacant and potentially redevelopable parcels provides important context for the Housing Growth Plan and supports suitability analysis and further analyses in subsequent phases.
+Beyond the statutory requirements, identifying vacant and potentially redevelopable parcels provides important context for the Housing Growth Plans by supporting suitability analyses in subsequent phases.
 
 This section describes queries developed to identify the parcels within these categories and a set of analytical approaches that can be used to evaluate redevelopment potential. Together, these methods offer a flexible toolkit for recognizing parcels that might support future housing development and for tailoring analyses to local priorities.
 
@@ -8,8 +8,9 @@ It is recommended to carefully review outputs using local knowledge, supplementa
 
 For reference, the following datasets are used in the analyses:
 
-- [Connecticut CAMA and Parcel Layer (CT Geodata Portal)](https://geodata.ct.gov/datasets/ctmaps::connecticut-cama-and-parcel-layer/about)
-- [2025 Connecticut Parcel and CAMA Data (CT Open Data Portal)](https://data.ct.gov/Local-Government/2025-Connecticut-Parcel-and-CAMA-Data/rny9-6ak2/about_data)
+**Parcel geometry**: [Connecticut CAMA and Parcel Layer (CT Geodata Portal)](https://housingmaps.ct.gov/datasets/ctmaps::connecticut-cama-and-parcel-layer/about)
+
+**CAMA data**: [2025 Connecticut Parcel and CAMA Data (CT Open Data Portal)](https://data.ct.gov/Local-Government/2025-Connecticut-Parcel-and-CAMA-Data/rny9-6ak2/about_data)
 
 If using aerial imagery for review, high‑resolution statewide imagery (leaf‑off, 4‑band, 3‑inch pixel) is available through CT ECO for [download](https://maps.cteco.uconn.edu/download/) or through [online services](https://maps.cteco.uconn.edu/map-services/). More information can be found on the [2023 Aerial Imagery and Elevation](https://maps.cteco.uconn.edu/data/flight2023/) web page.
 
@@ -17,7 +18,7 @@ If using aerial imagery for review, high‑resolution statewide imagery (leaf‑
 
 ## Vacant Parcels
 
-Vacant parcels represent land that is either currently undeveloped or previously developed but now considered vacant and may present direct development opportunities. While no statewide dataset of vacant parcels exists, the statewide CAMA and parcel dataset can be queried to identify parcels labeled as vacant.
+Vacant parcels represent land that is either currently undeveloped or previously developed but now considered vacant, and they may present direct development opportunities. While no statewide dataset of vacant parcels exists, the statewide CAMA and parcel dataset can be queried to identify parcels labeled as vacant.
 
 ::: {.callout-warning appearance="simple" icon="false"}
 Please note that terminology is not standardized across municipalities statewide; however, many jurisdictions use similar naming conventions and descriptions that can provide useful indicators for identifying parcels that may fit within a given category.
@@ -29,7 +30,7 @@ Recommended query:
 - State_Use_Description for values such as “vac”, "vacant", or "vacancy"
 
 ::: {style="text-align:center;"}
-![*Example map of vacant parcels identified*](Vacant_Parcels.png){fig-alt="Example map of vacant parcels identified" width="350"}
+![*Example map of vacant parcels identified*](maps/Vacant_Parcels.png){fig-alt="Example map of vacant parcels identified" width="350"}
 :::
 
 <br/>
@@ -62,7 +63,7 @@ Potentially redevelopable land consists of previously developed parcels with cha
 
 > Previously contaminated or industrial sites undergoing or eligible for cleanup.
 
-The available data describing brownfield site locations is provided as an .xlsx file maintained by the Connecticut Department of Energy & Environmental Protection (DEEP).
+The available data describing brownfield site locations is provided as an .xlsx file maintained by the Connecticut Department of Energy & Environmental Protection (CT DEEP).
 
 **Dataset**: [Connecticut Brownfields Inventory](https://portal.ct.gov/deep/remediation--site-clean-up/brownfields/brownfields-site-inventory)
 
@@ -73,24 +74,24 @@ The available data describing brownfield site locations is provided as an .xlsx 
 
 2.  Identifying brownfield parcels: Next, use the points to identify parcels that contain brownfield sites. This may be achieved with various queries, summary tools, or join tools that utilize spatial overlap. The following resources provide details and options for this process:
 
-    - ArcGIS Pro: [Select by Location](#0), [Spatial Join](#0), [Summarize Within](#0)
-    - QGIS: [Extract by Location](#0) or [Select by Location](#0) within Vector Selection, [Join Attributes by Location](#0)
+    - ArcGIS Pro: [Select by Location](https://doc.esri.com/en/arcgis-pro/latest/help/mapping/navigation/select-features-by-location.html), [Spatial Join](https://doc.esri.com/en/arcgis-pro/latest/tool-reference/analysis/spatial-join.html?tabs=dialog), [Summarize Within](https://doc.esri.com/en/arcgis-pro/latest/tool-reference/analysis/summarize-within.html?tabs=dialog)
+    - QGIS: [Extract by Location](https://docs.qgis.org/3.44/en/docs/user_manual/processing_algs/qgis/vectorselection.html#extract-by-location) or [Select by Location](https://docs.qgis.org/3.44/en/docs/user_manual/processing_algs/qgis/vectorselection.html#select-by-location) within Vector Selection, [Join Attributes by Location](https://www.qgistutorials.com/en/docs/3/performing_spatial_joins.html)
 
 ::: {style="text-align:center;"}
-![*Example map of brownfield site parcels identified*](brownfields.png){fig-alt="Example map of brownfield site parcels identified" width="350"}
+![*Example map of brownfield site parcels identified*](maps/brownfields.png){fig-alt="Example map of brownfield site parcels identified" width="350"}
 :::
 
 <br/>
 
 ### **Land-to-improvement value ratio**
 
-> Analyze assessed land value to assessed improvements value in certain areas or districts to identify properties that may be underperforming (significantly higher than average land-to-improvements values)
+> Analyze assessed land value to assessed improvements value in certain areas or districts to identify properties that may be underperforming (higher than average land-to-improvements values)
 
 1.  **Calculating improvement values**:
 
     A land-to-improvement (LTI) ratio compares a parcel’s appraised building value to the value of that parcel’s land area. Parcels with exceptionally high LTI ratios have potential for redevelopment with higher-performing structures.
 
-    Improvement value can be found by totaling the combined appraised value of primary buildings, outbuildings (such as sheds and detached garages), and extra features (such as decks and patios). In the [Connecticut CAMA and Parcel Layer](https://geodata.ct.gov/datasets/ctmaps::connecticut-cama-and-parcel-layer/about), improvement values can be calculated by summing the “Appraised Building”, “Appraised Outbuilding”, and “Appraised Extra Feature” fields. The “Appraised Total” field should not be used in this analysis, as this field represents the combined appraised value of improvements and land.
+    Improvement value can be found by totaling the combined appraised value of primary buildings, outbuildings (such as sheds and detached garages), and extra features (such as decks and patios). In the Connecticut CAMA and Parcel Layer, improvement values can be calculated by summing the “Appraised Building”, “Appraised Outbuilding”, and “Appraised Extra Feature” fields. The “Appraised Total” field should not be used in this analysis, as this field represents the combined appraised value of improvements and land.
 
     **Improvement** = Appraised_Building + Appraised_Outbuilding + Appraised_Extra_Feature
 
@@ -137,7 +138,7 @@ flextable(lti_table) |>
 ```
 
 ::: {style="text-align:center;"}
-![*Example map of LTI parcels identified using an applied threshold.*](LTI_ratio.png){fig-alt="Example map of LTI parcels identified using the applied threshold." width="350"}
+![*Example map of LTI parcels identified using an applied threshold.*](maps/LTI_ratio.png){fig-alt="Example map of LTI parcels identified using the applied threshold." width="350"}
 :::
 
 <br/>
@@ -148,14 +149,14 @@ flextable(lti_table) |>
 
 The feasibility of redevelopment efforts is also dependent on parcel size; accordingly, potentially redevelopable land analyses may include an inventory of parcels with the largest relative area within their neighborhood designation.
 
-The “Land Acres” field in the Statewide Parcel and CAMA dataset may have missing or incomplete data so it is recommended to use the “Shape Area” field or to derive acreage directly from the parcel geometry in GIS.
+The “Land Acres” field in the Connecticut CAMA and Parcel Layer may have missing or incomplete data so it is recommended to use the “Shape Area” field or to derive acreage directly from the parcel geometry in GIS.
 
 - **Normalizing parcel area by neighborhood**
 
   To identify parcels that are larger than others in their neighborhood, an analyst should select a threshold, such as the top 10% of parcel area within each neighborhood or district, to flag potential infill opportunities.
 
 ::: {style="text-align:center;"}
-![*Example map of large parcels identified.*](Relative_Size.png){fig-alt="Example map of large parcels identified." width="350"}
+![*Example map of large parcels identified.*](maps/Relative_Size.png){fig-alt="Example map of large parcels identified." width="350"}
 :::
 
 <br/>
@@ -166,7 +167,7 @@ The “Land Acres” field in the Statewide Parcel and CAMA dataset may have mis
 
 The floor area ratio (FAR) of a parcel’s primary building is the ratio of gross building area to lot or parcel area. Higher FAR values indicate higher building density, and lower potential for redevelopment. Whereas land-to-improvement ratio measures the economic value of existing buildings, the floor area ratio measures the physical space a building occupies, weighted by number of floors.
 
-The [Connecticut CAMA and Parcel Layer](https://geodata.ct.gov/datasets/ctmaps::connecticut-cama-and-parcel-layer/about) field “Gross Area of Primary Building” represents the sum of all enclosed living and non-living building spaces. The gross building area is measured from a building’s exterior and factors in number of floors, extending beyond the building footprint.
+The Connecticut CAMA and Parcel Layer field “Gross Area of Primary Building” represents the sum of all enclosed living and non-living building spaces. The gross building area is measured from a building’s exterior and factors in number of floors, extending beyond the building footprint.
 
 In some cases, the "Gross Area of Primary Building" field may have missing or incomplete data, in which case the "Living Area" field may be used as a substitute. Note that this is a more restrictive metric, as it only captures habitable, finished floor space rather than total enclosed building area.
 
@@ -217,7 +218,7 @@ flextable(far_table) |>
 ```
 
 ::: {style="text-align:center;"}
-![*Example map identifying parcels based on low FAR values.*](FAR.png){fig-alt="Example map identifying parcels based on low FAR values." width="350"}
+![*Example map identifying parcels based on low FAR values.*](maps/FAR.png){fig-alt="Example map identifying parcels based on low FAR values." width="350"}
 :::
 
 <br/>
@@ -228,7 +229,7 @@ flextable(far_table) |>
 
 Construction and renovation year clustering offers insight into building aging patterns within municipalities, with the goal of identifying parcel clusters that may need rehabilitation.
 
-The [Connecticut CAMA and Parcel Layer](https://geodata.ct.gov/datasets/ctmaps::connecticut-cama-and-parcel-layer/about) has multiple fields relevant to this analysis.
+The Connecticut CAMA and Parcel Layer has multiple fields relevant to this analysis.
 
 - “AYB” (Actual Year Built) field: The original construction date for each parcel’s primary building
 - “EYB” (Effective Year Built) field: The building’s effective age, factoring in remodeling and renovations.
@@ -238,21 +239,21 @@ It is important to note that there are no statewide criteria for evaluating Effe
 
 1.  **Construction and renovation year clustering analysis**
 
-    This analysis uses a multivariate clustering tool in GIS to group parcels based on three fields simultaneously: original construction date (AYB), effective building age (EYB), and physical deterioration (Depreciation). Rather than applying a single threshold to one variable, multivariate clustering evaluates all three fields at once, automatically grouping parcels that share similar combinations of age, renovation history, and condition. The result is multiple groups of parcels, one of which will represent the oldest, least-renovated, and most deteriorated buildings in the study area, which are the parcels most likely to be candidates for rehabilitation or redevelopment
+    This analysis uses a multivariate clustering tool in GIS to group parcels based on three fields simultaneously: original construction date (AYB), effective building age (EYB), and physical deterioration (Depreciation). Rather than applying a single threshold to one variable, multivariate clustering evaluates all three fields at once, automatically grouping parcels that share similar combinations of age, renovation history, and condition. The result is multiple groups of parcels, one of which will represent the oldest, least-renovated, and most deteriorated buildings in the study area, which are the parcels most likely to be candidates for rehabilitation or redevelopment.
 
     **Why multivariate clustering?**
 
     A simple threshold approach (for example, filtering only by construction year) would miss properties that are old but have been well-maintained, or flag properties that are deteriorated but have been recently renovated. A multivariate analysis using the "AYB", "EYB", and "Depreciation" fields together can be used to flag groups of parcels with high redevelopment potential.
 
-    It is also important to use a clustering method that does not rely on spatial relationships between parcels, meaning one that groups parcels based purely on shared traits rather than proximity or adjacency. Spatial clustering methods, such as K-nearest neighbor (KNN) or Queen contiguity, which would traditionally be used for parcel data using polygon geometry, identify parcels based on how close they are to each other or whether they share edges or corners. Because the parcel layer may be segmented by missing data, these methods will fail or produce inaccurate clusters by attempting to connect parcels across large gaps. Instead, a non-spatial multivariate clustering tool ensures that all parcels with available data are assigned to a cluster with shared features, regardless of where they are located. For more insight into these methods and their limitations:
+    It is also important to use a clustering method that does not rely on spatial relationships between parcels, meaning one that groups parcels based purely on shared traits rather than proximity or adjacency. Spatial clustering methods, such as K-nearest neighbor (KNN) or Queen contiguity, which would traditionally be used for parcel data using polygon geometry, identify parcels based on how close they are to each other or whether they share edges or corners. Because the parcel layer may be segmented by missing data, these methods will fail or produce inaccurate clusters by attempting to connect parcels across large gaps. Instead, a non-spatial multivariate clustering method ensures that all parcels with available data are assigned to a cluster with shared features, regardless of where they are located. For more insight into these methods and their limitations:
 
     - Brief introduction to concepts, with R examples: [Spatial Weights Matrix](https://cran.r-project.org/web/packages/geostan/vignettes/spatial-weights-matrix.html)
     - Description of spatial statistics: [Modeling Spatial Relationships](https://doc.esri.com/en/arcgis-pro/latest/tool-reference/spatial-statistics/modeling-spatial-relationships.html)
     - Overview of ESRI clustering tools and their applications: [Mapping Clusters](https://doc.esri.com/en/arcgis-pro/latest/tool-reference/spatial-statistics/an-overview-of-the-mapping-clusters-toolset.html)
 
-    Instead, it is recommended to use a multivariate clustering tool that relies only on the presence of shared traits. These tools identify optimized seed locations, or initial parcels, by maximizing their initial distance from each other, then repeatedly adjust these seeds to minimize variability within clusters and increase variability between clusters. In this way, all parcels with available data are assigned to a cluster with shared features. Simplified, the process is:
+    Instead, it is recommended to use a multivariate clustering tool that relies only on the presence of shared traits. These tools identify optimized seed locations, or initial parcels, by maximizing their initial distance from each other, then repeatedly adjusting these seeds to minimize variability within clusters and increase variability between clusters. In this way, all parcels with available data are assigned to a cluster with shared features. Simplified, the process is:
 
-    ::: {}
+    ::: {style="text-align:center;"}
     *assign seeds → recompute and adjust seed location → repeat until stable*
     :::
 
@@ -271,7 +272,7 @@ It is important to note that there are no statewide criteria for evaluating Effe
 
 2.  **Data preparation**
 
-    Within the Statewide Parcel and CAMA data, the AYB and EYB fields may include null placeholder values of 0, 15, or other extremely low numbers. Placeholders may also take the form of years from the 1500s, 1600s, or 1700s. Accordingly, municipalities should evaluate the distribution of AYB values in their CAMA data, identify any outliers or apparent null placeholders, verify these against their oldest historical buildings, and filter this data out prior to running the clustering analysis.
+    Within the Connecticut CAMA and Parcel Layer, the AYB and EYB fields may include null placeholder values of 0, 15, or other extremely low numbers. Placeholders may also take the form of years from the 1500s, 1600s, or 1700s. Accordingly, municipalities should evaluate the distribution of AYB values in their CAMA data, identify any outliers or apparent null placeholders, verify these against their oldest historical buildings, and filter this data out prior to running the clustering analysis.
 
     Example filter queries include:
 
@@ -285,17 +286,17 @@ It is important to note that there are no statewide criteria for evaluating Effe
     Below is a sample series of boxplots automatically produced by running the Multivariate Clustering tool in ArcGIS Pro. These boxplots illustrate the distribution of data for the three fields of interest and reveal which clusters contain the combination of traits most relevant to this analysis. The target cluster will exhibit the lowest AYB, lowest EYB, and highest depreciation percentage.
 
     ::: {style="text-align:center;"}
-    ![](mc_boxplot.png){fig-alt="multivariate clustering box plot example" width="800"}
+    ![](images/mc_boxplot.png){fig-alt="multivariate clustering box plot example"}
     :::
 
     For example, the yellow cluster (cluster 4) contains parcels with extremely low AYB, high depreciation percentage, and low EYB, while the red cluster (cluster 2) contains parcels with low AYB, the highest depreciation, and the lowest EYB. Accordingly, clusters 2 and 4 are groups of interest for potential rehabilitation; in this case, cluster 2 would be isolated and included in a Potentially Redevelopable Land inventory, as it has the highest depreciation and lowest EYB.
 
-    Note that AYB will naturally contain lower values than EYB, as it reflects original construction rather than effective age. The oldest buildings may have already undergone extensive renovation and therefore may not exhibit similarly extreme Depreciation or EYB values. Accordingly, Depreciation and EYB should be weighted more heavily when deciding which cluster to isolate, as these variables better reflect the current physical condition of properties.
+    Note that AYB will naturally contain lower values than EYB, as it reflects original construction rather than effective age. The oldest buildings may have already undergone extensive renovation and therefore may not exhibit similarly extreme depreciation or EYB values. Accordingly, Depreciation and EYB should be weighted more heavily when deciding which cluster to isolate, as these variables better reflect the current physical condition of properties.
 
-    The figure on the left (a) shows the results of the Multivariate Clustering tool in ArcGIS Pro, where cluster colors on the map correspond to those shown in the boxplots. The figure on the right (b) shows the resulting map after isolating cluster 2, which represents the end product of a construction and renovation year clustering analysis.
+    The figure on the left shows the results of the Multivariate Clustering tool in ArcGIS Pro, where cluster colors on the map correspond to those shown in the boxplots. The figure on the right shows the resulting map after isolating cluster 2, which represents the end product of a construction and renovation year clustering analysis.
 
 ::: {style="text-align:center;" layout-ncol="2"}
-![a) Multivariate Clustering results](MultiVar.png){fig-alt="multivariate clustering box plot example" width="300"}
+![Multivariate Clustering results](maps/MultiVar.png){fig-alt="multivariate clustering box plot example" width="300"}
 
-![b) Cluster 2 isolated](MultiVar2.png){fig-alt="multivariate clustering box plot example" width="300"}
+![Cluster 2 isolated](maps/MultiVar2.png){fig-alt="multivariate clustering box plot example" width="300"}
 :::

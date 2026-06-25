@@ -132,10 +132,10 @@ ft
 #| message: false
 library(magick)
 
-img <- image_read("excl_map.png")
+img <- image_read("maps/excl.png")
 img <- image_border(img, color = "gray", geometry = "2x2")
 
-image_write(img, "excl_map_bordered.png")
+image_write(img, "maps/excl_map_bordered.png")
 ```
 
 ::: {style="text-align:center;"}
@@ -224,10 +224,10 @@ ft
 #| message: false
 library(magick)
 
-img <- image_read("bw_map.png")
+img <- image_read("maps/bw.png")
 img <- image_border(img, color = "gray", geometry = "2x2")
 
-image_write(img, "bw_map_bordered.png")
+image_write(img, "maps/bw_map_bordered.png")
 ```
 
 ::: {style="text-align:center;"}
@@ -331,10 +331,10 @@ ft
 #| message: false
 library(magick)
 
-img <- image_read("summary_map.png")
+img <- image_read("maps/summary.png")
 img <- image_border(img, color = "gray", geometry = "2x2")
 
-image_write(img, "summary_map_bordered.png")
+image_write(img, "maps/summary_map_bordered.png")
 ```
 
 ::: {style="text-align:center;"}

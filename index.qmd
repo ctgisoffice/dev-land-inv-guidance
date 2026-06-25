@@ -1,6 +1,6 @@
 # Summary {.unnumbered}
 
-The *Developable Land Inventory Technical Guidance*, prepared by the Connecticut Office of Policy and Management's GIS Office, provides a standardized, transparent framework for municipalities to identify land suitable for future residential or mixed-use development as required under [CGS §§ 8-13bb and 8-13cc](https://cga.ct.gov/2026/sup/chap_124b.htm). The guidance outlines the datasets, analytical methods, and mapping standards needed to produce a consistent, statewide inventory of developable land.
+The *Developable Land Inventory Technical Guidance*, prepared by the Connecticut Office of Policy and Management's GIS Office, provides a standardized, transparent framework for municipalities to identify land suitable for future residential or mixed-use development as required under [Connecticut General Statutes (C.G.S.) §§ 8-13bb and 8-13cc](https://cga.ct.gov/2026/sup/chap_124b.htm). The guidance outlines the datasets, analytical methods, and mapping standards needed to produce a consistent, statewide inventory of developable land.
 
 The document emphasizes that identifying land as “developable” does not obligate development, nor does exclusion from the inventory permanently restrict future development opportunities. Instead, the inventory serves as a foundational input to each municipality’s Housing Growth Plan, supporting later phases such as suitability analysis and parcel-level evaluation. The developable land inventory is not a permanent designation of a property's development potential.
 
@@ -18,7 +18,7 @@ In the Housing Growth Plans, the following should be included:
 
 ## Statutory Exclusions
 
-[CGS §§ 8-13aa](https://cga.ct.gov/2026/sup/chap_124b.htm#sec_8-13aa) defines five categories of land that must be excluded from the developable land inventory:
+[C.G.S. §§ 8-13aa](https://cga.ct.gov/2026/sup/chap_124b.htm#sec_8-13aa) defines five categories of land that must be excluded from the developable land inventory:
 
 A.  Land already committed to public use or purpose (public or private)
 B.  Open space, parks, and recreation areas dedicated to the public or protected by a conservation easement

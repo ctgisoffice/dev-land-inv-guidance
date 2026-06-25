@@ -274,7 +274,7 @@
     width=\paperwidth,
     height=\paperheight,
     keepaspectratio=false
-  ]{DLI_cover.png}
+  ]{images/DLI_cover.png}
 }
 
 \null
@@ -684,7 +684,7 @@ parcels}.
 
 \textbf{Parcel geometry}:
 \href{https://housingmaps.ct.gov/datasets/ctmaps::connecticut-cama-and-parcel-layer/about}{Connecticut
-CAMA and Parcel Layer (CT Geodata Portal)}
+CAMA and Parcel Layer (CT Housing Data Hub)}
 
 \textbf{CAMA data}:
 \href{https://data.ct.gov/Local-Government/2025-Connecticut-Parcel-and-CAMA-Data/rny9-6ak2/about_data}{2025
@@ -918,6 +918,7 @@ point features:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
+\tightlist
 \item
   Ensure matching coordinate systems
 \item
@@ -939,6 +940,8 @@ rather than as a primary authoritative dataset. Features identified
 through OSM should be reviewed and verified using authoritative GIS
 data, parcel information, aerial imagery, or other reliable sources
 where available.
+
+\textbf{Link}: \href{https://www.openstreetmap.org/}{OpenStreetMap}
 
 \section{Open space, parks, and recreation areas dedicated to the public
 or protected by a conservation
@@ -1394,16 +1397,11 @@ downloaded for GIS analysis.
 Resolution Marsh Mapping (CT ECO)}
 
 \begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, breakable, colback=white, colframe=quarto-callout-note-color-frame, left=2mm, leftrule=.75mm, opacityback=0, rightrule=.15mm, toprule=.15mm]
-\begin{minipage}[t]{5.5mm}
-\textcolor{quarto-callout-note-color}{\faInfo}
-\end{minipage}%
-\begin{minipage}[t]{\textwidth - 5.5mm}
 
 Municipalities located within Connecticut's coastal areas should
 incorporate tidal wetland data into their developable land inventory to
 account for these regulated environmental resources.
 
-\end{minipage}%
 \end{tcolorbox}
 
 \subsubsection{Connecticut Hydrography
@@ -1435,19 +1433,15 @@ analysis, the polygon features will give the best surface area cover
 estimation of surface water in CT.
 
 \begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, breakable, colback=white, colframe=quarto-callout-note-color-frame, left=2mm, leftrule=.75mm, opacityback=0, rightrule=.15mm, toprule=.15mm]
-\begin{minipage}[t]{5.5mm}
-\textcolor{quarto-callout-note-color}{\faInfo}
-\end{minipage}%
-\begin{minipage}[t]{\textwidth - 5.5mm}
 
-Although the NHD provides information locations of marshes, Connecticut
-inland wetlands are defined by soil type by statutes
+Although the NHD provides information locations of marshes, the
+``marsh'' category should not be used here. Connecticut inland wetlands
+are defined by soil type by statutes
 (\href{https://www.cga.ct.gov/2019/pub/chap_440.htm}{C.G.S. Chapter
 440}) and this data should take priority over the NHD marshes category.
 See the \textbf{Soils Inland Wetland} section above for more details on
 inland wetlands data.
 
-\end{minipage}%
 \end{tcolorbox}
 
 \subsubsection{Local data}\label{sec-local-data3}
@@ -1576,8 +1570,7 @@ Redevelopment}\label{identifying-vacant-and-potential-land-for-redevelopment}
 
 Beyond the statutory requirements, identifying vacant and potentially
 redevelopable parcels provides important context for the Housing Growth
-Plan and supports suitability analysis and further analyses in
-subsequent phases.
+Plans by supporting suitability analyses in subsequent phases.
 
 This section describes queries developed to identify the parcels within
 these categories and a set of analytical approaches that can be used to
@@ -1590,15 +1583,13 @@ supplemental data sources, and/or aerial imagery.
 
 For reference, the following datasets are used in the analyses:
 
-\begin{itemize}
-\tightlist
-\item
-  \href{https://geodata.ct.gov/datasets/ctmaps::connecticut-cama-and-parcel-layer/about}{Connecticut
-  CAMA and Parcel Layer (CT Geodata Portal)}
-\item
-  \href{https://data.ct.gov/Local-Government/2025-Connecticut-Parcel-and-CAMA-Data/rny9-6ak2/about_data}{2025
-  Connecticut Parcel and CAMA Data (CT Open Data Portal)}
-\end{itemize}
+\textbf{Parcel geometry}:
+\href{https://housingmaps.ct.gov/datasets/ctmaps::connecticut-cama-and-parcel-layer/about}{Connecticut
+CAMA and Parcel Layer (CT Geodata Portal)}
+
+\textbf{CAMA data}:
+\href{https://data.ct.gov/Local-Government/2025-Connecticut-Parcel-and-CAMA-Data/rny9-6ak2/about_data}{2025
+Connecticut Parcel and CAMA Data (CT Open Data Portal)}
 
 If using aerial imagery for review, high‑resolution statewide imagery
 (leaf‑off, 4‑band, 3‑inch pixel) is available through CT ECO for
@@ -1611,10 +1602,10 @@ and Elevation} web page.
 \section{Vacant Parcels}\label{vacant-parcels}
 
 Vacant parcels represent land that is either currently undeveloped or
-previously developed but now considered vacant and may present direct
-development opportunities. While no statewide dataset of vacant parcels
-exists, the statewide CAMA and parcel dataset can be queried to identify
-parcels labeled as vacant.
+previously developed but now considered vacant, and they may present
+direct development opportunities. While no statewide dataset of vacant
+parcels exists, the statewide CAMA and parcel dataset can be queried to
+identify parcels labeled as vacant.
 
 \begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, breakable, colback=white, colframe=quarto-callout-warning-color-frame, left=2mm, leftrule=.75mm, opacityback=0, rightrule=.15mm, toprule=.15mm]
 
@@ -1638,7 +1629,7 @@ Recommended query:
 
 \begin{figure}[H]
 
-{\centering \includegraphics[width=3.64583in,height=\textheight,keepaspectratio,alt={Example map of vacant parcels identified}]{Vacant_Parcels.png}
+{\centering \includegraphics[width=3.64583in,height=\textheight,keepaspectratio,alt={Example map of vacant parcels identified}]{maps/Vacant_Parcels.png}
 
 }
 
@@ -1689,7 +1680,7 @@ cleanup.
 
 The available data describing brownfield site locations is provided as
 an .xlsx file maintained by the Connecticut Department of Energy \&
-Environmental Protection (DEEP).
+Environmental Protection (CT DEEP).
 
 \textbf{Dataset}:
 \href{https://portal.ct.gov/deep/remediation--site-clean-up/brownfields/brownfields-site-inventory}{Connecticut
@@ -1728,18 +1719,27 @@ Brownfields Inventory}
   \begin{itemize}
   \tightlist
   \item
-    ArcGIS Pro: \hyperref[0]{Select by Location}, \hyperref[0]{Spatial
-    Join}, \hyperref[0]{Summarize Within}
+    ArcGIS Pro:
+    \href{https://doc.esri.com/en/arcgis-pro/latest/help/mapping/navigation/select-features-by-location.html}{Select
+    by Location},
+    \href{https://doc.esri.com/en/arcgis-pro/latest/tool-reference/analysis/spatial-join.html?tabs=dialog}{Spatial
+    Join},
+    \href{https://doc.esri.com/en/arcgis-pro/latest/tool-reference/analysis/summarize-within.html?tabs=dialog}{Summarize
+    Within}
   \item
-    QGIS: \hyperref[0]{Extract by Location} or \hyperref[0]{Select by
-    Location} within Vector Selection, \hyperref[0]{Join Attributes by
-    Location}
+    QGIS:
+    \href{https://docs.qgis.org/3.44/en/docs/user_manual/processing_algs/qgis/vectorselection.html\#extract-by-location}{Extract
+    by Location} or
+    \href{https://docs.qgis.org/3.44/en/docs/user_manual/processing_algs/qgis/vectorselection.html\#select-by-location}{Select
+    by Location} within Vector Selection,
+    \href{https://www.qgistutorials.com/en/docs/3/performing_spatial_joins.html}{Join
+    Attributes by Location}
   \end{itemize}
 \end{enumerate}
 
 \begin{figure}[H]
 
-{\centering \includegraphics[width=3.64583in,height=\textheight,keepaspectratio,alt={Example map of brownfield site parcels identified}]{brownfields.png}
+{\centering \includegraphics[width=3.64583in,height=\textheight,keepaspectratio,alt={Example map of brownfield site parcels identified}]{maps/brownfields.png}
 
 }
 
@@ -1753,7 +1753,7 @@ ratio}}{Land-to-improvement value ratio}}\label{land-to-improvement-value-ratio}
 \begin{quote}
 Analyze assessed land value to assessed improvements value in certain
 areas or districts to identify properties that may be underperforming
-(significantly higher than average land-to-improvements values)
+(higher than average land-to-improvements values)
 \end{quote}
 
 \begin{enumerate}
@@ -1769,12 +1769,11 @@ areas or districts to identify properties that may be underperforming
   Improvement value can be found by totaling the combined appraised
   value of primary buildings, outbuildings (such as sheds and detached
   garages), and extra features (such as decks and patios). In the
-  \href{https://geodata.ct.gov/datasets/ctmaps::connecticut-cama-and-parcel-layer/about}{Connecticut
-  CAMA and Parcel Layer}, improvement values can be calculated by
-  summing the ``Appraised Building'', ``Appraised Outbuilding'', and
-  ``Appraised Extra Feature'' fields. The ``Appraised Total'' field
-  should not be used in this analysis, as this field represents the
-  combined appraised value of improvements and land.
+  Connecticut CAMA and Parcel Layer, improvement values can be
+  calculated by summing the ``Appraised Building'', ``Appraised
+  Outbuilding'', and ``Appraised Extra Feature'' fields. The ``Appraised
+  Total'' field should not be used in this analysis, as this field
+  represents the combined appraised value of improvements and land.
 
   \textbf{Improvement} = Appraised\_Building + Appraised\_Outbuilding +
   Appraised\_Extra\_Feature
@@ -1856,7 +1855,7 @@ areas or districts to identify properties that may be underperforming
 
 \begin{figure}[H]
 
-{\centering \includegraphics[width=3.64583in,height=\textheight,keepaspectratio,alt={Example map of LTI parcels identified using the applied threshold.}]{LTI_ratio.png}
+{\centering \includegraphics[width=3.64583in,height=\textheight,keepaspectratio,alt={Example map of LTI parcels identified using the applied threshold.}]{maps/LTI_ratio.png}
 
 }
 
@@ -1879,7 +1878,7 @@ size; accordingly, potentially redevelopable land analyses may include
 an inventory of parcels with the largest relative area within their
 neighborhood designation.
 
-The ``Land Acres'' field in the Statewide Parcel and CAMA dataset may
+The ``Land Acres'' field in the Connecticut CAMA and Parcel Layer may
 have missing or incomplete data so it is recommended to use the ``Shape
 Area'' field or to derive acreage directly from the parcel geometry in
 GIS.
@@ -1896,7 +1895,7 @@ GIS.
 
 \begin{figure}[H]
 
-{\centering \includegraphics[width=3.64583in,height=\textheight,keepaspectratio,alt={Example map of large parcels identified.}]{Relative_Size.png}
+{\centering \includegraphics[width=3.64583in,height=\textheight,keepaspectratio,alt={Example map of large parcels identified.}]{maps/Relative_Size.png}
 
 }
 
@@ -1920,12 +1919,10 @@ land-to-improvement ratio measures the economic value of existing
 buildings, the floor area ratio measures the physical space a building
 occupies, weighted by number of floors.
 
-The
-\href{https://geodata.ct.gov/datasets/ctmaps::connecticut-cama-and-parcel-layer/about}{Connecticut
-CAMA and Parcel Layer} field ``Gross Area of Primary Building''
-represents the sum of all enclosed living and non-living building
-spaces. The gross building area is measured from a building's exterior
-and factors in number of floors, extending beyond the building
+The Connecticut CAMA and Parcel Layer field ``Gross Area of Primary
+Building'' represents the sum of all enclosed living and non-living
+building spaces. The gross building area is measured from a building's
+exterior and factors in number of floors, extending beyond the building
 footprint.
 
 In some cases, the ``Gross Area of Primary Building'' field may have
@@ -2023,7 +2020,7 @@ enclosed building area.
 
 \begin{figure}[H]
 
-{\centering \includegraphics[width=3.64583in,height=\textheight,keepaspectratio,alt={Example map identifying parcels based on low FAR values.}]{FAR.png}
+{\centering \includegraphics[width=3.64583in,height=\textheight,keepaspectratio,alt={Example map identifying parcels based on low FAR values.}]{maps/FAR.png}
 
 }
 
@@ -2044,9 +2041,8 @@ Construction and renovation year clustering offers insight into building
 aging patterns within municipalities, with the goal of identifying
 parcel clusters that may need rehabilitation.
 
-The
-\href{https://geodata.ct.gov/datasets/ctmaps::connecticut-cama-and-parcel-layer/about}{Connecticut
-CAMA and Parcel Layer} has multiple fields relevant to this analysis.
+The Connecticut CAMA and Parcel Layer has multiple fields relevant to
+this analysis.
 
 \begin{itemize}
 \tightlist
@@ -2083,7 +2079,7 @@ property records.
   renovation history, and condition. The result is multiple groups of
   parcels, one of which will represent the oldest, least-renovated, and
   most deteriorated buildings in the study area, which are the parcels
-  most likely to be candidates for rehabilitation or redevelopment
+  most likely to be candidates for rehabilitation or redevelopment.
 
   \textbf{Why multivariate clustering?}
 
@@ -2103,10 +2099,10 @@ property records.
   other or whether they share edges or corners. Because the parcel layer
   may be segmented by missing data, these methods will fail or produce
   inaccurate clusters by attempting to connect parcels across large
-  gaps. Instead, a non-spatial multivariate clustering tool ensures that
-  all parcels with available data are assigned to a cluster with shared
-  features, regardless of where they are located. For more insight into
-  these methods and their limitations:
+  gaps. Instead, a non-spatial multivariate clustering method ensures
+  that all parcels with available data are assigned to a cluster with
+  shared features, regardless of where they are located. For more
+  insight into these methods and their limitations:
 
   \begin{itemize}
   \tightlist
@@ -2127,8 +2123,8 @@ property records.
   Instead, it is recommended to use a multivariate clustering tool that
   relies only on the presence of shared traits. These tools identify
   optimized seed locations, or initial parcels, by maximizing their
-  initial distance from each other, then repeatedly adjust these seeds
-  to minimize variability within clusters and increase variability
+  initial distance from each other, then repeatedly adjusting these
+  seeds to minimize variability within clusters and increase variability
   between clusters. In this way, all parcels with available data are
   assigned to a cluster with shared features. Simplified, the process
   is:
@@ -2172,8 +2168,8 @@ property records.
 \item
   \textbf{Data preparation}
 
-  Within the Statewide Parcel and CAMA data, the AYB and EYB fields may
-  include null placeholder values of 0, 15, or other extremely low
+  Within the Connecticut CAMA and Parcel Layer, the AYB and EYB fields
+  may include null placeholder values of 0, 15, or other extremely low
   numbers. Placeholders may also take the form of years from the 1500s,
   1600s, or 1700s. Accordingly, municipalities should evaluate the
   distribution of AYB values in their CAMA data, identify any outliers
@@ -2208,7 +2204,7 @@ property records.
   relevant to this analysis. The target cluster will exhibit the lowest
   AYB, lowest EYB, and highest depreciation percentage.
 
-  \includegraphics[width=8.33333in,height=\textheight,keepaspectratio]{mc_boxplot.png}
+  \pandocbounded{\includegraphics[keepaspectratio]{images/mc_boxplot.png}}
 
   For example, the yellow cluster (cluster 4) contains parcels with
   extremely low AYB, high depreciation percentage, and low EYB, while
@@ -2221,14 +2217,14 @@ property records.
   Note that AYB will naturally contain lower values than EYB, as it
   reflects original construction rather than effective age. The oldest
   buildings may have already undergone extensive renovation and
-  therefore may not exhibit similarly extreme Depreciation or EYB
+  therefore may not exhibit similarly extreme depreciation or EYB
   values. Accordingly, Depreciation and EYB should be weighted more
   heavily when deciding which cluster to isolate, as these variables
   better reflect the current physical condition of properties.
 
-  The figure on the left (a) shows the results of the Multivariate
+  The figure on the left shows the results of the Multivariate
   Clustering tool in ArcGIS Pro, where cluster colors on the map
-  correspond to those shown in the boxplots. The figure on the right (b)
+  correspond to those shown in the boxplots. The figure on the right
   shows the resulting map after isolating cluster 2, which represents
   the end product of a construction and renovation year clustering
   analysis.
@@ -2240,11 +2236,11 @@ property records.
 
 \begin{figure}[H]
 
-{\centering \includegraphics[width=3.125in,height=\textheight,keepaspectratio,alt={multivariate clustering box plot example}]{MultiVar.png}
+{\centering \includegraphics[width=3.125in,height=\textheight,keepaspectratio,alt={multivariate clustering box plot example}]{maps/MultiVar.png}
 
 }
 
-\subcaption{a) Multivariate Clustering results}
+\subcaption{Multivariate Clustering results}
 
 \end{figure}%
 
@@ -2254,11 +2250,11 @@ property records.
 
 \begin{figure}[H]
 
-{\centering \includegraphics[width=3.125in,height=\textheight,keepaspectratio,alt={multivariate clustering box plot example}]{MultiVar2.png}
+{\centering \includegraphics[width=3.125in,height=\textheight,keepaspectratio,alt={multivariate clustering box plot example}]{maps/MultiVar2.png}
 
 }
 
-\subcaption{b) Cluster 2 isolated}
+\subcaption{Cluster 2 isolated}
 
 \end{figure}%
 
@@ -2273,11 +2269,11 @@ property records.
 The developable land inventory identifies land that meets the statutory
 definition of developable land under PA 25-1. This inventory serves as a
 foundational input to subsequent phases of the Housing Growth Plan
-process, including the suitability analysis {[}link{]} and the parcel
-and zone identification. These later steps incorporate additional
-planning considerations, local context, and policy objectives to
-evaluate where housing growth and affordable housing opportunities may
-be most appropriate.
+process, including the suitability analysis and the parcel and zone
+identification. These later steps incorporate additional planning
+considerations, local context, and policy objectives to evaluate where
+housing growth and affordable housing opportunities may be most
+appropriate.
 
 To support Housing Growth Plan reporting and review, the developable
 land inventory should be presented in the report as municipality-wide
@@ -2305,7 +2301,6 @@ The final maps included in the Housing Growth Plan will be:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\tightlist
 \item
   \textbf{Statutory Exclusions Map}: A municipality-wide map displaying
   each statutory exclusion category as a separate layer and symbolized
@@ -2362,73 +2357,73 @@ CAMA and Parcel Layer (CT Geodata Portal)}
 
 \providecommand{\ascline}[3]{\noalign{\global\arrayrulewidth #1}\arrayrulecolor[HTML]{#2}\cline{#3}}
 
-\begin{longtable*}[c]{|p{2.00in}|p{1.50in}|p{1.30in}|p{1.30in}|p{0.70in}}
+\begin{longtable*}[c]{|p{1.40in}|p{1.40in}|p{1.00in}|p{1.00in}|p{0.70in}}
 
 
 
 \ascline{1.5pt}{666666}{1-5}
 
-\multicolumn{1}{>{\raggedright}p{\dimexpr 2in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \textbf{Map\ Layer\ (top\ to\ bottom)}}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.5in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \textbf{Description}}}}} & \multicolumn{3}{>{\raggedright}p{\dimexpr 3.3in+4\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \textbf{Recommended\ Symbology}}}}} \\
+\multicolumn{1}{>{\raggedright}p{\dimexpr 1.4in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \textbf{Map\ Layer\ (top\ to\ bottom)}}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.4in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \textbf{Description}}}}} & \multicolumn{3}{>{\raggedright}p{\dimexpr 2.7in+4\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \textbf{Recommended\ Symbology}}}}} \\
 
 \ascline{0.75pt}{666666}{3-5}
 
 
 
-\multicolumn{1}{>{\raggedright}p{\dimexpr 2in+0\tabcolsep}}{} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.5in+0\tabcolsep}}{} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.3in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \textbf{Fill}}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.3in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \textbf{Outline}}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 0.7in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \textbf{Transparency}}}}} \\
+\multicolumn{1}{>{\raggedright}p{\dimexpr 1.4in+0\tabcolsep}}{} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.4in+0\tabcolsep}}{} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \textbf{Fill}}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \textbf{Outline}}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 0.7in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \textbf{Transparency}}}}} \\
 
 \ascline{1.5pt}{666666}{1-5}\endfirsthead 
 
 \ascline{1.5pt}{666666}{1-5}
 
-\multicolumn{1}{>{\raggedright}p{\dimexpr 2in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \textbf{Map\ Layer\ (top\ to\ bottom)}}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.5in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \textbf{Description}}}}} & \multicolumn{3}{>{\raggedright}p{\dimexpr 3.3in+4\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \textbf{Recommended\ Symbology}}}}} \\
+\multicolumn{1}{>{\raggedright}p{\dimexpr 1.4in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \textbf{Map\ Layer\ (top\ to\ bottom)}}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.4in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \textbf{Description}}}}} & \multicolumn{3}{>{\raggedright}p{\dimexpr 2.7in+4\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \textbf{Recommended\ Symbology}}}}} \\
 
 \ascline{0.75pt}{666666}{3-5}
 
 
 
-\multicolumn{1}{>{\raggedright}p{\dimexpr 2in+0\tabcolsep}}{} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.5in+0\tabcolsep}}{} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.3in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \textbf{Fill}}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.3in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \textbf{Outline}}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 0.7in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \textbf{Transparency}}}}} \\
+\multicolumn{1}{>{\raggedright}p{\dimexpr 1.4in+0\tabcolsep}}{} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.4in+0\tabcolsep}}{} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \textbf{Fill}}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \textbf{Outline}}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 0.7in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \textbf{Transparency}}}}} \\
 
 \ascline{1.5pt}{666666}{1-5}\endhead
 
 
 
-\multicolumn{1}{>{\raggedright}p{\dimexpr 2in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Municipality\ boundary}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.5in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Municipal\ boundary\ delineating\ the\ extent\ of\ the\ study\ area}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.3in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} None}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.3in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} 0.7\ pt,}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \linebreak }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Gray}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \linebreak }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} (\#9C9C9C)}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 0.7in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} 0\%}}}} \\
+\multicolumn{1}{>{\raggedright}p{\dimexpr 1.4in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Municipality\ boundary}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.4in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Municipal\ boundary\ delineating\ the\ extent\ of\ the\ study\ area}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} None}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} 0.6\ pt,}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \linebreak }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Dark\ gray}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \linebreak }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} (\#343434)}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 0.7in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} 0\%}}}} \\
 
 \ascline{0.75pt}{666666}{1-5}
 
 
 
-\multicolumn{1}{>{\raggedright}p{\dimexpr 2in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Parcels}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.5in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Municipal\ parcel\ boundaries}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.3in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} None}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.3in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} 0.2\ pt,}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \linebreak }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Light\ gray}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \linebreak }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} (\#D1D1D1)}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 0.7in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} 20\%}}}} \\
+\multicolumn{1}{>{\raggedright}p{\dimexpr 1.4in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Parcels}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.4in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Municipal\ parcel\ boundaries}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} None}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} 0.1\ pt,}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \linebreak }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Dark\ gray}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \linebreak }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} (\#343434)}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 0.7in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} 30\%}}}} \\
 
 \ascline{0.75pt}{666666}{1-5}
 
 
 
-\multicolumn{1}{>{\raggedright}p{\dimexpr 2in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Areas\ of\ 0.5\ acres\ or\ more\ of\ contiguous\ land\ that\ are\ unsuitable\ for\ development\ due\ to\ topography\ (such\ as\ steep\ slopes)}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.5in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Exclusion\ category\ described\ in\ Section\ 3.5}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.3in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Solid,}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \linebreak }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Light\ brown}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \linebreak }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} (\#9F8170)}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.3in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} None}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 0.7in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} 20\%}}}} \\
+\multicolumn{1}{>{\raggedright}p{\dimexpr 1.4in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Land\ subject\ to\ enforceable\ restrictions\ or\ prohibitions\ on\ development}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.4in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Exclusion\ category\ described\ in\ Section\ 3.3}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Hatched\ \&\ Solid,}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \linebreak }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Red}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \linebreak }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} (\#FF0000)}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} None}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 0.7in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} 0\%\ hatch\ lines,}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \linebreak }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \ 75\%\ solid\ fill}}}} \\
 
 \ascline{0.75pt}{666666}{1-5}
 
 
 
-\multicolumn{1}{>{\raggedright}p{\dimexpr 2in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Land\ subject\ to\ enforceable\ restrictions\ or\ prohibitions\ on\ development}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.5in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Exclusion\ category\ described\ in\ Section\ 3.3}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.3in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Hatched,}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \linebreak }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Dark\ red}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \linebreak }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} (\#AA1C1C)}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.3in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} None}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 0.7in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} 20\%}}}} \\
+\multicolumn{1}{>{\raggedright}p{\dimexpr 1.4in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Land\ already\ committed\ to\ public\ use\ or\ purpose}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.4in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Exclusion\ category\ described\ in\ Section\ 3.1}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Solid,}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \linebreak }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Dark\ orange}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \linebreak }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} (\#CC5629)}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} None}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 0.7in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} 20\%}}}} \\
 
 \ascline{0.75pt}{666666}{1-5}
 
 
 
-\multicolumn{1}{>{\raggedright}p{\dimexpr 2in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Land\ already\ committed\ to\ public\ use\ or\ purpose}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.5in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Exclusion\ category\ described\ in\ Section\ 3.1}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.3in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Solid,}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \linebreak }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Orange}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \linebreak }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} (\#F0833A)}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.3in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} None}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 0.7in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} 20\%}}}} \\
+\multicolumn{1}{>{\raggedright}p{\dimexpr 1.4in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Open\ space,\ parks,\ and\ recreation\ areas\ dedicated\ to\ the\ public\ or\ protected\ by\ a\ conservation\ easement}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.4in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Exclusion\ category\ described\ in\ Section\ 3.2}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Solid,}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \linebreak }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Medium\ yellow}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \linebreak }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} (\#F9AB34)}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} None}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 0.7in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} 20\%}}}} \\
 
 \ascline{0.75pt}{666666}{1-5}
 
 
 
-\multicolumn{1}{>{\raggedright}p{\dimexpr 2in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Open\ space,\ parks,\ and\ recreation\ areas\ dedicated\ to\ the\ public\ or\ protected\ by\ a\ conservation\ easement}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.5in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Exclusion\ category\ described\ in\ Section\ 3.2}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.3in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Solid,}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \linebreak }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Medium\ yellow}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \linebreak }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} (\#FFB555)}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.3in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} None}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 0.7in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} 20\%}}}} \\
+\multicolumn{1}{>{\raggedright}p{\dimexpr 1.4in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Areas\ of\ 0.5\ acres\ or\ more\ of\ contiguous\ land\ that\ are\ unsuitable\ for\ development\ due\ to\ topography\ (such\ as\ steep\ slopes)}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.4in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Exclusion\ category\ described\ in\ Section\ 3.5}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Solid,}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \linebreak }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Brown}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \linebreak }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} (\#664F3C)}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} None}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 0.7in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} 15\%}}}} \\
 
 \ascline{0.75pt}{666666}{1-5}
 
 
 
-\multicolumn{1}{>{\raggedright}p{\dimexpr 2in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Wetlands\ or\ watercourses,\ as\ defined\ in\ the\ Wetlands\ and\ Watercourses\ Act\ (CGS\ Chapter\ 440)}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.5in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Exclusion\ category\ described\ in\ Section\ 3.4}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.3in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Solid,}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \linebreak }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Medium\ blue}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \linebreak }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} (\#5CB3FF)}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.3in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} None}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 0.7in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} 20\%}}}} \\
+\multicolumn{1}{>{\raggedright}p{\dimexpr 1.4in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Wetlands\ or\ watercourses,\ as\ defined\ in\ the\ Wetlands\ and\ Watercourses\ Act\ (CGS\ Chapter\ 440)}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.4in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Exclusion\ category\ described\ in\ Section\ 3.4}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Solid,}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \linebreak }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Medium\ blue}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \linebreak }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} (\#0070FF)}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} None}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 0.7in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} 40\%}}}} \\
 
 \ascline{1.5pt}{666666}{1-5}
 
@@ -2448,12 +2443,12 @@ CAMA and Parcel Layer (CT Geodata Portal)}
 
 \begin{figure}[H]
 
-{\centering \pandocbounded{\includegraphics[keepaspectratio,alt={Example Statutory Exclusions Map}]{excl_map_bordered.png}}
+{\centering \pandocbounded{\includegraphics[keepaspectratio,alt={Example Statutory Exclusions Map}]{maps/excl_map_bordered.png}}
 
 }
 
 \caption{\emph{Example Statutory Exclusions Map}
-\href{https://github.com/ctgisoffice/dev-land-inv-guidance/blob/master/excl_map.png?raw=true}{View
+\href{https://github.com/ctgisoffice/dev-land-inv-guidance/blob/master/maps/excl.png?raw=true}{View
 full-size map}}
 
 \end{figure}%
@@ -2508,19 +2503,19 @@ full-size map}}
 
 
 
-\multicolumn{1}{>{\raggedright}p{\dimexpr 2in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Municipality\ boundary}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.5in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Municipal\ boundary\ delineating\ the\ extent\ of\ the\ study\ area.}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.3in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} None}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.3in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} 0.7\ pt,}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \linebreak }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Gray\ (\#9C9C9C)}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 0.7in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} 0\%}}}} \\
+\multicolumn{1}{>{\raggedright}p{\dimexpr 2in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Municipality\ boundary}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.5in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Municipal\ boundary\ delineating\ the\ extent\ of\ the\ study\ area.}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.3in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} None}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.3in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} 0.6\ pt,}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \linebreak }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Dark\ gray}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \linebreak }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} (\#343434)}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 0.7in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} 0\%}}}} \\
 
 \ascline{0.75pt}{666666}{1-5}
 
 
 
-\multicolumn{1}{>{\raggedright}p{\dimexpr 2in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Statutory\ exclusions}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.5in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Areas\ excluded\ from\ the\ developable\ land\ inventory\ in\ Section\ 2.\ All\ statutory\ exclusion\ categories\ should\ be\ combined\ into\ a\ single\ layer.}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.3in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Solid,}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \linebreak }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Dark\ gray\ (\#A9A9A9)}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.3in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} None}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 0.7in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} 0\%}}}} \\
+\multicolumn{1}{>{\raggedright}p{\dimexpr 2in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Statutory\ exclusions}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.5in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Areas\ excluded\ from\ the\ developable\ land\ inventory\ in\ Section\ 2.\ All\ statutory\ exclusion\ categories\ should\ be\ combined\ into\ a\ single\ layer.}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.3in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Solid,}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \linebreak }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Dark\ gray}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \linebreak }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} (\#4E4E4E)}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.3in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} None}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 0.7in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} 0\%}}}} \\
 
 \ascline{0.75pt}{666666}{1-5}
 
 
 
-\multicolumn{1}{>{\raggedright}p{\dimexpr 2in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Developable\ land}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.5in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Land\ not\ identified\ as\ excluded\ under\ the\ statutory\ criteria.\ This\ layer\ represents\ all\ land\ remaining\ after\ the\ exclusion\ analysis.}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.3in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Solid,}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \linebreak }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Light\ gray\ (\#D3D3D3)}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.3in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} None}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 0.7in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} 0\%}}}} \\
+\multicolumn{1}{>{\raggedright}p{\dimexpr 2in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Developable\ land}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.5in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Land\ not\ identified\ as\ excluded\ under\ the\ statutory\ criteria.\ This\ layer\ represents\ all\ land\ remaining\ after\ the\ exclusion\ analysis.}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.3in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Solid,}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \linebreak }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Light\ gray}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \linebreak }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} (\#E1E1E1)}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.3in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} None}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 0.7in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} 30\%}}}} \\
 
 \ascline{1.5pt}{666666}{1-5}
 
@@ -2540,12 +2535,12 @@ full-size map}}
 
 \begin{figure}[H]
 
-{\centering \pandocbounded{\includegraphics[keepaspectratio,alt={Example Developable vs. Non-Developable Land Map}]{bw_map_bordered.png}}
+{\centering \pandocbounded{\includegraphics[keepaspectratio,alt={Example Developable vs. Non-Developable Land Map}]{maps/bw_map_bordered.png}}
 
 }
 
 \caption{\emph{Example Developable vs.~Non-Developable Land Map}
-\href{https://github.com/ctgisoffice/dev-land-inv-guidance/blob/master/bw_map.png?raw=true}{View
+\href{https://github.com/ctgisoffice/dev-land-inv-guidance/blob/master/maps/bw.png?raw=true}{View
 full-size map}}
 
 \end{figure}%
@@ -2600,37 +2595,37 @@ full-size map}}
 
 
 
-\multicolumn{1}{>{\raggedright}p{\dimexpr 2in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Municipality\ boundary}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.5in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Municipal\ boundary\ delineating\ the\ extent\ of\ the\ study\ area.}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.3in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} None}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.3in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} 0.7\ pt,}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \linebreak }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Gray\ (\#9c9c9c)}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 0.7in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} 0\%}}}} \\
+\multicolumn{1}{>{\raggedright}p{\dimexpr 2in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Municipality\ boundary}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.5in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Municipal\ boundary\ delineating\ the\ extent\ of\ the\ study\ area.}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.3in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} None}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.3in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} 0.6\ pt,}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \linebreak }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Dark\ gray}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \linebreak }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} (\#343434)}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 0.7in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} 0\%}}}} \\
 
 \ascline{0.75pt}{666666}{1-5}
 
 
 
-\multicolumn{1}{>{\raggedright}p{\dimexpr 2in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Parcels}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.5in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Municipal\ parcel\ boundaries.}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.3in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} None}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.3in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} 0.2\ pt,}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \linebreak }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Light\ gray\ (hex\ code)}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 0.7in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} 20\%}}}} \\
+\multicolumn{1}{>{\raggedright}p{\dimexpr 2in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Parcels}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.5in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Municipal\ parcel\ boundaries.}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.3in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} None}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.3in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} 0.1\ pt,}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \linebreak }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Dark\ gray}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \linebreak }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} (\#343434)}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 0.7in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} 30\%}}}} \\
 
 \ascline{0.75pt}{666666}{1-5}
 
 
 
-\multicolumn{1}{>{\raggedright}p{\dimexpr 2in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Vacant\ Areas}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.5in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Areas\ identified\ as\ vacant\ in\ Section\ 4.1.}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.3in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Solid,}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \linebreak }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Color\ (hex\ code)}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.3in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} None}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 0.7in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} 20\%}}}} \\
+\multicolumn{1}{>{\raggedright}p{\dimexpr 2in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Vacant\ Areas}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.5in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Areas\ identified\ as\ vacant\ in\ Section\ 4.1.}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.3in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Solid,}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \linebreak }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Orange}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \linebreak }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} (\#F17234)}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.3in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} None}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 0.7in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} 15\%}}}} \\
 
 \ascline{0.75pt}{666666}{1-5}
 
 
 
-\multicolumn{1}{>{\raggedright}p{\dimexpr 2in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Areas\ with\ Redevelopment\ Potential}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.5in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Areas\ identified\ as\ having\ redevelopment\ potential\ in\ Section\ 4.2.}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.3in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Solid,}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \linebreak }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Color\ (hex\ code)}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.3in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} None}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 0.7in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} 20\%}}}} \\
+\multicolumn{1}{>{\raggedright}p{\dimexpr 2in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Areas\ with\ Redevelopment\ Potential}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.5in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Areas\ identified\ as\ having\ redevelopment\ potential\ in\ Section\ 4.2.}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.3in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Solid,}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \linebreak }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Blue}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \linebreak }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} (\#71BFEF)}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.3in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} None}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 0.7in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} 35\%}}}} \\
 
 \ascline{0.75pt}{666666}{1-5}
 
 
 
-\multicolumn{1}{>{\raggedright}p{\dimexpr 2in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Statutory\ Exclusions}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.5in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Areas\ excluded\ from\ the\ developable\ land\ inventory\ in\ Section\ 2.\ All\ statutory\ exclusion\ categories\ should\ be\ combined\ into\ a\ single\ layer.}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.3in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Solid,}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \linebreak }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Color\ (hex\ code)}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.3in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} None}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 0.7in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} 20\%}}}} \\
+\multicolumn{1}{>{\raggedright}p{\dimexpr 2in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Statutory\ Exclusions}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.5in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Areas\ excluded\ from\ the\ developable\ land\ inventory\ in\ Section\ 2.\ All\ statutory\ exclusion\ categories\ should\ be\ combined\ into\ a\ single\ layer.}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.3in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Solid,}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \linebreak }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Dark\ gray}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \linebreak }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} (\#343434)}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.3in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} None}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 0.7in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} 35\%}}}} \\
 
 \ascline{0.75pt}{666666}{1-5}
 
 
 
-\multicolumn{1}{>{\raggedright}p{\dimexpr 2in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Developable\ Land}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.5in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Land\ not\ identified\ as\ excluded\ under\ the\ statutory\ criteria.\ This\ layer\ represents\ all\ land\ remaining\ after\ the\ exclusion\ analysis.}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.3in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Solid,}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \linebreak }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Color\ (hex\ code)}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.3in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} None}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 0.7in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} 20\%}}}} \\
+\multicolumn{1}{>{\raggedright}p{\dimexpr 2in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Developable\ Land}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.5in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Land\ not\ identified\ as\ excluded\ under\ the\ statutory\ criteria.\ This\ layer\ represents\ all\ land\ remaining\ after\ the\ exclusion\ analysis.}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.3in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Solid,}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \linebreak }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} Light\ gray}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} \linebreak }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} (\#E1E1E1)}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 1.3in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} None}}}} & \multicolumn{1}{>{\raggedright}p{\dimexpr 0.7in+0\tabcolsep}}{\advance\leftskip by 4.0pt\relax \advance\rightskip by 4.0pt\relax \textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{{\fontspec{Arial} 50\%}}}} \\
 
 \ascline{1.5pt}{666666}{1-5}
 
@@ -2650,12 +2645,12 @@ full-size map}}
 
 \begin{figure}[H]
 
-{\centering \pandocbounded{\includegraphics[keepaspectratio,alt={Example Developable Land Summary Map}]{summary_map_bordered.png}}
+{\centering \pandocbounded{\includegraphics[keepaspectratio,alt={Example Developable Land Summary Map}]{maps/summary_map_bordered.png}}
 
 }
 
 \caption{\emph{Example Developable Land Summary Map}
-\href{https://github.com/ctgisoffice/dev-land-inv-guidance/blob/master/summary_map.png?raw=true}{View
+\href{https://github.com/ctgisoffice/dev-land-inv-guidance/blob/master/maps/summary.png?raw=true}{View
 full-size map}}
 
 \end{figure}%

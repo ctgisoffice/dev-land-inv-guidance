@@ -1,6 +1,6 @@
 # Creating the Maps
 
-The developable land inventory identifies land that meets the statutory definition of developable land under PA 25-1. This inventory serves as a foundational input to subsequent phases of the Housing Growth Plan process, including the suitability analysis \[link\] and the parcel and zone identification. These later steps incorporate additional planning considerations, local context, and policy objectives to evaluate where housing growth and affordable housing opportunities may be most appropriate.
+The developable land inventory identifies land that meets the statutory definition of developable land under C.G.S. §§ 8-13aa. This inventory serves as a foundational input to subsequent phases of the Housing Growth Plan process, including the suitability analysis and the parcel and zone identification. These later steps will incorporate additional planning considerations, local context, and policy objectives to evaluate where housing growth and affordable housing opportunities may be most appropriate.
 
 To support Housing Growth Plan reporting and review, the developable land inventory should be presented in the report as municipality-wide maps. The maps should clearly display the location and distribution of developable land using clear, accessible, and consistent symbology.
 
@@ -13,7 +13,9 @@ The maps should incorporate the following data:
 The final maps included in the Housing Growth Plan will be:
 
 1.  **Statutory Exclusions Map**: A municipality-wide map displaying each statutory exclusion category as a separate layer and symbolized distinctly to illustrate the distribution of land excluded from the developable land inventory.
+
 2.  **Developable vs. Non-Developable Land Map**: A municipality-wide map depicting all statutory exclusion categories combined into a single consolidated layer symbolized as non-developable land. All remaining land not subject to statutory exclusions is displayed as developable land, providing a simplified binary representation of land suitability across the municipality.
+
 3.  **Developable Land Summary Map**: A municipality-wide map displaying all statutory exclusion categories combined into a single exclusion layer, alongside a developable land layer representing all land remaining after the exclusion analysis. Identified vacant parcels and parcels with redevelopment potential should be displayed as separate overlays.
 
 <br/>
@@ -44,51 +46,57 @@ library(flextable)
 
 map_layers <- data.frame(
   `Map Layer (top to bottom)` = c(
-    "Municipality boundary",
-    "Parcels",
-    "Areas of 0.5 acres or more of contiguous land that are unsuitable for development due to topography (such as steep slopes)",
-    "Land subject to enforceable restrictions or prohibitions on development",
-    "Land already committed to public use or purpose",
-    "Open space, parks, and recreation areas dedicated to the public or protected by a conservation easement",
-    "Wetlands or watercourses, as defined in the Wetlands and Watercourses Act (CGS Chapter 440)"
+      
+      "Municipality boundary",
+      "Parcels",
+      "Land subject to enforceable restrictions or prohibitions on development",
+      "Land already committed to public use or purpose",
+      "Open space, parks, and recreation areas dedicated to the public or protected by a conservation easement",
+      "Areas of 0.5 acres or more of contiguous land that are unsuitable for development due to topography (such as steep slopes)",
+      "Wetlands or watercourses, as defined in the Wetlands and Watercourses Act (CGS Chapter 440)"
   ),
+    
   `Description` = c(
-    "Municipal boundary delineating the extent of the study area",
-    "Municipal parcel boundaries",
-    "Exclusion category described in Section 3.5",
-    "Exclusion category described in Section 3.3",
-    "Exclusion category described in Section 3.1",
-    "Exclusion category described in Section 3.2",
-    "Exclusion category described in Section 3.4"
+      "Municipal boundary delineating the extent of the study area",
+      "Municipal parcel boundaries",
+      "Exclusion category described in Section 3.3",
+      "Exclusion category described in Section 3.1",
+      "Exclusion category described in Section 3.2",
+      "Exclusion category described in Section 3.5",
+      "Exclusion category described in Section 3.4"
   ),
+    
   Fill_Color = c(
-    "None",
-    "None",
-    "Solid,\nLight brown\n(#9F8170)",
-    "Hatched,\nDark red\n(#AA1C1C)",
-    "Solid,\nOrange\n(#F0833A)",
-    "Solid,\nMedium yellow\n(#FFB555)",
-    "Solid,\nMedium blue\n(#5CB3FF)"
+      "None",
+      "None",
+      "Hatched & Solid,\nRed\n(#FF0000)",
+      "Solid,\nDark orange\n(#CC5629)",
+      "Solid,\nMedium yellow\n(#F9AB34)",
+      "Solid,\nBrown\n(#664F3C)",
+      "Solid,\nMedium blue\n(#0070FF)"
   ),
+    
   Outline_Color = c(
-    "0.7 pt,\nGray\n(#9C9C9C)",
-    "0.2 pt,\nLight gray\n(#D1D1D1)",
-    "None",
-    "None",
-    "None",
-    "None",
-    "None"
+      "0.6 pt,\nDark gray\n(#343434)",
+      "0.1 pt,\nDark gray\n(#343434)",
+      "None",
+      "None",
+      "None",
+      "None",
+      "None"
   ),
+    
   Transparency = c(
-    "0%",
-    "20%",
-    "20%",
-    "20%",
-    "20%",
-    "20%",
-    "20%"
+      "0%",
+      "30%",
+      "0% hatch lines,\n 75% solid fill",
+      "20%",
+      "20%",
+      "15%",
+      "40%"
   ),
-  check.names = FALSE
+    
+    check.names = FALSE
 )
 
 ft <- flextable(map_layers)
@@ -111,11 +119,35 @@ ft <- add_header_row(
 
 ft <- merge_v(ft, part = "header")
 
-ft <- width(ft, j = 1, width = 2.0) |>  # Map Layer
-  width(j = 2, width = 1.5) |>           # Description
-  width(j = 3, width = 1.3) |>           # Fill & Color
-  width(j = 4, width = 1.3) |>           # Outline & Color
-  width(j = 5, width = 0.7)              # Transparency
+# ft <- width(ft, j = 1, width = 2.0) |>  # Map Layer
+#   width(j = 2, width = 1.5) |>           # Description
+#   width(j = 3, width = 1.3) |>           # Fill & Color
+#   width(j = 4, width = 1.3) |>           # Outline & Color
+#   width(j = 5, width = 0.7)              # Transparency
+
+if (knitr::is_latex_output()) {
+    
+  ft <- width(ft, j = 1, width = 1.4) |>
+    width(j = 2, width = 1.4) |>
+    width(j = 3, width = 1.0) |>
+    width(j = 4, width = 1.0) |>
+    width(j = 5, width = 0.7)
+
+  ft <- set_table_properties(
+    ft,
+    width = 1,
+    layout = "fixed"
+      
+  )
+} else {
+    
+  ft <- width(ft, j = 1, width = 2.0) |>
+    width(j = 2, width = 1.5) |>
+    width(j = 3, width = 1.3) |>
+    width(j = 4, width = 1.3) |>
+    width(j = 5, width = 0.7)
+    
+}
 
 ft <- theme_vanilla(ft) |>
   valign(valign = "top", part = "all") |>
@@ -139,7 +171,7 @@ image_write(img, "maps/excl_map_bordered.png")
 ```
 
 ::: {style="text-align:center;"}
-![*Example Statutory Exclusions Map* <br> [View full-size map](https://github.com/ctgisoffice/dev-land-inv-guidance/blob/master/excl_map.png?raw=true)](excl_map_bordered.png){fig-alt="Example Statutory Exclusions Map"}
+![*Example Statutory Exclusions Map* <br> [View full-size map](https://github.com/ctgisoffice/dev-land-inv-guidance/blob/master/maps/excl.png?raw=true)](maps/excl_map_bordered.png){fig-alt="Example Statutory Exclusions Map" fig-align="center"}
 :::
 
 <br/>
@@ -167,18 +199,18 @@ map_layers <- data.frame(
   ),
   Fill_Color = c(
     "None",
-    "Solid,\nDark gray (#A9A9A9)",
-    "Solid,\nLight gray (#D3D3D3)"
+    "Solid,\nDark gray\n(#4E4E4E)",
+    "Solid,\nLight gray\n(#E1E1E1)"
   ),
   Outline_Color = c(
-    "0.7 pt,\nGray (#9C9C9C)",
+    "0.6 pt,\nDark gray\n(#343434)",
     "None",
     "None"
   ),
   Transparency = c(
     "0%",
     "0%",
-    "0%"
+    "30%"
   ),
   check.names = FALSE
 )
@@ -203,11 +235,29 @@ ft <- add_header_row(
 
 ft <- merge_v(ft, part = "header")
 
-ft <- width(ft, j = 1, width = 2.0) |>
-  width(j = 2, width = 1.5) |>
-  width(j = 3, width = 1.3) |>
-  width(j = 4, width = 1.3) |>
-  width(j = 5, width = 0.7)
+if (knitr::is_latex_output()) {
+    
+  ft <- width(ft, j = 1, width = 1.4) |>
+    width(j = 2, width = 1.4) |>
+    width(j = 3, width = 1.0) |>
+    width(j = 4, width = 1.0) |>
+    width(j = 5, width = 0.7)
+
+  ft <- set_table_properties(
+    ft,
+    width = 1,
+    layout = "fixed"
+      
+  )
+} else {
+    
+  ft <- width(ft, j = 1, width = 2.0) |>
+    width(j = 2, width = 1.5) |>
+    width(j = 3, width = 1.3) |>
+    width(j = 4, width = 1.3) |>
+    width(j = 5, width = 0.7)
+    
+}
 
 ft <- set_table_properties(ft, layout = "fixed") |>
   theme_vanilla() |>
@@ -231,7 +281,7 @@ image_write(img, "maps/bw_map_bordered.png")
 ```
 
 ::: {style="text-align:center;"}
-![*Example Developable vs. Non-Developable Land Map* <br> [View full-size map](https://github.com/ctgisoffice/dev-land-inv-guidance/blob/master/bw_map.png?raw=true)](bw_map_bordered.png){fig-alt="Example Developable vs. Non-Developable Land Map"}
+![*Example Developable vs. Non-Developable Land Map* <br> [View full-size map](https://github.com/ctgisoffice/dev-land-inv-guidance/blob/master/maps/bw.png?raw=true)](maps/bw_map_bordered.png){fig-alt="Example Developable vs. Non-Developable Land Map" fig-align="center"}
 :::
 
 <br/>
@@ -263,29 +313,32 @@ map_layers <- data.frame(
     "Areas excluded from the developable land inventory in Section 2. All statutory exclusion categories should be combined into a single layer.",
     "Land not identified as excluded under the statutory criteria. This layer represents all land remaining after the exclusion analysis."
   ),
+    
   Fill_Color = c(
     "None",
     "None",
-    "Solid,\nColor (hex code)",
-    "Solid,\nColor (hex code)",
-    "Solid,\nColor (hex code)",
-    "Solid,\nColor (hex code)"
+    "Solid,\nOrange\n(#F17234)",
+    "Solid,\nBlue\n(#71BFEF)",
+    "Solid,\nDark gray\n(#343434)",
+    "Solid,\nLight gray\n(#E1E1E1)"
   ),
+    
   Outline_Color = c(
-    "0.7 pt,\nGray (#9c9c9c)",
-    "0.2 pt,\nLight gray (hex code)",
-    "None",
-    "None",
-    "None",
-    "None"
+      "0.6 pt,\nDark gray\n(#343434)",
+      "0.1 pt,\nDark gray\n(#343434)",
+      "None",
+      "None",
+      "None",
+      "None"
   ),
+    
   Transparency = c(
     "0%",
-    "20%",
-    "20%",
-    "20%",
-    "20%",
-    "20%"
+    "30%",
+    "15%",
+    "35%",
+    "35%",
+    "50%"
   ),
   check.names = FALSE
 )
@@ -310,11 +363,29 @@ ft <- add_header_row(
 
 ft <- merge_v(ft, part = "header")
 
-ft <- width(ft, j = 1, width = 2.0) |>
-  width(j = 2, width = 1.5) |>
-  width(j = 3, width = 1.3) |>
-  width(j = 4, width = 1.3) |>
-  width(j = 5, width = 0.7)
+if (knitr::is_latex_output()) {
+    
+  ft <- width(ft, j = 1, width = 1.4) |>
+    width(j = 2, width = 1.4) |>
+    width(j = 3, width = 1.0) |>
+    width(j = 4, width = 1.0) |>
+    width(j = 5, width = 0.7)
+
+  ft <- set_table_properties(
+    ft,
+    width = 1,
+    layout = "fixed"
+      
+  )
+} else {
+    
+  ft <- width(ft, j = 1, width = 2.0) |>
+    width(j = 2, width = 1.5) |>
+    width(j = 3, width = 1.3) |>
+    width(j = 4, width = 1.3) |>
+    width(j = 5, width = 0.7)
+    
+}
 
 ft <- set_table_properties(ft, layout = "fixed") |>
   theme_vanilla() |>
@@ -338,7 +409,7 @@ image_write(img, "maps/summary_map_bordered.png")
 ```
 
 ::: {style="text-align:center;"}
-![*Example Developable Land Summary Map* <br> [View full-size map](https://github.com/ctgisoffice/dev-land-inv-guidance/blob/master/summary_map.png?raw=true)](summary_map_bordered.png){fig-alt="Example Developable Land Summary Map"}
+![*Example Developable Land Summary Map* <br> [View full-size map](https://github.com/ctgisoffice/dev-land-inv-guidance/blob/master/maps/summary.png?raw=true)](maps/summary_map_bordered.png){fig-alt="Example Developable Land Summary Map"}
 :::
 
 <br/>

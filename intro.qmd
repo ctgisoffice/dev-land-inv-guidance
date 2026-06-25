@@ -2,12 +2,12 @@
 
 ## Purpose
 
-This documentation provides technical guidance for preparing the municipal developable land inventory required for inclusion in the Housing Growth Plans under [Connecticut General Statutes (CGS) §§ 8-13bb and 8-13cc](https://cga.ct.gov/2026/sup/chap_124b.htm). The inventory identifies land that meets the statutory definition of developable land in [CGS §§ 8-13aa](https://cga.ct.gov/2026/sup/chap_124b.htm#sec_8-13aa) and serves as a foundational input to the Housing Growth Plan process. This guidance is intended to support a consistent and transparent analytical approach across municipalities.
+This documentation provides technical guidance for preparing the municipal developable land inventory required for inclusion in the Housing Growth Plans under [Connecticut General Statutes (C.G.S.) §§ 8-13bb and 8-13cc](https://cga.ct.gov/2026/sup/chap_124b.htm). The inventory identifies land that meets the statutory definition of developable land in [C.G.S. §§ 8-13aa](https://cga.ct.gov/2026/sup/chap_124b.htm#sec_8-13aa) and serves as a foundational input to the Housing Growth Plan process. This guidance is intended to support a consistent and transparent analytical approach across municipalities.
 
 ::: {.callout-note appearance="simple"}
 ## A note about developable land
 
-Identifying land as developable does not obligate anyone to pursue development on that land, nor does exclusion from the inventory limit future development opportunities outside the context of the Housing Growth Plan process. The developable land inventory is not a permanent designation of a property's development potential. Rather, it is a necessary step in preparing a Housing Growth Plan under CGS §§ 8-13bb and 8-13cc.
+Identifying land as developable does not obligate anyone to pursue development on that land, nor does exclusion from the inventory limit future development opportunities outside the context of the Housing Growth Plan process. The developable land inventory is not a permanent designation of a property's development potential. Rather, it is a necessary step in preparing a Housing Growth Plan under C.G.S. §§ 8-13bb and 8-13cc.
 :::
 
 <br/>
@@ -29,4 +29,4 @@ The sections that follow describe each statutory exclusion from developable land
 
 ## Use of this Guidance
 
-This document provides recommended methodologies for preparing a developable land inventory under [CGS §§ 8-13aa, 8-13bb, and 8-13cc](https://cga.ct.gov/2026/sup/chap_124b.htm). Municipalities may use alternative data sources or analytical approaches where appropriate, provided that the resulting inventory is consistent with the requirements of these statutes and is adequately documented.
+This document provides recommended methodologies for preparing a developable land inventory under C.G.S. §§ 8-13aa, 8-13bb, and 8-13cc. Municipalities may use alternative data sources or analytical approaches where appropriate, provided that the resulting inventory is consistent with the requirements of these statutes and is adequately documented.

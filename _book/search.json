@@ -230,16 +230,6 @@
     ]
   },
   {
-    "objectID": "map.html#required-map-elements",
-    "href": "map.html#required-map-elements",
-    "title": "5  Creating the Maps",
-    "section": "5.2 Required Map Elements",
-    "text": "5.2 Required Map Elements\nAll maps should include:\n\nMunicipality-wide extent\nClear map title\nMunicipality name\nLegend identifying all mapped categories",
-    "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Creating the Maps</span>"
-    ]
-  },
-  {
     "objectID": "end.html",
     "href": "end.html",
     "title": "6  Next Steps",
@@ -247,26 +237,6 @@
     "text": "The Developable Land Inventory feeds into subsequent phases of the Housing Growth Plan, including a suitability analysis and the parcel and zone identification. Parcel-level detail, including deed restriction research and site-specific constraint verification, is addressed in those later phases.",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Next Steps</span>"
-    ]
-  },
-  {
-    "objectID": "map.html#map-elements",
-    "href": "map.html#map-elements",
-    "title": "5  Creating the Maps",
-    "section": "5.2 Map Elements",
-    "text": "5.2 Map Elements\nAll maps should include:\n\nMunicipality-wide extent\nClear map title\nMunicipality name\nLegend identifying all mapped categories",
-    "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Creating the Maps</span>"
-    ]
-  },
-  {
-    "objectID": "map.html#symbology",
-    "href": "map.html#symbology",
-    "title": "5  Creating the Maps",
-    "section": "5.3 Symbology",
-    "text": "5.3 Symbology\n\nStatutory Exclusions Map\n\n\n\nMap Layer (top to bottom)DescriptionSymbologyFillOutlineTransparencyMunicipality boundaryMunicipal boundary delineating the extent of the study areaNone0.6 pt,Dark gray(#343434)0%ParcelsMunicipal parcel boundariesNone0.1 pt,Dark gray(#343434)30%Land subject to enforceable restrictions or prohibitions on developmentExclusion category described in Section 3.3Hatched & Solid,Red(#FF0000)None0% hatch lines, 75% solid fillLand already committed to public use or purposeExclusion category described in Section 3.1Solid,Dark orange(#CC5629)None20%Open space, parks, and recreation areas dedicated to the public or protected by a conservation easementExclusion category described in Section 3.2Solid,Medium yellow(#F9AB34)None20%Areas of 0.5 acres or more of contiguous land that are unsuitable for development due to topography (such as steep slopes)Exclusion category described in Section 3.5Solid,Brown(#664F3C)None15%Wetlands or watercourses, as defined in the Wetlands and Watercourses Act (CGS Chapter 440)Exclusion category described in Section 3.4Solid,Medium blue(#0070FF)None40%\n\n\n\n\n\n\nExample Statutory Exclusions Map  View full-size map\n\n\n\n\n\nDevelopable vs. Non-Developable Land Map\n\n\n\nMap Layer (top to bottom)DescriptionSymbologyFillOutlineTransparencyMunicipality boundaryMunicipal boundary delineating the extent of the study area.None0.6 pt,Dark gray(#343434)0%Statutory exclusionsAreas excluded from the developable land inventory in Section 2. All statutory exclusion categories should be combined into a single layer.Solid,Dark gray(#4E4E4E)None0%Developable landLand not identified as excluded under the statutory criteria. This layer represents all land remaining after the exclusion analysis.Solid,Light gray(#E1E1E1)None30%\n\n\n\n\n\n\nExample Developable vs. Non-Developable Land Map  View full-size map\n\n\n\n\n\nDevelopable Land Summary Map\n\n\n\nMap Layer (top to bottom)DescriptionSymbologyFillOutlineTransparencyMunicipality boundaryMunicipal boundary delineating the extent of the study area.None0.6 pt,Dark gray(#343434)0%ParcelsMunicipal parcel boundaries.None0.1 pt,Dark gray(#343434)30%Vacant AreasAreas identified as vacant in Section 4.1.Solid,Orange(#F17234)None15%Areas with Redevelopment PotentialAreas identified as having redevelopment potential in Section 4.2.Solid,Blue(#71BFEF)None35%Statutory ExclusionsAreas excluded from the developable land inventory in Section 2. All statutory exclusion categories should be combined into a single layer.Solid,Dark gray(#343434)None35%Developable LandLand not identified as excluded under the statutory criteria. This layer represents all land remaining after the exclusion analysis.Solid,Light gray(#E1E1E1)None50%\n\n\n\n\n\n\nExample Developable Land Summary Map  View full-size map\n\n\n\n\n\n\n\n\n\n\nMap symbology should use colors and patterns that improve overall readability, provide clear visual distinction between categories, and remain accessible to users with color vision deficiencies.",
-    "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Creating the Maps</span>"
     ]
   }
 ]

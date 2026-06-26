@@ -10,7 +10,7 @@ The maps should incorporate the following data:
 - Identified vacant parcels ([Section 4](vac_redev.qmd))
 - Identified parcels with redevelopment potential ([Section 4](vac_redev.qmd))
 
-The final maps included in the Housing Growth Plan will be:
+At a minimum, the following maps shall be included in the Housing Growth Plan:
 
 1.  **Statutory Exclusions Map**: A municipality-wide map displaying each statutory exclusion category as a separate layer and symbolized distinctly to illustrate the distribution of land excluded from the developable land inventory.
 
@@ -21,6 +21,10 @@ The final maps included in the Housing Growth Plan will be:
 <br/>
 
 ## Map Layers and Symbology
+
+The following mapping standards are required for all final maps included in the report. Any deviations should be explained in a brief narrative detailing what was changed and why. Adherence to these standards ensures consistency across all 169 municipalities statewide.
+
+<br/>
 
 All maps include the municipal boundary layer to delineate the geographic extent of the study area.
 
@@ -33,6 +37,23 @@ Municipal parcel boundaries are included where appropriate to provide spatial co
 **Dataset**: [Connecticut CAMA and Parcel Layer (CT Geodata Portal)](https://geodata.ct.gov/datasets/ctmaps::connecticut-cama-and-parcel-layer/about)
 
 <br/>
+
+### Map Elements
+
+All maps should include:
+
+- Municipality-wide extent
+- Clear map title
+- Municipality name
+- Legend identifying all mapped categories
+
+<br/>
+
+### Symbology
+
+::: {.callout-caution appearance="simple" icon="false"}
+Map symbology should use colors and patterns that improve overall readability, provide clear visual distinction between categories, and remain accessible to users with color vision deficiencies.
+:::
 
 1.  **Statutory Exclusions Map**
 
@@ -112,7 +133,7 @@ ft <- set_header_labels(
 
 ft <- add_header_row(
   ft,
-  values = c("Map Layer (top to bottom)", "Description", "Recommended Symbology"),
+  values = c("Map Layer (top to bottom)", "Description", "Symbology"),
   colwidths = c(1, 1, 3),
   top = TRUE
 )
@@ -228,7 +249,7 @@ ft <- set_header_labels(
 
 ft <- add_header_row(
   ft,
-  values = c("Map Layer (top to bottom)", "Description", "Recommended Symbology"),
+  values = c("Map Layer (top to bottom)", "Description", "Symbology"),
   colwidths = c(1, 1, 3),
   top = TRUE
 )
@@ -356,7 +377,7 @@ ft <- set_header_labels(
 
 ft <- add_header_row(
   ft,
-  values = c("Map Layer (top to bottom)", "Description", "Recommended Symbology"),
+  values = c("Map Layer (top to bottom)", "Description", "Symbology"),
   colwidths = c(1, 1, 3),
   top = TRUE
 )
@@ -413,18 +434,3 @@ image_write(img, "maps/summary_map_bordered.png")
 :::
 
 <br/>
-
-::: {.callout-caution appearance="simple" icon="false"}
-Map symbology should use colors and patterns that improve overall readability, provide clear visual distinction between categories, and remain accessible to users with color vision deficiencies.
-:::
-
-<br/>
-
-## Required Map Elements
-
-All maps should include:
-
-- Municipality-wide extent
-- Clear map title
-- Municipality name
-- Legend identifying all mapped categories

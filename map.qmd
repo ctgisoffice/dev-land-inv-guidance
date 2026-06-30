@@ -10,7 +10,7 @@ The maps should incorporate the following data:
 - Identified vacant parcels ([Section 4](vac_redev.qmd))
 - Identified parcels with redevelopment potential ([Section 4](vac_redev.qmd))
 
-At a minimum, the following maps shall be included in the Housing Growth Plan:
+At a minimum, the following maps must be included in the Housing Growth Plan:
 
 1.  **Statutory Exclusions Map**: A municipality-wide map displaying each statutory exclusion category as a separate layer and symbolized distinctly to illustrate the distribution of land excluded from the developable land inventory.
 

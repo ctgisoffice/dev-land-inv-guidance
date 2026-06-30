@@ -1,7 +1,15 @@
 # Required Outputs
 
-The following outputs are required for inclusion in the Housing Growth Plan report as part of the developable land inventory:
+## Housing growth plans
 
-1.  Three town-wide maps visualizing the developable land, statutory exclusions, vacant parcels, and areas with redevelopment potential (see [Section 5](map.qmd) for more details on mapping standards)
+C.G.S. Sec. 8-13bb and 8-13cc: The following outputs are required for inclusion in the Housing Growth Plan report (C.G.S. Sec. 8-13bb and 8-13cc) as part of the developable land inventory:
+
+1.  Three town‑wide maps produced in accordance with the required mapping standards outlined in [Section 5: Creating the Maps](map.qmd), illustrating (1) statutory exclusions, (2) developable vs. non-developable land, (3) a developable land summary, including vacant parcels and areas with redevelopment potential.
 
 2.  Narrative description of the methodology used to develop the inventory of developable land. This should include how vacant and potential redevelopment areas were identified, a summary of data sources used, how datasets were queried and processed, and the methods used to classify land into statutory exclusion categories.
+
+<br>
+
+## Regional housing needs program
+
+C.G.S. Sec. 8-13dd: The results of this process of identifying qualifying developable land per C.G.S. Section 8-13aa are used in calculating the Regional Housing Needs Allocation under C.G.S. Section 8-13dd(c)(3).

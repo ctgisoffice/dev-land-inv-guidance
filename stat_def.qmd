@@ -1,22 +1,26 @@
-# Statutory Exclusions {#sec-statutory-exclusions}
+# Statutory Definitions {#sec-statutory-exclusions}
 
-[CGS § 8-13aa](https://cga.ct.gov/2026/sup/chap_124b.htm#sec_8-13aa) defines what developable land is and is not in the context of this planning process:
+[C.G.S. Sec. 8-13aa](https://cga.ct.gov/2026/sup/chap_124b.htm#sec_8-13aa) defines what qualifies as developable land and what is not considered to be within the context of this planning process:
 
 > *(5) "Developable land" means land, including any land owned by the state or a political subdivision of the state, including a municipality, that, as of January 1, 2026, can be feasibly developed or redeveloped into a residential development or a mixed-use development, as defined in section 8-13m of the general statutes, provided the feasibility of such development or redevelopment is based on commercially reasonable assumptions. "Developable land" does not include: (A) Land already committed to a public use or purpose, whether publicly or privately owned; (B) open space, parks and recreation areas that are dedicated to the public or subject to a recorded conservation easement; (C) land that is subject to an enforceable restriction on or prohibition of development, provided any such restriction or prohibition is not imposed by any zoning regulations or ordinance adopted by a municipality; (D) wetlands or watercourses, as defined in chapter 440 of the general statutes; and (E) areas of one-half or more acres of contiguous land that are unsuitable for development due to topographic features, such as steep slopes;*
 
-This developable land inventory is a high-level description of land with a municipality that has opportunity for development or redevelopment of residential or mixed-use development.
+This developable land inventory is a high-level description of land with a municipality that has opportunity for development or redevelopment of residential or mixed-use development based on commercially reasonable assumptions.
 
-Under the statute, several types of land are defined as areas that should be excluded from the developable land inventory for the purposes of Housing Growth Plans. The statutory exclusions identified in CGS § 8-13aa are:
+The statute requires that feasibility determinations for developable land be grounded in commercially reasonable assumptions. This standard is inherently context dependent. What counts as a commercially reasonable assumption in one municipality or region may not hold true in another, given differences in market conditions, infrastructure capacity, land values, and local development patterns. Because of this variability, this guidance does not attempt to define a single statewide threshold for what makes an assumption commercially reasonable. Municipalities and COGs should apply local market knowledge and professional judgment when assessing feasibility, consistent with the statutory standard.
+
+The remainder of this section focuses on the second component of the statutory definition, the categories of land explicitly excluded from the developable land inventory regardless of market feasibility. These exclusions are applied independent of commercially reasonable assumptions. A parcel that is otherwise feasible to develop must still be excluded if it falls within one of the categories below.
+
+Under the statute, several types of land are defined as areas that should be excluded from the developable land inventory for the purposes of Housing Growth Plans. The statutory exclusions identified in CGS Sec. 8-13aa are:
 
 A.  Land already committed to public use or purpose (public or private)
 B.  Open space, parks, and recreation areas dedicated to the public or protected by a conservation easement
 C.  Land subject to enforceable restrictions or prohibitions on development
-D.  Wetlands or watercourses, as defined in the Wetlands and Watercourses Act (CGS Chapter 440)
+D.  Wetlands or watercourses, as defined in the Wetlands and Watercourses Act (C.G.S. Chapter 440)
 E.  Contiguous land areas of 0.5 acres or more that are unsuitable for development due to steep slopes or other topographic conditions
 
-In addition to incorporating these categories, the final inventory may also document vacant land and land with potential for redevelopment. These areas provide important context for the development of other pieces of the Housing Growth Plans, which will use [suitability analyses]{.underline} \[link coming soon\] to complete a more detailed assessment on capacity for future housing growth. Guidance for identifying and analyzing vacant and potentially redevelopable land is provided in [Section 4](#0).
+In addition to incorporating these categories, the final inventory may also document vacant land and land with potential for redevelopment. These areas provide important context for the development of other elements of the Housing Growth Plans, which will use [suitability analyses](https://housingmaps.ct.gov/pages/suitability-analysis) to complete a more detailed assessment on capacity for future housing growth. Guidance for identifying and analyzing vacant and potentially redevelopable land is provided in [Section 4](#0).
 
-This section outlines each statutory exclusion category, identifies recommended datasets for analysis, and provides technical guidance for preparing those datasets for inclusion in the final developable land inventory. The intent is to support consistent data preparation across municipalities and ensure that the resulting outputs meet the mapping standards described in [Section 5](map.qmd).
+The sections below outline each statutory exclusion category, identifies potential datasets for analysis, and provides technical guidance for preparing those datasets for inclusion in the final developable land inventory. The intent is to support consistent data preparation across municipalities and ensure that the resulting outputs meet the mapping standards described in [Section 5](map.qmd).
 
 <br/>
 
@@ -50,9 +54,9 @@ Examples of land committed to public use or purpose include:
 
 <br/>
 
-### Recommended Datasets
+### Datasets
 
-There is no single comprehensive dataset of publicly committed land in Connecticut. The following sources, used in combination, should capture qualifying parcels and land area. Some overlap across sources is expected, but each may also identify areas the others miss. See the “Technical Guidance” section below for more details about using, filtering, spatializing, and querying these datasets.
+There is no single comprehensive dataset of publicly committed land in Connecticut. The following sources, used in combination, provide a starting point to capture qualifying land area. Some overlap across sources is expected, but each may also identify areas the others miss. See the “Technical Guidance” section below for more details about using, filtering, spatializing, and querying these datasets.
 
 1.  [Local data](#sec-local-data)
 2.  [Parcel and CAMA Data](#sec-parcel-and-cama-data)
@@ -71,7 +75,7 @@ Utility parcel data, local zoning or public facilities layers, and local institu
 
 #### Parcel and CAMA Data {#sec-parcel-and-cama-data}
 
-We recommend utilizing the parcel dataset. The CT GIS Office aggregates municipal parcel data annually. While locally published datasets may also be available, the statewide aggregation is publicly accessible through the CT Geodata Portal and the CT Housing Data Hub. This data is not edited or transformed by the CT GIS Office; questions about data quality or completeness should be directed to the local town assessor. For more information on CT parcel data aggregation, see the [CT Geodata Portal page on parcels](https://geodata.ct.gov/pages/parcels).
+The CT GIS Office aggregates municipal parcel data annually. While locally published datasets may also be available, the statewide aggregation is publicly accessible through the CT Geodata Portal and the CT Housing Data Hub. This data is not edited or transformed by the CT GIS Office; questions about data quality or completeness should be directed to the local town assessor. For more information on CT parcel data aggregation, see the [CT Geodata Portal page on parcels](https://geodata.ct.gov/pages/parcels).
 
 **Parcel geometry**: [Connecticut CAMA and Parcel Layer (CT Housing Data Hub)](https://housingmaps.ct.gov/datasets/ctmaps::connecticut-cama-and-parcel-layer/about)
 
@@ -148,14 +152,11 @@ No comprehensive statewide GIS dataset currently exists publicly that consistent
 Rights-of-way may be identified using keyword searches within the State Use Description field of the parcel dataset. Common keywords may include:
 
 - "ROW"
-- "Rights of Way"
 
 **Example query logic:**
 
 ``` sql
 STATE_USE_DESCRIPTION LIKE '%ROW%'
-
-OR STATE_USE_DESCRIPTION LIKE '%RIGHTS OF WAY%'
 ```
 
 Because parcel data are compiled from municipal assessor records, terminology and attribute completeness vary considerably across jurisdictions. As a result, some municipalities may not consistently identify rights-of-way using standardized naming conventions or parcel attributes.
@@ -264,7 +265,7 @@ The [Connecticut Open Space Parcels (CT Housing Data Hub)](https://housingmaps.c
 
 #### Parcel and CAMA Data {#sec-parcel-and-cama-data2}
 
-We recommend utilizing the parcel dataset. The CT GIS Office aggregates municipal parcel data annually. While locally published datasets may also be available, the statewide aggregation is publicly accessible through the CT Geodata Portal and the CT Housing Data Hub. This data is not edited or transformed by the CT GIS Office; questions about data quality or completeness should be directed to the local town assessor. For more information on CT parcel data aggregation, see the [CT Geodata Portal page on parcels](https://geodata.ct.gov/pages/parcels).
+The CT GIS Office aggregates municipal parcel data annually. While locally published datasets may also be available, the statewide aggregation is publicly accessible through the CT Geodata Portal and the CT Housing Data Hub. This data is not edited or transformed by the CT GIS Office; questions about data quality or completeness should be directed to the local town assessor. For more information on CT parcel data aggregation, see the [CT Geodata Portal page on parcels](https://geodata.ct.gov/pages/parcels).
 
 **Parcel geometry**: [Connecticut CAMA and Parcel Layer (CT Housing Data Hub)](https://housingmaps.ct.gov/datasets/ctmaps::connecticut-cama-and-parcel-layer/about)
 
@@ -298,7 +299,7 @@ OR OWNER '%LAND ALLIANCE%'
 
 ##### B. ***State Use and State Use Description Queries***
 
-Search state use and state use description for open space and recreation terms, including::
+Search state use and state use description for open space and recreation terms, including:
 
 - Open (for Open Space)
 - Forest
@@ -307,11 +308,11 @@ Search state use and state use description for open space and recreation terms, 
 **Example query logic:**
 
 ``` sql
-OWNER_NAME LIKE '%Land trust%'
-
-OR OWNER_NAME LIKE '%Conservation%'
-
-OR OWNER_NAME LIKE '%Land alliance%'
+STATE_USE_DESCRIPTION LIKE '%OPEN%'
+    
+OR STATE_USE_DESCRIPTION LIKE '%FOREST%'
+    
+OR STATE_USE_DESCRIPTION LIKE %REC%'
 ```
 
 <br>

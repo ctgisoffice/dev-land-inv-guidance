@@ -18,7 +18,7 @@ book:
     - vac_redev.qmd
     - map.qmd
     - end.qmd
-  page-footer: "CT GIS Office, July 2026 V1.0"
+  page-footer: "CT GIS Office, July 2026 V0.1"
   favicon: logos/CT-GIS-Office-favicon.png
   downloads: [pdf]
   sidebar:

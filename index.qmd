@@ -1,6 +1,6 @@
 # Summary {.unnumbered}
 
-The *Developable Land Inventory Technical Guidance*, prepared by the Connecticut Office of Policy and Management's GIS Office, provides a standardized, transparent framework for municipalities to identify land suitable for future residential or mixed-use development as required under [Connecticut General Statutes (C.G.S.) §§ 8-13bb and 8-13cc](https://cga.ct.gov/2026/sup/chap_124b.htm). The guidance outlines the datasets, analytical methods, and mapping standards needed to produce a consistent, statewide inventory of developable land.
+The *Developable Land Inventory Technical Guidance*, prepared by the Connecticut Office of Policy and Management's GIS Office, provides a standardized, transparent framework for municipalities to identify land suitable for future residential or mixed-use development as defined in [Connecticut General Statutes (C.G.S.) Sec. 8-13aa](https://cga.ct.gov/2026/sup/chap_124b.htm#sec_8-13aa). This is required as part of the municipal and regional Housing Growth Plans ([C.G.S. Sec. 8-13bb and 8-13cc](https://cga.ct.gov/2026/sup/chap_124b.htm#sec_8-13bb)) and regional housing needs allocation requirements ([C.G.S. Sec. 8-13dd](https://cga.ct.gov/2026/sup/chap_124b.htm#sec_8-13dd)). The guidance outlines the datasets, analytical methods, and mapping standards needed to produce a consistent, statewide inventory of developable land.
 
 The document emphasizes that identifying land as “developable” does not obligate development, nor does exclusion from the inventory permanently restrict future development opportunities. Instead, the inventory serves as a foundational input to each municipality’s Housing Growth Plan, supporting later phases such as suitability analysis and parcel-level evaluation. The developable land inventory is not a permanent designation of a property's development potential.
 
@@ -13,6 +13,10 @@ In the Housing Growth Plans, the following shall be included:
 - Three town-wide maps showing statutory exclusions, developable land, vacant parcels, and potential redevelopment areas
 
 - A narrative methodology describing data sources, queries, processing steps, and classification methods used in the analysis
+
+In the Regional Needs Assessment, the follow shall be included:
+
+- A summary of developable land pursuant to Section 8‑13aa for use in the Regional Housing Needs allocation.
 
 <br/>
 
@@ -44,7 +48,7 @@ These categories support later phases of the Housing Growth Plan process and and
 
 ## Mapping Standards
 
-The guidance specifies three required maps and recommendations for symbology:
+The guidance specifies three required maps in the Housing Growth Plans:
 
 1.  Statutory Exclusions Map
 
@@ -56,4 +60,4 @@ The guidance specifies three required maps and recommendations for symbology:
 
 ## Next Steps
 
-The developable land inventory feeds directly into the Housing Growth Plan’s suitability analysis and parcel and zone identification.
+The Developable Land Inventory is just one required portion of the Housing Growth Planning process. While this is a required element in the Housing Growth Plans and the Regional Needs Assessments, a separate Suitability Analysis will apply locally defined factors that enable and limit development potential to narrow planning focus and prioritize site, neighborhoods, or zones for potential housing growth strategies.
